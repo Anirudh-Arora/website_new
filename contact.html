@@ -1,165 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Portfolio | Anirudh Arora</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script
-    src="https://kit.fontawesome.com/eecc9ab967.js"
-    crossorigin="anonymous"
-  ></script>
-    <link rel="icon" type="images/x-icon" href="images\Myanni.png" />
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-   
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/website_new/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Anirudh Arora</title>
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
 
-    <link rel="stylesheet" href="css/aos.css">
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    /* Info side */
+    .contact-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      position: sticky;
+      top: 90px;
+    }
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    .contact-info-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/body.css">
-  </head>
-  <body>
+    .contact-info-card .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
 
-    <div class="KW_progressContainer">
-      <div class="KW_progressBar">
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-row:last-of-type { border-bottom: none; }
 
-      </div>
+    .contact-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .contact-row-text .label { font-size: 0.75rem; color: var(--text-light); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; }
+    .contact-row-text .value { font-size: 0.92rem; font-weight: 500; color: var(--text); }
+    .contact-row-text a { color: var(--text); text-decoration: none; }
+    .contact-row-text a:hover { color: var(--accent); }
+
+    .social-links-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    /* Form side */
+    .contact-form-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 44px;
+    }
+
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .form-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    .form-group { margin-bottom: 22px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 16px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(27,94,138,0.12);
+    }
+
+    .form-group textarea { min-height: 140px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .success-message .icon { font-size: 3rem; margin-bottom: 16px; }
+    .success-message h3 { font-family: var(--font-display); margin-bottom: 8px; }
+    .success-message p { color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-info-card { position: static; }
+      .contact-form-wrap { padding: 28px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img" /><span class="nav-logo-text">Anirudh Arora</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li><li><a href="life.html">Life</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
     </div>
-    <div class="page">
-      
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(images/Myanni.png);"></div>
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row no-gutters">
-            <div class="col-md-12 text-center nav3">
-              <h1 class="namennav"><a href="index.html" class="logo">Anirudh Arora</a></h1>
-              <ul>
-                <li class="active"><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>Resume</span></a></li>
-                <li><a href="services.html"><span>Services</span></a></li>
-                <!-- <li><a href="portfolio.html"><span>Portfolio</span></a></li> -->
-                <li><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li>
-              </ul>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Talks</a><a href="readings.html">Readings</a><a href="life.html">Life</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="section-label">Get in Touch</span>
+    <h1 class="section-title">Contact</h1>
+    <div class="divider"></div>
+    <p class="section-subtitle">Whether you're a researcher, collaborator, journalist, or just curious — I'd love to hear from you.</p>
+  </div>
+</div>
+
+<section style="padding:70px 0;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info side -->
+      <div data-reveal="left">
+        <div class="contact-info-card">
+          <h3>Let's Connect</h3>
+          <p class="subtitle">I'm always open to conversations about climate science, research collaborations, science communication, or just an interesting idea.</p>
+
+          <div class="contact-row">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-row-text">
+              <div class="label">Email</div>
+              <div class="value"><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></div>
             </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-row-text">
+              <div class="label">Location</div>
+              <div class="value">KAUST, Thuwal, Saudi Arabia</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon"><i class="fa-brands fa-google-scholar"></i></div>
+            <div class="contact-row-text">
+              <div class="label">Google Scholar</div>
+              <div class="value"><a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener">View Profile →</a></div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-row-text">
+              <div class="label">LinkedIn</div>
+              <div class="value"><a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener">anirudharora →</a></div>
+            </div>
+          </div>
+
+          <div class="social-links-row">
+            <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link" aria-label="Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+            <a href="mailto:anirudh21@iiserb.ac.in" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="Anirudh_CV.pdf" class="social-link" download aria-label="Download CV"><i class="fa-solid fa-file-pdf"></i></a>
           </div>
         </div>
       </div>
-    </nav>
-    <div id="colorlib-page">
-      <header>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="colorlib-navbar-brand">
-                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/anni.jpeg);"></span>Anirudh Arora</a>
-              </div>
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-            </div>
-          </div>
-        </div>
-      </header>
-      <section class="ftco-section contact-section">
-        <div class="container mt-5">
-          <div class="row d-flex mb-5 contact-info">
-            <div class="col-md-12 mb-4">
-              <h2 class="h4">Contact Information</h2>
-            </div>
-            <div class="w-100"></div>
-            <div class="col-md-3">
-              <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-            </div>
-            <div class="col-md-3">
-              <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-            </div>
-            <div class="col-md-3">
-              <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-            </div>
-            <div class="col-md-3">
-              <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row mb-5 justify-content-center">
-              <div class="col-md-5 text-center">
-                <div class="ftco-footer-widget mb-5">
-                  <ul class="ftco-footer-social list-unstyled">
-                    <li class="ftco-animate"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                    <li class="ftco-animate"><a href="#"><i class="fa-brands fa-researchgate"></i></a></li>
-                    <li class="ftco-animate"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="ftco-animate"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                  </ul>
+
+      <!-- Form side -->
+      <div data-reveal="right">
+        <div class="contact-form-wrap">
+          <div id="form-container">
+            <div class="form-title">Send a Message</div>
+            <p class="form-subtitle">Fill in the form and I'll get back to you as soon as I can — usually within a few days.</p>
+
+            <!--
+              SETUP: Replace YOUR_FORM_ID below with your Formspree form ID.
+              1. Go to https://formspree.io → sign up free
+              2. Create a new form → get your ID (looks like: xpzgbwkr)
+              3. Replace YOUR_FORM_ID with it
+              No backend required — works perfectly on GitHub Pages.
+            -->
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name <span style="color:var(--terracotta)">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required />
                 </div>
-          
-      </section>
-      <footer class="stellar-footer">
-        <div class="footer-content">
-          <div class="footer-section links">
-            <h2>Quick Links</h2>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-         
-         
-              <li><a href="blog.html">Blog</a></li>
-             
-            </ul>
-          </div>-
-          <div class="footer-section about">
-            <h2>Contact Me</h2>
-            <li class="d"><p href="index.html">anirudh21@iiserb.ac.in</p></li>
-            <li class="d"><p href="about.html">+91 79871 88136</p></li>
+                <div class="form-group">
+                  <label for="email">Email <span style="color:var(--terracotta)">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="">Select a topic…</option>
+                  <option value="research-collab">Research Collaboration</option>
+                  <option value="phd-inquiry">PhD / Academic Inquiry</option>
+                  <option value="media-press">Media / Press</option>
+                  <option value="speaking">Speaking Invitation</option>
+                  <option value="general">General Question</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span style="color:var(--terracotta)">*</span></label>
+                <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+              </div>
+
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none;" />
+
+              <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+              <p class="form-note">Your message goes directly to my inbox. No spam, ever.</p>
+              <div id="form-error" style="display:none;margin-top:12px;padding:12px 16px;background:var(--terra-light);border-radius:var(--radius-sm);font-size:0.88rem;color:var(--terracotta);"></div>
+            </form>
           </div>
-   
-          <div class="footer-section social">
-            <h2>Social links</h2>
-            <ul>
-              <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-researchgate"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-            </ul>
+
+          <!-- Success state -->
+          <div class="success-message" id="success-message">
+            <div class="icon">✉️</div>
+            <h3>Message sent!</h3>
+            <p>Thanks for reaching out. I'll get back to you soon.</p>
+            <a href="index.html" class="btn btn-outline" style="margin-top:20px;">← Back to Home</a>
           </div>
-         
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Anirudh Arora | All rights reserved</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Climate researcher at KAUST. Open to collaborations and conversations.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="mailto:anirudh21@iiserb.ac.in" class="social-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
-      </footer>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li><li><a href="Anirudh_CV.pdf" download>Download CV</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
+  </div>
+</footer>
 
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contact-form');
+  var btn  = document.getElementById('submit-btn');
+  var err  = document.getElementById('form-error');
+  var suc  = document.getElementById('success-message');
+  var cont = document.getElementById('form-container');
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
+  if (!form) return;
 
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Basic validation
+    var name    = document.getElementById('name').value.trim();
+    var email   = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) {
+      err.style.display = 'block';
+      err.textContent   = 'Please fill in all required fields.';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      err.style.display = 'block';
+      err.textContent   = 'Please enter a valid email address.';
+      return;
+    }
+    err.style.display = 'none';
+    btn.disabled      = true;
+    btn.innerHTML     = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+
+    var data = new FormData(form);
+    fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' } })
+      .then(function(r) {
+        if (r.ok) {
+          cont.style.display = 'none';
+          suc.style.display  = 'block';
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(function() {
+        btn.disabled     = false;
+        btn.innerHTML    = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+        err.style.display = 'block';
+        err.textContent  = 'Something went wrong. Please email me directly at anirudh21@iiserb.ac.in';
+      });
+  });
+});
+</script>
+</body>
 </html>
