@@ -60,9 +60,15 @@
       .hero-portrait { display: none; }
     }
 
-    /* ── About section — text only, no photo ── */
+    /* ── About section — two col: heading left, text right ── */
     .about-text-only {
-      max-width: 800px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media(max-width: 768px) {
+      .about-text-only { grid-template-columns: 1fr; gap: 32px; }
     }
 
     /* ── Interests — 3-column ── */
@@ -154,18 +160,26 @@
 ════════════════════════════════ -->
 <section class="section-alt" style="padding:90px 0;">
   <div class="container">
-    <div class="about-text-only" data-reveal>
-      <span class="section-label">About Me</span>
-      <h2 class="section-title">Climate Scientist<br/><em style="font-weight:400;">in the making</em></h2>
-      <div class="divider"></div>
-      <div class="about-transition-banner" style="margin-bottom:24px;">
-        <span style="font-size:1.2rem;">🌍</span>
-        <span id="about-transition-text"></span>
+    <div class="about-text-only">
+      <!-- Left: heading + label -->
+      <div data-reveal="left">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Climate Scientist<br/><em style="font-weight:400;">in the making</em></h2>
+        <div class="divider"></div>
+        <div style="margin-top:28px;">
+          <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> Full Bio &amp; CV</a>
+        </div>
+        <div style="margin-top:14px;">
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+        </div>
       </div>
-      <div id="index-bio" style="font-size:1.02rem;line-height:1.8;color:var(--text-muted);"></div>
-      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> Full Bio &amp; CV</a>
-        <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+      <!-- Right: bio text -->
+      <div data-reveal="right">
+        <div class="about-transition-banner" style="margin-bottom:24px;">
+          <span style="font-size:1.2rem;">🌍</span>
+          <span id="about-transition-text"></span>
+        </div>
+        <div id="index-bio" style="font-size:1.02rem;line-height:1.8;color:var(--text-muted);"></div>
       </div>
     </div>
   </div>
@@ -244,7 +258,7 @@
         <li><a href="life.html">Life Outside Lab</a></li>
       </ul></div>
       <div class="footer-col"><h4>Get in Touch</h4><ul>
-        <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#6a0b0403181f0e02585b2a0303190f1808440b09440304"><span class="__cf_email__" data-cfemail="d5b4bbbca7a0b1bde7e495bcbca6b0a7b7fbb4b6fbbcbb">[email&#160;protected]</span></a></li>
         <li><a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
         <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
         <li><a href="contact.html">Contact Form</a></li>
@@ -257,7 +271,7 @@
   </div>
 </footer>
 
-<script src="js/content.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/content.js"></script>
 <script src="js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -278,11 +292,4 @@ document.addEventListener('DOMContentLoaded', function() {
   RENDER.featuredPubs('featured-pubs');
   RENDER.socialLinks('footer-social');
 
-  /* Responsive timeline */
-  var g = document.getElementById('timeline-grid');
-  function ck(){ if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
-  ck(); window.addEventListener('resize', ck);
-});
-</script>
-</body>
-</html>
+  /* Res
