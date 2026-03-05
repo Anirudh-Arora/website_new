@@ -1,187 +1,131 @@
 /* ============================================================
-   MAIN.JS — Anirudh Arora Portfolio
-   Handles: dark mode, nav scroll, hamburger, scroll reveal,
-            typing effect, scroll progress bar
+   MAIN.JS — Anirudh Arora Portfolio  (path-safe version)
    ============================================================ */
 
-/* ── Dark / Light Mode Toggle ────────────────────────────── */
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon   = document.getElementById('theme-icon');
-
+/* ── Dark / Light Mode ───────────────────────────────────── */
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-  localStorage.setItem('theme', theme);
+  const icon = document.getElementById('theme-icon');
+  if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+  try { localStorage.setItem('theme', theme); } catch(e) {}
 }
-
-// Load saved theme on page init
 (function() {
-  const saved = localStorage.getItem('theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  let saved = 'light';
+  try { saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch(e){}
   applyTheme(saved);
 })();
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    applyTheme(current === 'dark' ? 'light' : 'dark');
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.addEventListener('click', function() {
+    applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
-}
+});
 
-/* ── Navigation: scroll shadow + active link ─────────────── */
-const siteNav = document.querySelector('.site-nav');
-
-window.addEventListener('scroll', () => {
-  if (!siteNav) return;
-  siteNav.classList.toggle('scrolled', window.scrollY > 20);
+/* ── Nav scroll shadow ───────────────────────────────────── */
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.site-nav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-/* ── Hamburger Menu ──────────────────────────────────────── */
-const hamburger = document.getElementById('nav-hamburger');
-const mobileMenu = document.getElementById('nav-mobile');
-
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+/* ── Hamburger ───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function() {
+  const ham  = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile');
+  if (!ham || !menu) return;
+  ham.addEventListener('click', function() {
+    ham.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
   });
-
-  // Close on link click
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      ham.classList.remove('open');
+      menu.classList.remove('open');
       document.body.style.overflow = '';
     });
   });
-}
+});
 
 /* ── Scroll Progress Bar ─────────────────────────────────── */
-const progressBar = document.getElementById('scroll-progress');
-
-if (progressBar) {
-  window.addEventListener('scroll', () => {
-    const scrollTop    = window.scrollY;
-    const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent= docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progressBar.style.width = scrollPercent + '%';
-  }, { passive: true });
-}
+window.addEventListener('scroll', function() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  bar.style.width = Math.min(pct, 100) + '%';
+}, { passive: true });
 
 /* ── Scroll Reveal ───────────────────────────────────────── */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('[data-reveal], [data-reveal-stagger]').forEach(el => {
-  revealObserver.observe(el);
+document.addEventListener('DOMContentLoaded', function() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('[data-reveal],[data-reveal-stagger]').forEach(function(el) {
+      el.classList.add('revealed');
+    });
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal],[data-reveal-stagger]').forEach(function(el) { obs.observe(el); });
+  // expose so dynamic content can reuse
+  window._revealObs = obs;
 });
 
 /* ── Typing Animation ────────────────────────────────────── */
-function startTyping(elementId, phrases, speed = 80, pause = 2200, deleteSpeed = 45) {
-  const el = document.getElementById(elementId);
+window.startTyping = function(elementId, phrases, speed, pause, delSpeed) {
+  speed    = speed    || 80;
+  pause    = pause    || 2200;
+  delSpeed = delSpeed || 45;
+  var el = document.getElementById(elementId);
   if (!el || !phrases || !phrases.length) return;
-
-  let phraseIndex = 0;
-  let charIndex   = 0;
-  let isDeleting  = false;
-
+  var pi = 0, ci = 0, deleting = false;
   function tick() {
-    const current = phrases[phraseIndex];
-
-    if (isDeleting) {
-      charIndex--;
-      el.textContent = current.slice(0, charIndex);
-    } else {
-      charIndex++;
-      el.textContent = current.slice(0, charIndex);
-    }
-
-    let delay = isDeleting ? deleteSpeed : speed;
-
-    if (!isDeleting && charIndex === current.length) {
-      // Pause at full phrase
-      delay = pause;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      delay = 400;
-    }
-
+    var cur = phrases[pi];
+    if (deleting) { ci--; el.textContent = cur.slice(0, ci); }
+    else          { ci++; el.textContent = cur.slice(0, ci); }
+    var delay = deleting ? delSpeed : speed;
+    if (!deleting && ci === cur.length)      { delay = pause; deleting = true; }
+    else if (deleting && ci === 0)           { deleting = false; pi = (pi + 1) % phrases.length; delay = 400; }
     setTimeout(tick, delay);
   }
+  setTimeout(tick, 800);
+};
 
-  // Start after a brief delay
-  setTimeout(tick, 600);
-}
+/* ── Filter helper (pub + project) ──────────────────────── */
+document.addEventListener('DOMContentLoaded', function() {
 
-/* ── Publications Filter ─────────────────────────────────── */
-function initPubFilter() {
-  const filterBtns = document.querySelectorAll('.pub-filter-btn');
-  const pubCards   = document.querySelectorAll('.pub-card');
-
-  if (!filterBtns.length || !pubCards.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-
-      pubCards.forEach(card => {
-        if (filter === 'all') {
-          card.classList.remove('hidden');
-        } else {
-          const matches = card.dataset.status === filter ||
-                          card.dataset.type   === filter ||
-                          card.dataset.year   === filter;
-          card.classList.toggle('hidden', !matches);
-        }
+  /* Publications filter */
+  function initPubFilter() {
+    document.querySelectorAll('.pub-filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.pub-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var f = btn.dataset.filter;
+        document.querySelectorAll('.pub-card').forEach(function(card) {
+          var show = f === 'all' || card.dataset.status === f || card.dataset.type === f;
+          card.style.display = show ? '' : 'none';
+        });
+        var vc = document.getElementById('visible-count');
+        if (vc) vc.textContent = document.querySelectorAll('.pub-card:not([style*="none"])').length;
       });
     });
-  });
-}
-
-/* ── Projects Filter ─────────────────────────────────────── */
-function initProjectFilter() {
-  const filterBtns   = document.querySelectorAll('.proj-filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  if (!filterBtns.length || !projectCards.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-
-      projectCards.forEach(card => {
-        if (filter === 'all') {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.toggle('hidden', card.dataset.category !== filter);
-        }
-      });
-    });
-  });
-}
-
-/* ── Run on DOM ready ────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-  initPubFilter();
-  initProjectFilter();
-
-  // Typing effect — only runs if element exists (index.html)
-  if (window.SITE_DATA) {
-    startTyping('typing-text', SITE_DATA.typingRoles);
   }
+
+  /* Projects filter */
+  function initProjFilter() {
+    document.querySelectorAll('.proj-filter-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.proj-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var f = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(function(card) {
+          card.style.display = (f === 'all' || card.dataset.category === f) ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  initPubFilter();
+  initProjFilter();
 });
