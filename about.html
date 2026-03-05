@@ -352,15 +352,29 @@
 <script src="js/content.js"></script>
 <script src="js/main.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
+  RENDER.startTyping('typing-text');
+
+  var tl = document.getElementById('hero-tagline');
+  if (tl) tl.textContent = CONTENT.tagline;
+
+  RENDER.affiliations('hero-affiliations');
+
   var tb = document.getElementById('about-transition-text');
   if (tb) tb.innerHTML = CONTENT.bio.transition;
 
-  RENDER.bio('about-bio-full', true);
-  RENDER.education('about-edu');
-  RENDER.experience('about-exp');
-  RENDER.awards('about-awards');
+  RENDER.bio('index-bio', false);
+  RENDER.interests('interests-grid');
+  RENDER.education('index-edu');
+  RENDER.experience('index-exp');
+  RENDER.featuredPubs('featured-pubs');
   RENDER.socialLinks('footer-social');
+
+  var g = document.getElementById('timeline-grid');
+  function ck() { if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
+  ck(); window.addEventListener('resize', ck);
+});
+</script>
 
   /* responsive grids */
   var g = docu
