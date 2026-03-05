@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/main.css" />
   <style>
     .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
-    /* gradient thumbnails */
+    /* Thumbnail gradient classes must be defined here for project cards */
     .thumb-climate  { background: linear-gradient(135deg,#1B5E8A,#4A9ECC); }
     .thumb-atmos    { background: linear-gradient(135deg,#2E7D32,#81C784); }
     .thumb-decision { background: linear-gradient(135deg,#C4622D,#F5A623); }
@@ -21,7 +21,12 @@
     .thumb-ethno    { background: linear-gradient(135deg,#5C3A1B,#C8A96E); }
     .thumb-fire     { background: linear-gradient(135deg,#B71C1C,#FF7043); }
     .thumb-default  { background: linear-gradient(135deg,#37474F,#90A4AE); }
-    .project-thumb-icon { position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.85;z-index:1; }
+    /* Project count badge */
+    .project-count {
+      font-family: var(--font-mono); font-size: 0.78rem;
+      color: var(--text-light); margin-bottom: 36px;
+    }
+    .project-count span { color: var(--accent); font-weight: 700; }
   </style>
 </head>
 <body>
@@ -31,13 +36,10 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img"/><span class="nav-logo-text">Anirudh Arora</span></a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
       <li class="active"><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="talks.html">Talks</a></li>
-      <li><a href="readings.html">Readings</a></li>
-      <li><a href="life.html">Life</a></li>
+      <li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li>
+      <li><a href="readings.html">Readings</a></li><li><a href="life.html">Life</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
@@ -64,16 +66,18 @@
 <section style="padding:70px 0;">
   <div class="container">
 
-    <!-- Filter buttons — built dynamically from content.js categories -->
-    <div id="filter-bar" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;" data-reveal></div>
+    <!-- Filter bar — built from content.js categories -->
+    <div id="filter-bar" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;" data-reveal></div>
 
-    <!-- Projects grid — populated by content.js -->
-    <div class="projects-grid" id="projects-grid" data-reveal-stagger></div>
+    <!-- Count -->
+    <p class="project-count" id="project-count"></p>
+
+    <!-- Projects grid -->
+    <div class="projects-grid" id="projects-grid"></div>
 
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-inner">
@@ -103,38 +107,48 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 
-  /* ── Render all projects ── */
+  /* 1. Render all project cards into the grid */
   RENDER.projects('projects-grid');
   RENDER.socialLinks('footer-social');
 
-  /* ── Build filter buttons dynamically from actual categories ── */
-  var categories = ['all'];
+  /* 2. All cards that were just rendered */
+  var allCards = document.querySelectorAll('#projects-grid .project-card');
+
+  /* 3. Update visible count */
+  function updateCount(visible) {
+    var el = document.getElementById('project-count');
+    if (el) el.innerHTML = 'Showing <span>' + visible + '</span> of <span>' + allCards.length + '</span> projects';
+  }
+  updateCount(allCards.length);
+
+  /* 4. Build filter buttons from actual categories in CONTENT */
+  var categories = ['All'];
   CONTENT.projects.forEach(function(p) {
     if (categories.indexOf(p.category) === -1) categories.push(p.category);
   });
 
   var bar = document.getElementById('filter-bar');
   bar.innerHTML = categories.map(function(c) {
-    var label = c === 'all' ? 'All Projects' : c;
-    return '<button class="pub-filter-btn proj-filter-btn'+(c==='all'?' active':'')+'" data-filter="'+c+'">'+label+'</button>';
+    return '<button class="pub-filter-btn proj-filter-btn' + (c === 'All' ? ' active' : '') + '" data-filter="' + c + '">' + c + '</button>';
   }).join('');
 
-  /* ── Wire filter click events ── */
+  /* 5. Wire filter events — use data-category attribute set by RENDER.projects */
   bar.querySelectorAll('.proj-filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       bar.querySelectorAll('.proj-filter-btn').forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
+
       var f = btn.dataset.filter;
-      document.querySelectorAll('#projects-grid .project-card').forEach(function(card) {
-        card.style.display = (f === 'all' || card.dataset.category === f) ? '' : 'none';
+      var count = 0;
+      allCards.forEach(function(card) {
+        var show = (f === 'All' || card.dataset.category === f);
+        card.style.display = show ? '' : 'none';
+        if (show) count++;
       });
+      updateCount(count);
     });
   });
 
-  /* ── Re-observe newly rendered cards for scroll reveal ── */
-  if (window._revealObs) {
-    document.querySelectorAll('.project-card').forEach(function(el) { _revealObs.observe(el); });
-  }
 });
 </script>
 </body>
