@@ -274,7 +274,7 @@
 <script src="js/content.js"></script>
 <script src="js/main.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
   RENDER.startTyping('typing-text');
 
   var tl = document.getElementById('hero-tagline');
@@ -292,4 +292,8 @@ document.addEventListener('DOMContentLoaded', function() {
   RENDER.featuredPubs('featured-pubs');
   RENDER.socialLinks('footer-social');
 
-  /* Res
+  var g = document.getElementById('timeline-grid');
+  function ck() { if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
+  ck(); window.addEventListener('resize', ck);
+});
+</script>
