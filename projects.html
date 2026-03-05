@@ -2,10 +2,9 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <base href="/website_new/">
+  <base href="/website_new/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Anirudh Arora</title>
-  <meta name="description" content="Research projects by Anirudh Arora spanning climate modeling, geoengineering, and atmospheric science." />
   <link rel="icon" type="image/png" href="images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,25 +13,21 @@
   <link rel="stylesheet" href="css/main.css" />
   <style>
     .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
-    .filter-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
+    /* Gradient fallback thumbnails per category */
+    .thumb-climate  { background: linear-gradient(135deg,#1B5E8A 0%,#4A9ECC 100%); }
+    .thumb-atmos    { background: linear-gradient(135deg,#2E7D32 0%,#81C784 100%); }
+    .thumb-decision { background: linear-gradient(135deg,#C4622D 0%,#F5A623 100%); }
+    .thumb-comp     { background: linear-gradient(135deg,#6A1B9A 0%,#BA68C8 100%); }
+    .thumb-default  { background: linear-gradient(135deg,#37474F 0%,#90A4AE 100%); }
+    .project-thumb-icon { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:3rem; opacity:0.8; z-index:1; }
   </style>
 </head>
 <body>
-
 <div class="scroll-progress" id="scroll-progress"></div>
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <img src="images/anni.jpeg" alt="" class="nav-logo-img" />
-      <span class="nav-logo-text">Anirudh Arora</span>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img" /><span class="nav-logo-text">Anirudh Arora</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -40,6 +35,7 @@
       <li><a href="publications.html">Publications</a></li>
       <li><a href="talks.html">Talks</a></li>
       <li><a href="readings.html">Readings</a></li>
+      <li><a href="life.html">Life</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
@@ -47,14 +43,9 @@
     </div>
   </div>
 </nav>
-
 <div class="nav-mobile" id="nav-mobile">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html" class="active">Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="talks.html">Talks</a>
-  <a href="readings.html">Readings</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html" class="active">Projects</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Talks</a><a href="readings.html">Readings</a><a href="life.html">Life</a>
 </div>
 
 <div class="page-hero">
@@ -62,15 +53,14 @@
     <span class="section-label">Research Work</span>
     <h1 class="section-title">Projects</h1>
     <div class="divider"></div>
-    <p class="section-subtitle">I am interested in climate science, solar geoengineering, and the socio-political dimensions of climate action.</p>
+    <p class="section-subtitle">Exploring climate science, solar geoengineering, atmospheric aerosols, and the socio-political dimensions of climate action.</p>
   </div>
 </div>
 
-<section>
+<section style="padding:70px 0;">
   <div class="container">
-
-    <!-- Filter bar -->
-    <div class="filter-bar" data-reveal>
+    <!-- Filter buttons -->
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;" data-reveal>
       <button class="proj-filter-btn pub-filter-btn active" data-filter="all">All Projects</button>
       <button class="proj-filter-btn pub-filter-btn" data-filter="Climate Modeling">Climate Modeling</button>
       <button class="proj-filter-btn pub-filter-btn" data-filter="Atmospheric Science">Atmospheric Science</button>
@@ -78,85 +68,119 @@
       <button class="proj-filter-btn pub-filter-btn" data-filter="Computational Physics">Computational Physics</button>
     </div>
 
-    <!-- Project grid — populated by JS -->
-    <div class="projects-grid" id="projects-grid"></div>
+    <div class="projects-grid" id="projects-grid">
 
+      <!-- Project 1: GeoMIP — LINKED -->
+      <div class="project-card" data-category="Climate Modeling">
+        <div class="project-thumb thumb-climate">
+          <span class="project-category-pill">Climate Modeling</span>
+          <div class="project-thumb-icon">🌐</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">2024</div>
+          <div class="project-title"><a href="project-geomip.html">Stratospheric Aerosol Injection &amp; the South Asian Monsoon</a></div>
+          <div class="project-desc">Analyzed GeoMIP G6 outputs (CESM-WACCM) to assess impacts of SAI on precipitation patterns, temperature gradients, and atmospheric circulation. Presented at GeoMIP 2024, Cornell University.</div>
+          <div class="project-tags"><span class="badge-tag">GeoMIP</span><span class="badge-tag">Geoengineering</span><span class="badge-tag">Monsoon</span></div>
+          <div style="margin-top:20px;"><a href="project-geomip.html" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <!-- Project 2: Air Pollution — LINKED -->
+      <div class="project-card" data-category="Atmospheric Science">
+        <div class="project-thumb thumb-atmos">
+          <span class="project-category-pill">Atmospheric Science</span>
+          <div class="project-thumb-icon">🏭</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">2024</div>
+          <div class="project-title"><a href="project-pollution.html">Air Pollution Dynamics over the Indo-Gangetic Plain</a></div>
+          <div class="project-desc">Multi-scale analysis of natural and anthropogenic sources of air pollution using reanalysis and satellite datasets. Co-authored policy commentary in The India Forum.</div>
+          <div class="project-tags"><span class="badge-tag">Air Quality</span><span class="badge-tag">Satellite Data</span><span class="badge-tag">IGP</span></div>
+          <div style="margin-top:20px;"><a href="project-pollution.html" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <!-- Project 3: Policy — LINKED -->
+      <div class="project-card" data-category="Decision Theory">
+        <div class="project-thumb thumb-decision">
+          <span class="project-category-pill">Decision Theory</span>
+          <div class="project-thumb-icon">📜</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">2023</div>
+          <div class="project-title"><a href="project-policy.html">Sequential Decision-Making for Climate Action</a></div>
+          <div class="project-desc">Developed a novel framework for sequential decision-making using Markov Decision Processes (MDPs) to promote efficient climate adaptation strategies.</div>
+          <div class="project-tags"><span class="badge-tag">MDPs</span><span class="badge-tag">Climate Policy</span><span class="badge-tag">Optimization</span></div>
+          <div style="margin-top:20px;"><a href="project-policy.html" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+
+      <!-- Project 4: Aerosols — no dedicated page yet -->
+      <div class="project-card" data-category="Climate Modeling">
+        <div class="project-thumb thumb-climate">
+          <span class="project-category-pill">Climate Modeling</span>
+          <div class="project-thumb-icon">🔬</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">2024 · IISER Bhopal</div>
+          <div class="project-title">Modeling Atmospheric Aerosols in Climate Systems</div>
+          <div class="project-desc">Comprehensive report on aerosol dynamics and representation in GCMs, focusing on aerosol microphysics, cloud interactions, and radiative forcing. Supervised by Prof. Ramya Sunder Raman.</div>
+          <div class="project-tags"><span class="badge-tag">Aerosols</span><span class="badge-tag">GCMs</span><span class="badge-tag">Radiative Forcing</span></div>
+        </div>
+      </div>
+
+      <!-- Project 5: Monsoon aerosols — no dedicated page yet -->
+      <div class="project-card" data-category="Atmospheric Science">
+        <div class="project-thumb thumb-atmos">
+          <span class="project-category-pill">Atmospheric Science</span>
+          <div class="project-thumb-icon">🌧️</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">2024 · IISER Bhopal</div>
+          <div class="project-title">Aerosol Influence on Indian Monsoon Rainfall</div>
+          <div class="project-desc">Co-authored review paper analyzing the influence of remote aerosol emissions on South Asian monsoon variability. Supervised by Dr. Shubhi Agrawal.</div>
+          <div class="project-tags"><span class="badge-tag">Aerosols</span><span class="badge-tag">Monsoon</span><span class="badge-tag">South Asia</span></div>
+        </div>
+      </div>
+
+      <!-- Project 6: Penalty kick — no dedicated page -->
+      <div class="project-card" data-category="Computational Physics">
+        <div class="project-thumb thumb-comp">
+          <span class="project-category-pill">Computational Physics</span>
+          <div class="project-thumb-icon">⚽</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">2022 · IISER Bhopal</div>
+          <div class="project-title">Modelling the Perfect Penalty Kick</div>
+          <div class="project-desc">Solved six coupled differential equations with varying initial conditions to obtain optimal velocities and spin values for a perfect football penalty kick.</div>
+          <div class="project-tags"><span class="badge-tag">Fluid Dynamics</span><span class="badge-tag">Differential Equations</span><span class="badge-tag">Sports Science</span></div>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
   </div>
 </section>
 
-<footer class="site-footer">
+<!-- FOOTER -->
+<footer class="site-footer" id="contact">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-name">Anirudh Arora</div>
-        <p>Climate researcher at KAUST studying atmospheric dynamics, solar geoengineering, and monsoon variability.</p>
+        <p>Climate researcher at KAUST. Open to collaborations and conversations.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
           <a href="mailto:anirudh21@iiserb.ac.in" class="social-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About & CV</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="readings.html">Readings</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
-          <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li><li><a href="life.html">Life Outside Lab</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li><li><a href="Anirudh_CV.pdf" download>Download CV</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Anirudh Arora</span>
-      <span>Hosted on GitHub Pages</span>
-    </div>
+    <div class="footer-bottom"><span>© 2025 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
   </div>
 </footer>
 
-<script src="js/data.js"></script>
 <script src="js/main.js"></script>
-<script>
-function buildProjects() {
-  const container = document.getElementById('projects-grid');
-  if (!container || !SITE_DATA.projects) return;
-
-  container.innerHTML = SITE_DATA.projects.map(proj => `
-    <div class="project-card" data-category="${proj.category}">
-      <div class="project-thumb" style="background-image:url('${proj.image}')">
-        <span class="project-category-pill">${proj.category}</span>
-      </div>
-      <div class="project-body">
-        <div class="project-meta">${proj.year}</div>
-        <div class="project-title">
-          ${proj.url
-            ? `<a href="${proj.url}">${proj.title}</a>`
-            : proj.title}
-        </div>
-        <div class="project-desc">${proj.desc}</div>
-        <div class="project-tags">
-          ${proj.tags.map(t => `<span class="badge-tag">${t}</span>`).join('')}
-        </div>
-        ${proj.url ? `
-          <div style="margin-top:20px;">
-            <a href="${proj.url}" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">
-              Read More <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>` : ''}
-      </div>
-    </div>
-  `).join('');
-}
-
-document.addEventListener('DOMContentLoaded', buildProjects);
-</script>
 </body>
 </html>
