@@ -428,12 +428,9 @@ window.CONTENT = {
 
   /* ── Research Interests ────────────────────────────────── */
   interests: [
-    { icon:"🌐", title:"Climate Model Evaluation",         desc:"Assessing GCM performance and credibility — especially CMIP5/CMIP6 ensembles — over South Asia and the Global South, where model uncertainty is greatest." },
-    { icon:"☁️", title:"Solar Geoengineering",             desc:"Investigating atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations." },
-    { icon:"🌧️", title:"Indian Summer Monsoon",            desc:"Understanding the dynamics, variability, and future projections of the Indian monsoon — and how geoengineering interventions alter its character." },
-    { icon:"🏭", title:"Aerosols & Air Quality",           desc:"Multi-scale analysis of natural and anthropogenic aerosol sources over the Indo-Gangetic Plain and their interactions with clouds and radiative forcing." },
-    { icon:"📜", title:"Climate Policy & Decision Theory", desc:"Principled frameworks for sequential climate decision-making using MDPs, and the ethics of geoengineering governance." },
-    { icon:"🧭", title:"Science, Society & Philosophy",    desc:"Exploring socio-political dimensions of climate action — from transboundary carbon migration to Kantian frameworks for public enlightenment." },
+    { icon:"🌐", title:"Climate Model Evaluation", desc:"Assessing GCM performance and credibility — especially CMIP5/CMIP6 ensembles — over South Asia and the Global South, where model uncertainty is greatest." },
+    { icon:"☁️", title:"Solar Geoengineering",     desc:"Investigating atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations, and their monsoon implications." },
+    { icon:"📜", title:"Climate Policy & Ethics",  desc:"Principled frameworks for sequential climate decision-making using MDPs, and Kantian ethics of geoengineering governance and public enlightenment." },
   ],
 
 };
