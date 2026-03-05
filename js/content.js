@@ -18,15 +18,12 @@
 
 window.CONTENT = {
 
-  /* ── Personal ────────────────────────────────────────────
-     Your name, contact details, and typing animation roles.
-  ──────────────────────────────────────────────────────── */
+  /* ── Personal ──────────────────────────────────────────── */
   name:     "Anirudh Arora",
   email:    "anirudh21@iiserb.ac.in",
   phone:    "+91-7987188136",
   location: "KAUST, Thuwal, Saudi Arabia",
 
-  // These cycle in the hero typing animation
   typingRoles: [
     "Climate Researcher",
     "Atmospheric Scientist",
@@ -34,34 +31,26 @@ window.CONTENT = {
     "Environmental Scientist",
   ],
 
-  // One-line tagline shown under your name
   tagline: "Studying how Earth's atmosphere responds to a changing climate — from Indian summer monsoon dynamics to stratospheric aerosol injection and the credibility of global climate models.",
 
-  /* ── Social Links ────────────────────────────────────────
-     Leave blank ("") to hide the icon.
-  ──────────────────────────────────────────────────────── */
+  /* ── Social Links ──────────────────────────────────────── */
   social: {
     linkedin:      "https://www.linkedin.com/in/anirudharora",
     googleScholar: "https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en",
     orcid:         "",   // e.g. "https://orcid.org/0000-0000-0000-0000"
-    bluesky:       "",   // e.g. "https://bsky.app/profile/yourhandle"
-    github:        "",   // e.g. "https://github.com/yourusername"
+    bluesky:       "",
+    github:        "",
     twitter:       "",
   },
 
-  /* ── Hero Affiliations ───────────────────────────────────
-     Chips shown at the bottom of the hero section.
-     dot: "blue" | "sand" | "none"   icon: emoji string or ""
-  ──────────────────────────────────────────────────────── */
+  /* ── Hero Affiliations ─────────────────────────────────── */
   affiliations: [
-    { label: "KAUST · CLIMATics Group",  dot: "blue",  icon: "" },
-    { label: "IIT Delhi · DST CoE",      dot: "sand",  icon: "" },
+    { label: "KAUST · CLIMATics Group",     dot: "blue", icon: "" },
+    { label: "IIT Delhi · DST CoE",         dot: "sand", icon: "" },
     { label: "Rhodes Scholar Finalist '26", dot: "none", icon: "🏆" },
   ],
 
-  /* ── Stats Row (homepage) ────────────────────────────────
-     Four numbers shown on the homepage about section.
-  ──────────────────────────────────────────────────────── */
+  /* ── Stats Row ─────────────────────────────────────────── */
   stats: [
     { number: "5+",   label: "Publications & Preprints" },
     { number: "2",    label: "Research Institutions"    },
@@ -69,10 +58,7 @@ window.CONTENT = {
     { number: "8+",   label: "Honours & Awards"         },
   ],
 
-  /* ── About / Bio ─────────────────────────────────────────
-     Multi-paragraph bio shown on index and about pages.
-     Use \n\n for paragraph breaks.
-  ──────────────────────────────────────────────────────── */
+  /* ── Bio ───────────────────────────────────────────────── */
   bio: {
     transition: "Final-year BS at IISER Bhopal · Now a visiting researcher at <strong>KAUST's CLIMATics Group</strong>, co-supervised by Prof. Ibrahim Hoteit for my master's thesis.",
     paragraphs: [
@@ -80,7 +66,6 @@ window.CONTENT = {
       "I am particularly drawn to questions about the <strong>Indian summer monsoon</strong>, <strong>stratospheric aerosol injection</strong>, and the credibility of global climate models over the Global South — a region critically underrepresented in the literature.",
       "Beyond modelling, I think deeply about the <strong>socio-political dimensions</strong> of climate action: how scientific evidence translates into governance, and what philosophical frameworks can guide equitable climate policy.",
     ],
-    // Full expanded bio paragraphs for about.html
     fullParagraphs: [
       "I am a climate researcher with a broad interest in <strong>how the atmosphere responds to natural and forced changes</strong> — from the interannual variability of the Indian monsoon to the large-scale dynamical consequences of stratospheric aerosol injection.",
       "My work spans statistical analysis of CMIP5/CMIP6 multi-model ensembles, offline processing of large NetCDF datasets with Python (Xarray, NumPy, Matplotlib), and the development of novel decision-theoretic frameworks for climate policy. I have been fortunate to be supervised by Prof. Saroj Mishra (IIT Delhi) and Prof. Ibrahim Hoteit (KAUST).",
@@ -89,18 +74,14 @@ window.CONTENT = {
     ],
   },
 
-  /* ── Skills ──────────────────────────────────────────────
-     Displayed as pills on the about page.
-  ──────────────────────────────────────────────────────── */
+  /* ── Skills ────────────────────────────────────────────── */
   skills: [
     "Python", "Xarray", "NumPy", "Matplotlib", "NCL",
     "MATLAB", "Mathematica", "CDO", "LaTeX", "SQL", "C", "HTML/CSS",
     "CMIP6", "GeoMIP", "NetCDF",
   ],
 
-  /* ── Education ───────────────────────────────────────────
-     badge: short string shown as a pill (e.g. "Current"), or ""
-  ──────────────────────────────────────────────────────── */
+  /* ── Education ─────────────────────────────────────────── */
   education: [
     {
       degree:      "Visiting Researcher",
@@ -128,9 +109,7 @@ window.CONTENT = {
     },
   ],
 
-  /* ── Research Experience ─────────────────────────────────
-     bullets: array of strings shown as bullet points.
-  ──────────────────────────────────────────────────────── */
+  /* ── Experience ────────────────────────────────────────── */
   experience: [
     {
       role:       "Visiting Researcher",
@@ -171,13 +150,7 @@ window.CONTENT = {
     },
   ],
 
-  /* ── Publications ────────────────────────────────────────
-     type:   "journal" | "article" | "conference"
-     status: "published" | "under-review" | "in-prep"
-     highlight: true = left border accent (use for first-author / key papers)
-     url:    direct link to paper (or "" if none)
-     doi:    DOI string only, e.g. "10.1175/BAMS-D-25-0172.1" (or "")
-  ──────────────────────────────────────────────────────── */
+  /* ── Publications ──────────────────────────────────────── */
   publications: [
     {
       id:        "bams-sarci-2025",
@@ -260,26 +233,21 @@ window.CONTENT = {
     },
   ],
 
-  /* ── Talks ───────────────────────────────────────────────
-     type: "Poster" | "Talk" | "Op-Ed" | "Podcast" | "Volunteer" | "Leadership"
-     note: shown with a ★ prefix (e.g. travel grant info)
-  ──────────────────────────────────────────────────────── */
+  /* ── Talks ─────────────────────────────────────────────── */
   talks: [
     {
-      type:    "Poster",
-      title:   "Circulation Changes under Geoengineering and their Implications in Regional Precipitation and Temperature",
-      event:   "14th Annual GeoMIP Meeting 2024",
-      location:"Cornell University, Ithaca, USA",
-      date:    "July 10–12, 2024",
-      authors: "Arora, A., Upadhyaya, P., Mishra, S. K.",
-      note:    "Full travel & accommodation support awarded",
-      url:     "",
+      type:     "Poster",
+      title:    "Circulation Changes under Geoengineering and their Implications in Regional Precipitation and Temperature",
+      event:    "14th Annual GeoMIP Meeting 2024",
+      location: "Cornell University, Ithaca, USA",
+      date:     "July 10–12, 2024",
+      authors:  "Arora, A., Upadhyaya, P., Mishra, S. K.",
+      note:     "Full travel & accommodation support awarded",
+      url:      "",
     },
   ],
 
-  /* ── Awards ──────────────────────────────────────────────
-     Listed top-to-bottom on about.html and top-4 on index.
-  ──────────────────────────────────────────────────────── */
+  /* ── Awards ────────────────────────────────────────────── */
   awards: [
     {
       year:  "2025",
@@ -331,14 +299,13 @@ window.CONTENT = {
     },
   ],
 
-  /* ── Projects ────────────────────────────────────────────
-     category: used for filter buttons — must match exactly
-     thumbIcon: emoji shown as fallback thumbnail
-     thumbClass: CSS gradient class — options:
-       "thumb-climate" | "thumb-atmos" | "thumb-decision"
-       "thumb-comp"    | "thumb-ethno" | "thumb-default"
-     url: link to detail page, or "" to hide Read More button
-  ──────────────────────────────────────────────────────── */
+  /* ── Projects ──────────────────────────────────────────────────────────────
+     pdf:        filename inside your Documents/ folder (e.g. "aerosol.pdf")
+                 Leave "" if no PDF exists for that project.
+     url:        detail page HTML file — all generated below.
+     thumbClass: "thumb-climate" | "thumb-atmos" | "thumb-decision"
+                 "thumb-comp" | "thumb-ethno" | "thumb-fire" | "thumb-default"
+  ─────────────────────────────────────────────────────────────────────────── */
   projects: [
     {
       id:         "geomip",
@@ -349,7 +316,9 @@ window.CONTENT = {
       thumbClass: "thumb-climate",
       tags:       ["GeoMIP", "Geoengineering", "Monsoon"],
       desc:       "Analyzed GeoMIP G6 outputs (CESM-WACCM) to assess impacts of SAI on precipitation patterns, temperature gradients, and atmospheric circulation. Presented at GeoMIP 2024, Cornell University.",
+      pdf:        "",          // no PDF for this one — linked to poster
       url:        "project-geomip.html",
+      advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
       id:         "pollution",
@@ -360,7 +329,9 @@ window.CONTENT = {
       thumbClass: "thumb-atmos",
       tags:       ["Air Quality", "Satellite Data", "IGP"],
       desc:       "Multi-scale analysis of natural and anthropogenic sources of air pollution using reanalysis and satellite datasets. Co-authored policy commentary in The India Forum.",
+      pdf:        "",          // linked to India Forum article instead
       url:        "project-pollution.html",
+      advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
       id:         "policy",
@@ -371,7 +342,9 @@ window.CONTENT = {
       thumbClass: "thumb-decision",
       tags:       ["MDPs", "Climate Policy", "Optimization"],
       desc:       "Developed a novel framework for sequential decision-making using Markov Decision Processes (MDPs) to promote efficient climate adaptation strategies.",
+      pdf:        "",
       url:        "project-policy.html",
+      advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
       id:         "aerosols",
@@ -381,8 +354,10 @@ window.CONTENT = {
       thumbIcon:  "🔬",
       thumbClass: "thumb-climate",
       tags:       ["Aerosols", "GCMs", "Radiative Forcing"],
-      desc:       "Comprehensive report on aerosol dynamics and representation in GCMs, focusing on aerosol microphysics, cloud interactions, and radiative forcing. Supervised by Prof. Ramya Sunder Raman.",
+      desc:       "Comprehensive report on aerosol dynamics and representation in GCMs, focusing on aerosol microphysics, cloud interactions, and radiative forcing.",
+      pdf:        "Documents/aerosol.pdf",
       url:        "project-aerosols.html",
+      advisor:    "Prof. Ramya Sunder Raman, IISER Bhopal",
     },
     {
       id:         "monsoon-aerosols",
@@ -392,8 +367,23 @@ window.CONTENT = {
       thumbIcon:  "🌧️",
       thumbClass: "thumb-atmos",
       tags:       ["Aerosols", "Monsoon", "South Asia"],
-      desc:       "Co-authored review paper analyzing the influence of remote aerosol emissions on South Asian monsoon variability. Supervised by Dr. Shubhi Agrawal.",
+      desc:       "Co-authored review paper analyzing the influence of remote aerosol emissions on South Asian monsoon variability.",
+      pdf:        "Documents/monsoon.pdf",
       url:        "project-monsoon.html",
+      advisor:    "Dr. Shubhi Agrawal, IISER Bhopal",
+    },
+    {
+      id:         "forest-fire",
+      title:      "Forest Fire Dynamics & Atmospheric Interactions",
+      year:       2024,
+      category:   "Atmospheric Science",
+      thumbIcon:  "🔥",
+      thumbClass: "thumb-fire",
+      tags:       ["Wildfire", "Aerosols", "Smoke Plumes"],
+      desc:       "Analysis of forest fire dynamics and their interactions with the atmosphere, including smoke plume transport, aerosol emissions, and impacts on regional air quality and climate.",
+      pdf:        "Documents/forest-fire.pdf",
+      url:        "project-forestfire.html",
+      advisor:    "IISER Bhopal",
     },
     {
       id:         "ethnography",
@@ -403,8 +393,10 @@ window.CONTENT = {
       thumbIcon:  "🔭",
       thumbClass: "thumb-ethno",
       tags:       ["Ethnography", "Science Studies", "Lab Culture"],
-      desc:       "Comprehensive ethnographic study of two distinct laboratory settings over four months, examining socio-cultural dynamics, work practices, and interactions within scientific environments. Supervised by Dr. Renny Thomas.",
+      desc:       "Comprehensive ethnographic study of two distinct laboratory settings over four months, examining socio-cultural dynamics, work practices, and interactions within scientific environments.",
+      pdf:        "",
       url:        "project-ethnography.html",
+      advisor:    "Dr. Renny Thomas, IISER Bhopal",
     },
     {
       id:         "garuda-purana",
@@ -414,8 +406,10 @@ window.CONTENT = {
       thumbIcon:  "📖",
       thumbClass: "thumb-ethno",
       tags:       ["Ethnography", "Ritual Studies", "Death & Culture"],
-      desc:       "Field ethnography study to understand the socio-cultural importance of Garuda Purana, examining death rituals and beliefs about life after death across communities. Supervised by Dr. Renny Thomas.",
+      desc:       "Field ethnography study examining the socio-cultural importance of Garuda Purana and death rituals across communities.",
+      pdf:        "",
       url:        "project-garuda.html",
+      advisor:    "Dr. Renny Thomas, IISER Bhopal",
     },
     {
       id:         "penalty",
@@ -426,43 +420,36 @@ window.CONTENT = {
       thumbClass: "thumb-comp",
       tags:       ["Fluid Dynamics", "Differential Equations", "Sports Science"],
       desc:       "Solved six coupled differential equations with varying initial conditions to obtain optimal velocities and spin values for a perfect football penalty kick.",
+      pdf:        "Documents/penalty.pdf",
       url:        "project-penalty.html",
+      advisor:    "Independent project, IISER Bhopal",
     },
   ],
 
-  /* ── Research Interests (homepage cards) ─────────────────
-     icon: emoji
-  ──────────────────────────────────────────────────────── */
+  /* ── Research Interests ────────────────────────────────── */
   interests: [
-    { icon:"🌐", title:"Climate Model Evaluation",        desc:"Assessing GCM performance and credibility — especially CMIP5/CMIP6 ensembles — over South Asia and the Global South, where model uncertainty is greatest." },
-    { icon:"☁️", title:"Solar Geoengineering",            desc:"Investigating atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations." },
-    { icon:"🌧️", title:"Indian Summer Monsoon",           desc:"Understanding the dynamics, variability, and future projections of the Indian monsoon — and how geoengineering interventions alter its character." },
-    { icon:"🏭", title:"Aerosols & Air Quality",          desc:"Multi-scale analysis of natural and anthropogenic aerosol sources over the Indo-Gangetic Plain and their interactions with clouds and radiative forcing." },
-    { icon:"📜", title:"Climate Policy & Decision Theory",desc:"Principled frameworks for sequential climate decision-making using MDPs, and the ethics of geoengineering governance." },
-    { icon:"🧭", title:"Science, Society & Philosophy",   desc:"Exploring socio-political dimensions of climate action — from transboundary carbon migration to Kantian frameworks for public enlightenment." },
+    { icon:"🌐", title:"Climate Model Evaluation",         desc:"Assessing GCM performance and credibility — especially CMIP5/CMIP6 ensembles — over South Asia and the Global South, where model uncertainty is greatest." },
+    { icon:"☁️", title:"Solar Geoengineering",             desc:"Investigating atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations." },
+    { icon:"🌧️", title:"Indian Summer Monsoon",            desc:"Understanding the dynamics, variability, and future projections of the Indian monsoon — and how geoengineering interventions alter its character." },
+    { icon:"🏭", title:"Aerosols & Air Quality",           desc:"Multi-scale analysis of natural and anthropogenic aerosol sources over the Indo-Gangetic Plain and their interactions with clouds and radiative forcing." },
+    { icon:"📜", title:"Climate Policy & Decision Theory", desc:"Principled frameworks for sequential climate decision-making using MDPs, and the ethics of geoengineering governance." },
+    { icon:"🧭", title:"Science, Society & Philosophy",    desc:"Exploring socio-political dimensions of climate action — from transboundary carbon migration to Kantian frameworks for public enlightenment." },
   ],
 
 };
+
 /* ═══════════════════════════════════════════════════════════
-   END OF CONTENT.JS
-   Everything below this line is rendering logic.
-   You do not need to edit anything below.
+   RENDER ENGINE — do not edit below this line
 ═══════════════════════════════════════════════════════════ */
-
-/* ── Render helpers called by each page ──────────────────── */
-
 window.RENDER = {
 
-  /* typing animation */
   startTyping: function(id) {
-    var phrases = CONTENT.typingRoles;
-    var el = document.getElementById(id);
-    if (!el || !phrases.length) return;
-    var pi=0, ci=0, del=false;
+    var phrases=CONTENT.typingRoles, el=document.getElementById(id);
+    if(!el||!phrases.length) return;
+    var pi=0,ci=0,del=false;
     function tick(){
       var cur=phrases[pi];
-      if(del){ci--;el.textContent=cur.slice(0,ci);}
-      else{ci++;el.textContent=cur.slice(0,ci);}
+      if(del){ci--;el.textContent=cur.slice(0,ci);}else{ci++;el.textContent=cur.slice(0,ci);}
       var d=del?45:80;
       if(!del&&ci===cur.length){d=2200;del=true;}
       else if(del&&ci===0){del=false;pi=(pi+1)%phrases.length;d=400;}
@@ -471,7 +458,6 @@ window.RENDER = {
     setTimeout(tick,800);
   },
 
-  /* stats row */
   stats: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.stats.map(function(s){
@@ -479,7 +465,6 @@ window.RENDER = {
     }).join('');
   },
 
-  /* affiliations chips */
   affiliations: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.affiliations.map(function(a){
@@ -489,20 +474,17 @@ window.RENDER = {
     }).join('');
   },
 
-  /* about bio paragraphs */
   bio: function(id, full) {
     var el=document.getElementById(id); if(!el) return;
     var paras=full?CONTENT.bio.fullParagraphs:CONTENT.bio.paragraphs;
     el.innerHTML=paras.map(function(p){return '<p style="margin-bottom:16px;">'+p+'</p>';}).join('');
   },
 
-  /* skills pills */
   skills: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.skills.map(function(s){return '<span class="skill-pill">'+s+'</span>';}).join('');
   },
 
-  /* education timeline */
   education: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.education.map(function(e,i){
@@ -516,7 +498,6 @@ window.RENDER = {
     }).join('');
   },
 
-  /* experience timeline */
   experience: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.experience.map(function(e,i){
@@ -532,17 +513,20 @@ window.RENDER = {
     }).join('');
   },
 
-  /* featured publications (index — top 3 published/highlight) */
   featuredPubs: function(id) {
     var el=document.getElementById(id); if(!el) return;
     var featured=CONTENT.publications.filter(function(p){return p.status==='published'||p.highlight;}).slice(0,3);
-    el.innerHTML=featured.map(function(p){ return RENDER._pubCard(p); }).join('');
+    el.innerHTML=featured.map(function(p){return RENDER._pubCard(p);}).join('');
   },
 
-  /* all publications grouped */
   allPubs: function(listId, countId) {
     var list=document.getElementById(listId); if(!list) return;
-    var groups={published:{label:'Published',items:[]}, 'under-review':{label:'Under Review',items:[]}, 'in-prep':{label:'In Preparation',items:[]}, conference:{label:'Conference',items:[]}};
+    var groups={
+      published:  {label:'Published',items:[]},
+      'under-review':{label:'Under Review',items:[]},
+      'in-prep':  {label:'In Preparation',items:[]},
+      conference: {label:'Conference',items:[]}
+    };
     CONTENT.publications.forEach(function(p){
       var key=p.type==='conference'?'conference':p.status;
       if(groups[key]) groups[key].items.push(p);
@@ -551,17 +535,17 @@ window.RENDER = {
     Object.keys(groups).forEach(function(k){
       var g=groups[k]; if(!g.items.length) return;
       html+='<div class="section-divider"><h3>'+g.label+'</h3></div>';
-      html+='<div class="pub-list">'+g.items.map(function(p){ return RENDER._pubCard(p); }).join('')+'</div>';
+      html+='<div class="pub-list">'+g.items.map(function(p){return RENDER._pubCard(p);}).join('')+'</div>';
     });
     list.innerHTML=html;
-    if(countId){ var c=document.getElementById(countId); if(c) c.textContent=CONTENT.publications.length; }
+    if(countId){var c=document.getElementById(countId); if(c) c.textContent=CONTENT.publications.length;}
   },
 
   _pubCard: function(p) {
     var viewBtn=p.url?'<a href="'+p.url+'" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 14px;font-size:0.8rem;margin-top:8px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>':'';
-    var doiStr=p.doi?(' · <a href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener" style="color:var(--accent);">DOI</a>'):'';
+    var doiStr=p.doi?' · <a href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener" style="color:var(--accent);">DOI</a>':'';
     var dateStr=p.date?' · '+p.date:'';
-    return '<div class="pub-card'+(p.highlight?' highlight':'') +'" data-status="'+p.status+'" data-type="'+p.type+'" data-year="'+p.year+'">'
+    return '<div class="pub-card'+(p.highlight?' highlight':'')+'" data-status="'+p.status+'" data-type="'+p.type+'" data-year="'+p.year+'">'
       +'<div class="pub-card-body">'
       +'<div class="pub-authors">'+p.authors+'</div>'
       +'<div class="pub-title">'+p.title+'</div>'
@@ -573,7 +557,6 @@ window.RENDER = {
       +'</div>';
   },
 
-  /* awards grid */
   awards: function(id, limit) {
     var el=document.getElementById(id); if(!el) return;
     var list=limit?CONTENT.awards.slice(0,limit):CONTENT.awards;
@@ -587,7 +570,6 @@ window.RENDER = {
     }).join('');
   },
 
-  /* interests cards */
   interests: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.interests.map(function(i){
@@ -595,7 +577,6 @@ window.RENDER = {
     }).join('');
   },
 
-  /* projects grid */
   projects: function(id) {
     var el=document.getElementById(id); if(!el) return;
     el.innerHTML=CONTENT.projects.map(function(p){
@@ -617,10 +598,9 @@ window.RENDER = {
     }).join('');
   },
 
-  /* talks list */
   talks: function(id) {
     var el=document.getElementById(id); if(!el) return;
-    if(!CONTENT.talks.length){ el.innerHTML='<p style="color:var(--text-muted);padding:20px 0;">More talks coming soon.</p>'; return; }
+    if(!CONTENT.talks.length){el.innerHTML='<p style="color:var(--text-muted);padding:20px 0;">More talks coming soon.</p>';return;}
     el.innerHTML=CONTENT.talks.map(function(t){
       return '<div class="talk-card">'
         +'<div class="talk-type-badge">'+t.type+'</div>'
@@ -635,18 +615,15 @@ window.RENDER = {
     }).join('');
   },
 
-  /* social links in footer / about sidebar */
   socialLinks: function(id) {
     var el=document.getElementById(id); if(!el) return;
-    var s=CONTENT.social;
-    var html='';
+    var s=CONTENT.social, html='';
     if(s.linkedin)      html+='<a href="'+s.linkedin+'" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>';
     if(s.googleScholar) html+='<a href="'+s.googleScholar+'" target="_blank" rel="noopener" class="social-link" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>';
     if(s.orcid)         html+='<a href="'+s.orcid+'" target="_blank" rel="noopener" class="social-link" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>';
     if(s.bluesky)       html+='<a href="'+s.bluesky+'" target="_blank" rel="noopener" class="social-link" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>';
     if(s.github)        html+='<a href="'+s.github+'" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>';
-    html+='<a href="mailto:'+s.email+'" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>';
+    html+='<a href="mailto:'+CONTENT.email+'" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>';
     el.innerHTML=html;
   },
-
 };
