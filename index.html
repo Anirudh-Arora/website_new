@@ -7,7 +7,6 @@
   <title>Anirudh Arora — Climate Researcher</title>
   <meta name="description" content="Anirudh Arora is a climate researcher at KAUST specialising in atmospheric sciences, solar geoengineering, and the Indian summer monsoon." />
   <meta property="og:title" content="Anirudh Arora — Climate Researcher" />
-  <meta property="og:description" content="Climate researcher at KAUST studying solar geoengineering, monsoon dynamics, and global climate models." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,33 +15,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/main.css" />
   <style>
-    .hero .container { display:grid; grid-template-columns:1fr 400px; gap:60px; align-items:center; min-height:100vh; padding-top:68px; }
+    /* Hero layout */
+    .hero .container { display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;min-height:100vh;padding-top:68px; }
     .hero-portrait { position:relative; }
-    .hero-portrait-img { width:100%; aspect-ratio:3/4; object-fit:cover; object-position:top center; border-radius:24px; box-shadow:0 30px 80px rgba(0,0,0,0.18); }
-    .hero-portrait-ring { position:absolute; inset:-12px; border-radius:28px; border:2px dashed var(--sand); opacity:0.5; pointer-events:none; }
-    .hero-portrait-tag { position:absolute; bottom:28px; left:-24px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:14px 18px; box-shadow:0 12px 40px var(--shadow-md); min-width:180px; }
-    .hero-portrait-tag .label-top { font-family:var(--font-mono); font-size:0.7rem; color:var(--text-light); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
-    .hero-portrait-tag .label-main { font-size:0.92rem; font-weight:600; color:var(--text); }
-    .dot-pulse { display:inline-block; width:8px; height:8px; border-radius:50%; background:#22c55e; margin-right:6px; animation:pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4);} 50%{box-shadow:0 0 0 6px rgba(34,197,94,0);} }
-    @media(max-width:960px){ .hero .container{grid-template-columns:1fr; padding-top:100px; padding-bottom:60px; min-height:unset;} .hero-portrait{display:none;} }
-    .section-alt{background:var(--bg-alt);}
+    .hero-portrait-img { width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,0.18); }
+    .hero-portrait-ring { position:absolute;inset:-12px;border-radius:28px;border:2px dashed var(--sand);opacity:0.5;pointer-events:none; }
+    .hero-portrait-tag { position:absolute;bottom:28px;left:-24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:14px 18px;box-shadow:0 12px 40px var(--shadow-md);min-width:180px; }
+    .hero-portrait-tag .label-top { font-family:var(--font-mono);font-size:0.7rem;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px; }
+    .hero-portrait-tag .label-main { font-size:0.92rem;font-weight:600;color:var(--text); }
+    .dot-pulse { display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4);}50%{box-shadow:0 0 0 6px rgba(34,197,94,0);} }
+    @media(max-width:960px){ .hero .container{grid-template-columns:1fr;padding-top:100px;padding-bottom:60px;min-height:unset;} .hero-portrait{display:none;} }
+    /* Stats */
     .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:60px;}
     .stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px 20px;text-align:center;transition:all var(--transition);}
     .stat-card:hover{transform:translateY(-4px);border-color:var(--sand);box-shadow:0 12px 40px var(--shadow);}
     .stat-number{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:8px;}
     .stat-label{font-size:0.82rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;}
     @media(max-width:640px){.stats-row{grid-template-columns:1fr 1fr;}}
+    .section-alt{background:var(--bg-alt);}
   </style>
 </head>
 <body>
-<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<div class="scroll-progress" id="scroll-progress"></div>
 
 <!-- NAV -->
-<nav class="site-nav" role="navigation">
+<nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/anni.jpeg" alt="Anirudh Arora" class="nav-logo-img" />
+      <img src="images/anni.jpeg" alt="Anirudh Arora" class="nav-logo-img"/>
       <span class="nav-logo-text">Anirudh Arora</span>
     </a>
     <ul class="nav-links">
@@ -68,7 +69,6 @@
   <a href="talks.html">Talks</a>
   <a href="readings.html">Readings</a>
   <a href="life.html">Life</a>
-  <a href="contact.html">Contact</a>
   <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border);">
     <a href="Anirudh_CV.pdf" class="btn btn-primary" download><i class="fa-solid fa-download"></i> Download CV</a>
   </div>
@@ -86,21 +86,17 @@
       <p class="hero-role-line" aria-live="polite">
         <span id="typing-text"></span><span class="typing-cursor" aria-hidden="true"></span>
       </p>
-      <p class="hero-tagline">Studying how Earth's atmosphere responds to a changing climate — from Indian summer monsoon dynamics to stratospheric aerosol injection and the credibility of global climate models.</p>
+      <p class="hero-tagline" id="hero-tagline"></p>
       <div class="hero-cta">
         <a href="projects.html" class="btn btn-primary"><i class="fa-solid fa-flask"></i> View Research</a>
         <a href="publications.html" class="btn btn-outline"><i class="fa-solid fa-book-open"></i> Publications</a>
         <a href="Anirudh_CV.pdf" class="btn btn-sand" download><i class="fa-solid fa-download"></i> CV</a>
       </div>
-      <div class="hero-affiliations">
-        <div class="affiliation-chip"><span class="dot"></span>KAUST · CLIMATics Group</div>
-        <div class="affiliation-chip"><span class="dot sand"></span>IIT Delhi · DST CoE</div>
-        <div class="affiliation-chip"><span style="font-size:0.9rem;">🏆</span>Rhodes Scholar Finalist '26</div>
-      </div>
+      <div id="hero-affiliations" class="hero-affiliations"></div>
     </div>
     <div class="hero-portrait" aria-hidden="true">
       <div class="hero-portrait-ring"></div>
-      <img src="images/Myanni.png" alt="Anirudh Arora" class="hero-portrait-img" />
+      <img src="images/Myanni.png" alt="Anirudh Arora" class="hero-portrait-img"/>
       <div class="hero-portrait-tag">
         <div class="label-top">Current status</div>
         <div class="label-main"><span class="dot-pulse"></span>Researching @ KAUST</div>
@@ -110,17 +106,12 @@
 </section>
 
 <!-- ABOUT SNAPSHOT -->
-<section class="section-alt" id="about" style="padding:90px 0;">
+<section class="section-alt" style="padding:90px 0;">
   <div class="container">
-    <div class="stats-row" data-reveal-stagger>
-      <div class="stat-card"><div class="stat-number">5+</div><div class="stat-label">Publications &amp; Preprints</div></div>
-      <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Research Institutions</div></div>
-      <div class="stat-card"><div class="stat-number">9.15</div><div class="stat-label">GPA (out of 10)</div></div>
-      <div class="stat-card"><div class="stat-number">8+</div><div class="stat-label">Honours &amp; Awards</div></div>
-    </div>
+    <div id="stats-row" class="stats-row" data-reveal-stagger></div>
     <div class="about-grid">
       <div class="about-photo-wrap" data-reveal="left">
-        <img src="images/Myanni.png" alt="Anirudh Arora" class="about-photo" loading="lazy" />
+        <img src="images/Myanni.png" alt="Anirudh Arora" class="about-photo" loading="lazy"/>
         <div class="about-photo-badge"><div class="number">9.15</div><div class="label">GPA / 10</div></div>
       </div>
       <div class="about-text" data-reveal="right">
@@ -129,11 +120,10 @@
         <div class="divider"></div>
         <div class="about-transition-banner">
           <span style="font-size:1.2rem;">🌍</span>
-          <span><strong>IISER Bhopal → KAUST, Saudi Arabia</strong><br/>Final-year BS at IISER Bhopal · Now a visiting researcher at <strong>KAUST's CLIMATics Group</strong>, co-supervised by Prof. Ibrahim Hoteit for my master's thesis.</span>
+          <span id="about-transition-text"></span>
         </div>
-        <p>My work sits at the intersection of <strong>atmospheric dynamics</strong>, <strong>solar geoengineering</strong>, and <strong>climate model evaluation</strong>. I work with large CMIP5/CMIP6 multi-model ensembles, GeoMIP simulations, and reanalysis datasets to understand how the climate system responds — and how well our models capture it.</p>
-        <p style="margin-top:14px;">Beyond modelling, I think deeply about the <strong>socio-political dimensions</strong> of climate action: how scientific evidence translates into governance, and what philosophical frameworks can guide equitable climate policy.</p>
-        <div class="about-links" style="margin-top:32px;">
+        <div id="index-bio"></div>
+        <div style="margin-top:32px;">
           <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> Full Bio &amp; CV</a>
           <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
         </div>
@@ -143,26 +133,19 @@
 </section>
 
 <!-- RESEARCH INTERESTS -->
-<section id="research-interests" style="padding:90px 0;">
+<section style="padding:90px 0;">
   <div class="container">
     <div style="max-width:560px;margin-bottom:52px;" data-reveal>
       <span class="section-label">What I Study</span>
       <h2 class="section-title">Research Interests</h2>
       <div class="divider"></div>
     </div>
-    <div class="interests-grid" data-reveal-stagger>
-      <div class="interest-card"><span class="interest-icon">🌐</span><h3>Climate Model Evaluation</h3><p>Assessing GCM performance and credibility — especially CMIP5/CMIP6 ensembles — over South Asia and the Global South, where model uncertainty is greatest.</p></div>
-      <div class="interest-card"><span class="interest-icon">☁️</span><h3>Solar Geoengineering</h3><p>Investigating atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations.</p></div>
-      <div class="interest-card"><span class="interest-icon">🌧️</span><h3>Indian Summer Monsoon</h3><p>Understanding the dynamics, variability, and future projections of the Indian monsoon — and how geoengineering interventions alter its character.</p></div>
-      <div class="interest-card"><span class="interest-icon">🏭</span><h3>Aerosols &amp; Air Quality</h3><p>Multi-scale analysis of natural and anthropogenic aerosol sources over the Indo-Gangetic Plain and their interactions with clouds and radiative forcing.</p></div>
-      <div class="interest-card"><span class="interest-icon">📜</span><h3>Climate Policy &amp; Decision Theory</h3><p>Principled frameworks for sequential climate decision-making using MDPs, and the ethics of geoengineering governance.</p></div>
-      <div class="interest-card"><span class="interest-icon">🧭</span><h3>Science, Society &amp; Philosophy</h3><p>Exploring socio-political dimensions of climate action — from transboundary carbon migration to Kantian frameworks for public enlightenment.</p></div>
-    </div>
+    <div id="interests-grid" class="interests-grid" data-reveal-stagger></div>
   </div>
 </section>
 
 <!-- TIMELINE -->
-<section class="section-alt" id="timeline" style="padding:90px 0;">
+<section class="section-alt" style="padding:90px 0;">
   <div class="container">
     <div style="max-width:560px;margin-bottom:52px;" data-reveal>
       <span class="section-label">Background</span>
@@ -172,151 +155,59 @@
     <div id="timeline-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;">
       <div data-reveal="left">
         <h3 style="font-size:1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--sand);margin-bottom:36px;">Education</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-period">July 2025 – Present</div>
-            <div class="timeline-title">Visiting Researcher <span class="timeline-badge">Current</span></div>
-            <div class="timeline-org">KAUST — CLIMATics Group</div>
-            <div class="timeline-detail">Master's thesis under Prof. Ibrahim Hoteit. Quantifying internal variability in large ensemble climate simulations.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot sand"></div>
-            <div class="timeline-period">2021 – 2025</div>
-            <div class="timeline-title">BS Environmental Sciences</div>
-            <div class="timeline-org">IISER Bhopal · India</div>
-            <div class="timeline-detail">CPI: 9.15/10 · CNR Rao Prize for highest CPI (10/10) in first semester</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot sand"></div>
-            <div class="timeline-period">2006 – 2021</div>
-            <div class="timeline-title">High School STEM Diploma</div>
-            <div class="timeline-org">St. Paul H.S. School · Indore</div>
-            <div class="timeline-detail">10th (CBSE): 95.2% · 12th (CBSE): 95.6%</div>
-          </div>
-        </div>
+        <div class="timeline" id="index-edu"></div>
       </div>
       <div data-reveal="right">
         <h3 style="font-size:1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--sand);margin-bottom:36px;">Research Experience</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-period">May 2023 – Present</div>
-            <div class="timeline-title">Research Intern</div>
-            <div class="timeline-org">DST CoE Climate Info · IIT Delhi</div>
-            <div class="timeline-detail">Supervised by Prof. Saroj Mishra. CMIP6 analysis, GeoMIP simulations, air pollution over IGP, sequential decision-making for climate policy.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot sand"></div>
-            <div class="timeline-period">Aug 2023 – Apr 2024</div>
-            <div class="timeline-title">Research Intern — Ethnography</div>
-            <div class="timeline-org">IISER Bhopal</div>
-            <div class="timeline-detail">Supervised by Dr. Renny Thomas. Ethnographic study of laboratory environments and socio-cultural dynamics.</div>
-          </div>
-        </div>
+        <div class="timeline" id="index-exp"></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FEATURED PUBLICATIONS -->
-<section id="featured-pubs" style="padding:90px 0;">
+<section style="padding:90px 0;">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;" data-reveal>
       <div><span class="section-label">Research Output</span><h2 class="section-title">Featured Publications</h2><div class="divider"></div></div>
       <a href="publications.html" class="btn btn-outline">All Publications <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="pub-list">
-      <!-- BAMS -->
-      <div class="pub-card" data-status="published" data-type="journal" data-year="2025">
-        <div class="pub-card-body">
-          <div class="pub-authors">Bhuyan, D. P., Upadhyaya, P., …, <strong>Arora, A.</strong>, … &amp; Mishra, S. K.</div>
-          <div class="pub-title">Advancing climate services in South Asia: The SARCI Framework for actionable information, capability, and capacity</div>
-          <div class="pub-venue">Bulletin of the American Meteorological Society · DOI: 10.1175/BAMS-D-25-0172.1</div>
-          <div class="pub-tags"><span class="badge-status published">Published</span><span class="badge-tag">Climate Services</span><span class="badge-tag">South Asia</span></div>
-        </div>
-        <div class="pub-card-meta">
-          <div class="pub-year">2025</div>
-          <a href="https://doi.org/10.1175/BAMS-D-25-0172.1" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 14px;font-size:0.8rem;margin-top:8px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>
-        </div>
-      </div>
-      <!-- India Forum -->
-      <div class="pub-card" data-status="published" data-type="article" data-year="2025">
-        <div class="pub-card-body">
-          <div class="pub-authors">Mishra, S. K., Upadhyaya P., <strong>Arora, A.</strong>, Vinod A.J., Jayan N., Dwivedi A.</div>
-          <div class="pub-title">To Solve North India's Air Crisis, Look Beyond Stubble and Fireworks</div>
-          <div class="pub-venue">The India Forum · Oct 22, 2025</div>
-          <div class="pub-tags"><span class="badge-status published">Published</span><span class="badge-tag">Air Pollution</span><span class="badge-tag">Policy</span></div>
-        </div>
-        <div class="pub-card-meta">
-          <div class="pub-year">2025</div>
-          <a href="https://www.theindiaforum.in/environment/solve-north-indias-air-crisis-look-beyond-stubble-and-fireworks-0" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 14px;font-size:0.8rem;margin-top:8px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>
-        </div>
-      </div>
-      <!-- npj under review -->
-      <div class="pub-card highlight" data-status="under-review" data-type="journal" data-year="2026">
-        <div class="pub-card-body">
-          <div class="pub-authors"><strong>Arora, A.</strong></div>
-          <div class="pub-title">Public enlightenment and climate action: rethinking Kantian principles for a sustainable future</div>
-          <div class="pub-venue">npj Climate Action (submitted)</div>
-          <div class="pub-tags"><span class="badge-status under-review">Under Review</span><span class="badge-tag">Climate Ethics</span><span class="badge-tag">Philosophy</span></div>
-        </div>
-        <div class="pub-card-meta"><div class="pub-year">2026</div></div>
-      </div>
-    </div>
+    <div class="pub-list" id="featured-pubs"></div>
   </div>
 </section>
 
 <!-- AWARDS -->
-<section class="section-alt" id="awards" style="padding:90px 0;">
+<section class="section-alt" style="padding:90px 0;">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;" data-reveal>
       <div><span class="section-label">Recognition</span><h2 class="section-title">Honours &amp; Awards</h2><div class="divider"></div></div>
       <a href="about.html#awards" class="btn btn-outline">All Awards <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="awards-grid" data-reveal-stagger>
-      <div class="award-card"><div class="award-year">2025</div><div><div class="award-title">Rhodes Scholarship — India Finalist</div><div class="award-org">University of Oxford · Rhodes Trust</div><div class="award-desc">Among the top 13 students out of 1,000 applicants for the Rhodes Scholarship India.</div></div></div>
-      <div class="award-card"><div class="award-year">2025</div><div><div class="award-title">Visiting Student Research Program</div><div class="award-org">KAUST, Saudi Arabia</div><div class="award-desc">Full scholarship to conduct master's thesis research at KAUST.</div></div></div>
-      <div class="award-card"><div class="award-year">2025</div><div><div class="award-title">MPI-M 1-Year Research Funding (Declined)</div><div class="award-org">Max Planck Institute for Meteorology</div><div class="award-desc">Full funding offered under IISER-MPI collaboration. Declined in favour of KAUST.</div></div></div>
-      <div class="award-card"><div class="award-year">2024</div><div><div class="award-title">Full Travel Support — GeoMIP Meeting</div><div class="award-org">Cornell University, Ithaca, USA</div><div class="award-desc">Full travel and accommodation support for the 14th Annual GeoMIP Meeting.</div></div></div>
-    </div>
+    <div class="awards-grid" id="index-awards" data-reveal-stagger></div>
   </div>
 </section>
 
-<!-- FOOTER / CONTACT -->
-<footer class="site-footer" id="contact">
+<!-- FOOTER -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-name">Anirudh Arora</div>
-        <p>Climate researcher at KAUST studying atmospheric dynamics, solar geoengineering, and monsoon variability. Open to collaborations and conversations.</p>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-          <a href="mailto:anirudh21@iiserb.ac.in" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-        </div>
+        <p>Climate researcher at KAUST studying atmospheric dynamics, solar geoengineering, and monsoon variability.</p>
+        <div id="footer-social" class="footer-social"></div>
       </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About &amp; CV</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="readings.html">Readings</a></li>
-          <li><a href="life.html">Life Outside Lab</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
-          <li><a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
-          <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
-          <li><a href="contact.html">Contact Form</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About &amp; CV</a></li>
+        <li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li>
+        <li><a href="life.html">Life Outside Lab</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Get in Touch</h4><ul>
+        <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
+        <li><a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 Anirudh Arora · Climate Researcher</span>
@@ -325,15 +216,59 @@
   </div>
 </footer>
 
+<script src="js/content.js"></script>
 <script src="js/main.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    startTyping('typing-text', ["Climate Researcher","Atmospheric Scientist","MS Student @ KAUST","Environmental Scientist"]);
-    // responsive timeline
-    var g = document.getElementById('timeline-grid');
-    function ck(){ if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
-    ck(); window.addEventListener('resize', ck);
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  /* Typing */
+  RENDER.startTyping('typing-text');
+
+  /* Tagline */
+  var tl = document.getElementById('hero-tagline');
+  if (tl) tl.textContent = CONTENT.tagline;
+
+  /* Affiliations */
+  RENDER.affiliations('hero-affiliations');
+
+  /* Stats */
+  RENDER.stats('stats-row');
+
+  /* About transition banner */
+  var tb = document.getElementById('about-transition-text');
+  if (tb) tb.innerHTML = CONTENT.bio.transition;
+
+  /* Bio (short) */
+  RENDER.bio('index-bio', false);
+
+  /* Interests */
+  RENDER.interests('interests-grid');
+
+  /* Timeline */
+  RENDER.education('index-edu');
+  RENDER.experience('index-exp');
+
+  /* Featured pubs */
+  RENDER.featuredPubs('featured-pubs');
+
+  /* Awards (top 4) */
+  RENDER.awards('index-awards', 4);
+
+  /* Social */
+  RENDER.socialLinks('footer-social');
+
+  /* Responsive timeline */
+  var g = document.getElementById('timeline-grid');
+  function ck(){ if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
+  ck(); window.addEventListener('resize', ck);
+
+  /* Re-observe dynamic content */
+  if (window._revealObs) {
+    ['stats-row','interests-grid','featured-pubs','index-awards'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) el.querySelectorAll(':scope > *').forEach(function(c){ _revealObs.observe(c); });
+    });
+  }
+});
 </script>
 </body>
 </html>
