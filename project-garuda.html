@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/website_new/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethnography of the Garuda Purana — Anirudh Arora</title>
+  <meta name="description" content="An ethnographic exploration of death rituals and afterlife beliefs in the Garuda Purana. Field study conducted at IISER Bhopal under Dr. Renny Thomas." />
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .proj-hero {
+      padding: 130px 0 60px;
+      background: linear-gradient(135deg, #5C3A1B 0%, #C8A96E 100%);
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .proj-hero-bg-icon {
+      position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
+      font-size: 22rem; opacity: 0.08; pointer-events: none; line-height: 1; user-select: none;
+    }
+    .proj-hero .container { position: relative; z-index: 1; }
+    .breadcrumb { display:flex;align-items:center;gap:8px;margin-bottom:20px; }
+    .breadcrumb a { font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);text-decoration:none;transition:color var(--transition); }
+    .breadcrumb a:hover { color:#fff; }
+    .breadcrumb span { color:rgba(255,255,255,0.45);font-size:0.78rem; }
+    .hero-category-pill { display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);color:#fff;border-radius:99px;font-family:var(--font-mono);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px;border:1px solid rgba(255,255,255,0.2); }
+    .hero-title { font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:700;color:#fff;line-height:1.2;max-width:760px;margin-bottom:16px; }
+    .hero-subtitle { font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:24px; }
+    .hero-meta-row { display:flex;flex-wrap:wrap;gap:20px; }
+    .hero-meta-item { display:flex;align-items:center;gap:8px;font-size:0.85rem;color:rgba(255,255,255,0.8); }
+    .hero-meta-item i { color:rgba(255,255,255,0.6);width:14px; }
+    .article-grid { display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:start;padding:64px 0; }
+    @media(max-width:900px){ .article-grid{grid-template-columns:1fr;} .article-sidebar{position:static!important;} }
+    .article-body { font-size:1.02rem;line-height:1.88;color:var(--text-muted); }
+    .article-body p { margin-bottom:1.4em; }
+    .article-body h2 { font-family:var(--font-display);font-size:1.55rem;color:var(--text);margin:2.8em 0 0.7em;padding-bottom:12px;border-bottom:2px solid var(--border); }
+    .article-body h3 { font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--text);margin:2em 0 0.6em; }
+    .article-body h4 { font-family:var(--font-mono);font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--sand);margin:1.8em 0 0.5em; }
+    .article-body blockquote { border-left:3px solid var(--sand);padding:18px 24px;margin:2em 0;background:var(--bg-alt);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-family:var(--font-display);font-style:italic;font-size:1rem;color:var(--text);line-height:1.75; }
+    .abstract-box { background:var(--bg-card);border:1px solid var(--border);border-left:4px solid var(--sand);border-radius:var(--radius-md);padding:28px 32px;margin-bottom:40px; }
+    .abstract-box .label { font-family:var(--font-mono);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--sand);margin-bottom:10px; }
+    .abstract-box p { font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin:0; }
+    .author-meta { display:flex;align-items:center;gap:14px;padding:20px 0 32px;border-bottom:1px solid var(--border);margin-bottom:40px; }
+    .author-meta img { width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--border); }
+    .author-meta .name { font-weight:600;color:var(--text);font-size:0.92rem; }
+    .author-meta .info { font-size:0.82rem;color:var(--text-light); }
+    .article-body sup { color:var(--accent);font-size:0.72rem; }
+    .footnotes { margin-top:48px;padding-top:28px;border-top:2px solid var(--border); }
+    .footnotes h4 { font-family:var(--font-mono);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--sand);margin-bottom:16px; }
+    .footnotes ol { padding-left:20px; }
+    .footnotes li { font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;line-height:1.6; }
+    .ack-box { background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px 28px;margin-top:40px; }
+    .ack-box .label { font-family:var(--font-mono);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-light);margin-bottom:10px; }
+    .ack-box p { font-size:0.88rem;color:var(--text-muted);line-height:1.75;margin:0; }
+    .article-sidebar { position:sticky;top:90px; }
+    .sidebar-card { background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px;margin-bottom:20px; }
+    .sidebar-card h4 { font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sand);margin-bottom:16px; }
+    .sidebar-info-row { display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:0.87rem; }
+    .sidebar-info-row:last-child { border-bottom:none;padding-bottom:0; }
+    .sidebar-info-row i { color:var(--accent);width:16px;flex-shrink:0;margin-top:3px; }
+    .sidebar-info-row .label { color:var(--text-light);font-size:0.76rem;font-family:var(--font-mono); }
+    .sidebar-info-row .val   { color:var(--text);font-weight:500;margin-top:2px; }
+    .toc-link { display:block;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.87rem;color:var(--text-muted);text-decoration:none;transition:color var(--transition); }
+    .toc-link:last-child { border-bottom:none; }
+    .toc-link:hover { color:var(--accent); }
+    .toc-link.sub { padding-left:14px;font-size:0.82rem;color:var(--text-light); }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img"/><span class="nav-logo-text">Anirudh Arora</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li class="active"><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li>
+      <li><a href="readings.html">Readings</a></li><li><a href="life.html">Life</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="projects.html" class="active">Projects</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Talks</a>
+  <a href="readings.html">Readings</a><a href="life.html">Life</a>
+</div>
+
+<div class="proj-hero">
+  <div class="proj-hero-bg-icon" aria-hidden="true">📖</div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="projects.html">← Projects</a>
+      <span>/ Ethnography</span>
+    </div>
+    <div class="hero-category-pill">Ethnography · Field Study</div>
+    <h1 class="hero-title">Navigating the Sacred Journey: Exploring the Significance of the Garuda Purana in Hindu Religious Practices and Beliefs</h1>
+    <p class="hero-subtitle">By Anirudh Arora</p>
+    <div class="hero-meta-row">
+      <div class="hero-meta-item"><i class="fa-solid fa-calendar"></i> 2023</div>
+      <div class="hero-meta-item"><i class="fa-solid fa-user-tie"></i> Supervised by Dr. Renny Thomas</div>
+      <div class="hero-meta-item"><i class="fa-solid fa-location-dot"></i> IISER Bhopal</div>
+      <div class="hero-meta-item"><i class="fa-solid fa-users"></i> 7 interviews · 2 households</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="article-grid">
+      <div>
+        <div class="author-meta" data-reveal>
+          <img src="images/anni.jpeg" alt="Anirudh Arora" />
+          <div>
+            <div class="name">Anirudh Arora</div>
+            <div class="info">BS Environmental Sciences · IISER Bhopal · Course: Anthropology of Magic, Science and Religion</div>
+          </div>
+          <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="badge-tag">Ethnography</span>
+            <span class="badge-tag">Ritual Studies</span>
+            <span class="badge-tag">Death & Culture</span>
+          </div>
+        </div>
+
+        <div class="abstract-box" data-reveal>
+          <div class="label">Abstract</div>
+          <p>This essay explores the significance of the Garuda Purana within Hindu religious tradition, examining its influence on religious practices, beliefs, and cultural dynamics. Drawing upon ethnographic engagement, fieldwork observations, and theoretical analysis, the author investigates the multifaceted dimensions of the Garuda Purana's teachings and their implications for contemporary society. Through ethnographic inquiry, participants revealed diverse interpretations of the Garuda Purana, ranging from ritualistic adherence to scientific validation, highlighting the complex interplay between tradition and modernity. Furthermore, the essay elucidates the role of the Garuda Purana as a repository of moral teachings, spiritual guidance, and cultural identity, emphasizing its enduring relevance in navigating life's existential questions and fostering communal healing in times of loss.</p>
+        </div>
+
+        <div class="article-body" data-reveal>
+
+          <h2 id="introduction">Introduction</h2>
+          <p>The Garuda Purana<sup>1</sup>, an ancient Hindu religious text, stands as a profound repository of wisdom, encompassing narratives, rituals, and teachings that traverse the intricate realms of death and the afterlife. It is one of the eighteen Mahapuranas in Hinduism. Rooted in Hindu cosmology, this sacred scripture has long guided adherents through the complex rituals associated with death, offering a pathway to transcendence and spiritual liberation. It was written in the form of a conversation between Lord Vishnu and Garuda, his vehicle and the King of Birds, primarily emphasizing the meaning of human life, also containing details of life after death, funeral rites, and rebirth.</p>
+          <p>In the vast spectrum of Hindu spirituality, death is not merely an end but a transition, and the Garuda Purana serves as a guide through this profound journey. The rituals delineated in it are more than ceremonial routines; they embody a cultural and spiritual link that weaves together the threads of tradition, community, and individual belief. Its influence extends beyond the realm of religious rituals, permeating the fabric of daily life, moral conduct, and communal identity.</p>
+          <p>This essay endeavours to delve into the complexity of the Garuda Purana, focusing on the ethnographic exploration of death rituals and afterlife beliefs embedded within its verses. Through this essay, I endeavour to unravel the layers of symbolism, community dynamics, and individual interpretations that converge in the Garuda Purana's verses, providing nuanced insights that contribute to the ever-evolving discourse on the anthropology of magic, science, and religion.</p>
+
+          <h2 id="methodology">Methodology</h2>
+          <p>A comprehensive ethnographic approach was employed to undertake this exploration. The methodological design was crafted to include participant observation, in-depth interviews, and ethnographic engagement that aimed to transcend mere documentation, delving into the lived experiences and interpretations of individuals immersed in the rituals guided by this ancient Hindu text.</p>
+
+          <h4>Participant Observation</h4>
+          <p>This was the foundational element of the research. By embedding myself within the community practicing the reciting of Garuda Purana after death, I sought to go beyond the surface of the rituals. Over the course of this study, I actively participated in and observed death rituals in two households, thereby gaining insights into the intricate details of the Garuda Purana's role in practice.</p>
+
+          <h4>In-Depth Interviews</h4>
+          <p>Complementing participant observation, seven in-depth interviews were conducted with a diverse array of individuals within the community. Key informants included the pandits who recite the Garuda Purana, community elders, and family members of the recently deceased. These interviews aimed to understand personal interpretations, beliefs, and the cultural nuances that underpin their relationship with the text.</p>
+
+          <h4>Ethnographic Engagement</h4>
+          <p>Informal conversations, participatory activities, and casual observations enriched the study, offering a holistic view of the community's daily life in times of death and the pervasive influence of the Garuda Purana. This approach facilitated a more comprehensive understanding of how the religious text permeates various facets of individuals' lives — shaping not only ritualistic moments but also ethical, moral, and social norms within the community.</p>
+
+          <h4>Challenges and Limitations</h4>
+          <p>The sensitive nature of death demanded a delicate approach to gain community trust and ensure ethical research practices. It took considerable time to make people comfortable sharing their personal experiences, which limited the depth of immersion in some communities, potentially impacting the breadth of experiences captured.</p>
+
+          <h4>Ethical Considerations</h4>
+          <p>Ethical considerations were paramount throughout. Informed consent was obtained from all participants, and confidentiality was assured. Respect for cultural norms and religious sensitivities guided the research process, and any potential harm to participants was rigorously minimised.</p>
+
+          <h2 id="framework">Theoretical Framework</h2>
+          <p>In navigating the complexities of the Garuda Purana and its influence on death rituals, this essay is anchored within a theoretical framework that draws upon anthropological concepts and perspectives. Methodological Luddism<sup>2</sup> was practiced while carrying out this study, which further enhanced my understanding of the interpretations of both sides.</p>
+
+          <h4>Symbolic Anthropology<sup>3</sup></h4>
+          <p>Building upon the foundations of symbolic anthropology, as advanced by Clifford Geertz and Victor Turner, this essay delves into the symbolic meanings embedded within the death rituals prescribed by the Garuda Purana. Recognizing that rituals are not mere performances but symbolic expressions laden with cultural significance, this framework encourages an exploration of the metaphorical dimensions, cultural symbols, and shared meanings that participants attribute to their actions.</p>
+
+          <h2 id="findings">Findings</h2>
+          <p>The ethnographic inquiry revealed that the Garuda Purana occupies a central role in navigating the rituals surrounding death within Hindu communities. A renowned Pandit explains the purpose of its recitation:</p>
+
+          <blockquote>"The rationale behind reciting the Garuda Purana for the family members lies in its transformative potential to instil moral and spiritual teachings that resonate with the universal themes of karma, liberation, and the cycle of rebirth. By engaging with the sacred text, family members are invited to reflect upon the impermanence of life, the consequences of one's actions, and the ultimate quest for spiritual liberation from the cycle of birth and death. The intention is not only to honour the memory of the departed but also to provide solace, guidance, and spiritual nourishment to the grieving family members."</blockquote>
+
+          <p>The recitation of the Garuda Purana serves as a vehicle for communal healing, fostering a collective journey towards understanding and acceptance in the face of loss and mortality. Participants emphasised the dynamic nature of interpretation, with beliefs ranging from ritualistic adherence to scientific validation. The timing of rituals, such as cremation and post-death recitation, underscored the intricate balance between religious tradition and pragmatic considerations within Hindu culture.</p>
+
+          <h2 id="conclusion">Conclusion</h2>
+          <p>In this essay, I embarked on a comprehensive exploration of the Garuda Purana, delving into its significance as a sacred text within Hinduism and its profound influence on religious practices, beliefs, and cultural dynamics. The Garuda Purana serves as more than just a religious text — it is a repository of moral teachings, spiritual guidance, and cultural identity.</p>
+          <p>The essay highlighted the ritualistic practices surrounding death and mourning, particularly the recitation of the Garuda Purana as a means of communal healing and spiritual solace. This essay contributes to a deeper understanding of the complex interplay between tradition, belief, and contemporary worldview. By exploring the Garuda Purana through an anthropological lens, it offers nuanced insights into the role of sacred texts in shaping individual and communal identity.</p>
+
+          <div class="footnotes">
+            <h4>References</h4>
+            <ol>
+              <li>Dutt, M. N. (2009). <em>The Garuda Purana.</em> Sri Satguru Publications.</li>
+              <li>Droogers, A., & Knibbe, K. (2011). Methodological Ludism and the academic study of religion. <em>Method & Theory in the Study of Religion</em>, 23(3), 283–303.</li>
+              <li>Hoskins, J. (2015). Symbolism in anthropology. <em>International Encyclopedia of the Social & Behavioral Sciences</em>, 860–865.</li>
+              <li>Peacock, J. L. (1981). Durkheim and the Social Anthropology of Culture. <em>Social Forces</em>, 59(4), 996–1008.</li>
+            </ol>
+          </div>
+
+          <div class="ack-box">
+            <div class="label">Acknowledgements</div>
+            <p>I would like to express my sincere gratitude to Dr. Renny Thomas, whose passion for anthropology ignited my interest in this field and motivated me to pursue this course. His guidance and encouragement have been invaluable throughout this research journey. I extend my heartfelt thanks to the community members who graciously welcomed me into their midst and generously shared their insights and experiences regarding the Garuda Purana.</p>
+          </div>
+
+        </div><!-- /article-body -->
+
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
+          <a href="projects.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> All Projects</a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>Essay Details</h4>
+          <div class="sidebar-info-row"><i class="fa-solid fa-tag"></i><div><div class="label">Category</div><div class="val">Ethnography</div></div></div>
+          <div class="sidebar-info-row"><i class="fa-solid fa-calendar"></i><div><div class="label">Year</div><div class="val">2023</div></div></div>
+          <div class="sidebar-info-row"><i class="fa-solid fa-user-tie"></i><div><div class="label">Supervisor</div><div class="val">Dr. Renny Thomas, IISER Bhopal</div></div></div>
+          <div class="sidebar-info-row"><i class="fa-solid fa-location-dot"></i><div><div class="label">Fieldwork</div><div class="val">Bhopal, India</div></div></div>
+          <div class="sidebar-info-row"><i class="fa-solid fa-users"></i><div><div class="label">Participants</div><div class="val">7 interviews · 2 households</div></div></div>
+          <div class="sidebar-info-row"><i class="fa-solid fa-book"></i><div><div class="label">Course</div><div class="val">Anthropology of Magic, Science & Religion</div></div></div>
+        </div>
+        <div class="sidebar-card">
+          <h4>Contents</h4>
+          <a href="#introduction" class="toc-link">Introduction</a>
+          <a href="#methodology" class="toc-link">Methodology</a>
+          <a href="#methodology" class="toc-link sub">↳ Participant Observation</a>
+          <a href="#methodology" class="toc-link sub">↳ In-Depth Interviews</a>
+          <a href="#methodology" class="toc-link sub">↳ Ethical Considerations</a>
+          <a href="#framework" class="toc-link">Theoretical Framework</a>
+          <a href="#findings" class="toc-link">Findings</a>
+          <a href="#conclusion" class="toc-link">Conclusion</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related Project</h4>
+          <a href="project-ethnography.html" style="display:flex;gap:12px;align-items:center;text-decoration:none;padding:8px 0;">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#5C3A1B,#C8A96E);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🔭</div>
+            <div>
+              <div style="font-size:0.85rem;font-weight:600;color:var(--text);line-height:1.3;">Ethnography of Laboratory Life at IISER Bhopal</div>
+              <div style="font-size:0.75rem;color:var(--text-light);margin-top:3px;">Ethnography · 2024</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Climate researcher at KAUST. Open to collaborations and conversations.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="mailto:anirudh21@iiserb.ac.in" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li>
+        <li><a href="life.html">Life Outside Lab</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
+        <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
