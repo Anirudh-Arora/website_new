@@ -1,171 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Reflection: The Metamorphosis | Anirudh Arora</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="../images/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/eecc9ab967.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="../css/animate.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/aos.css">
-    <link rel="stylesheet" href="../css/ionicons.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="../css/jquery.timepicker.css">
-    <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/icomoon.css">
-    <link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/body.css">
-  </head>
-  <body>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/website_new/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection: The Metamorphosis — Anirudh Arora</title>
+  <meta name="description" content="A reflection on Franz Kafka's The Metamorphosis — on usefulness, isolation, and quiet replacement." />
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
 
-    <div class="KW_progressContainer"><div class="KW_progressBar"></div></div>
-    <div id="particles-js"></div>
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 60px;
+      align-items: start;
+    }
 
-    <div class="page">
-		<nav id="colorlib-main-nav" role="navigation">
-            <!-- Mobile Nav -->
-            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-            <div class="js-fullheight colorlib-table">
-              <div class="img" style="background-image: url(../images/Myanni.png);"></div>
-              <div class="colorlib-table-cell js-fullheight">
-                <div class="row no-gutters">
-                  <div class="col-md-12 text-center nav3">
-                    <h1 class="namennav"><a href="../index.html" class="logo">Anirudh Arora</a></h1>
-                    <ul>
-                        <li><a href="../index.html"><span>Home</span></a></li>
-                        <li><a href="../about.html"><span>About</span></a></li>
-                        <li><a href="../projects.html"><span>Projects</span></a></li>
-                        <li class="active"><a href="../readings.html"><span>Readings</span></a></li>
-                        <li><a href="../contact.html"><span>Contact</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-		</nav>
-    
-		<div id="colorlib-page">
-			<header class="desktop-header">
-				<div class="container">
-					<div class="header-content">
-						<div class="logo-container">
-							<a class="colorlib-logo" href="../index.html">
-								<span class="logo-img" style="background-image: url(../images/anni.jpeg);"></span>
-								Anirudh Arora
-							</a>
-						</div>
-						<nav class="desktop-nav">
-							<ul>
-								<li><a href="../index.html">Home</a></li>
-								<li><a href="../about.html">About</a></li>
-								<li><a href="../projects.html">Projects</a></li>
-                                <li class="active"><a href="../readings.html">Readings</a></li>
-								<li><a href="../contact.html">Contact</a></li>
-							</ul>
-						</nav>
-						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle mobile-toggle"><i></i></a>
-					</div>
-				</div>
-			</header>
+    /* Article body */
+    .article-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .article-body p { margin-bottom: 1.5em; }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--text);
+      margin: 2.5em 0 0.8em;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--sand);
+      padding: 16px 24px;
+      margin: 2em 0;
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .article-body blockquote footer {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-style: normal;
+      font-family: var(--font-mono);
+      margin-top: 8px;
+      display: block;
+    }
 
-			<section class="ftco-section">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-md-10">
+    /* Sidebar */
+    .article-sidebar { position: sticky; top: 90px; }
 
-							<div class="project-article-header ftco-animate">
-								<h1 class="project-detail-title">Reflections on Usefulness, Isolation, and Quiet Replacement</h1>
-								<p class="author-info">A Reflection on Franz Kafka’s The Metamorphosis</p>
-							</div>
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #1B3A5C, #4A8BBD);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+    .book-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .book-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .book-author { font-size: 0.88rem; color: var(--text-muted); }
+    .book-genre {
+      display: inline-block;
+      padding: 3px 10px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+    .book-rating { color: var(--sand); font-size: 1rem; letter-spacing: 2px; margin-top: 8px; }
 
-							<div class="ftco-animate d-flex justify-content-center">
-   							    <img src="../images/book-metamorphosis.jpg" alt="The Metamorphosis by Franz Kafka" class="img-fluid mb-5">
-							</div>
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .meta-author-img {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+    .meta-name { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+    .meta-info { font-size: 0.82rem; color: var(--text-light); }
 
-							<div class="project-article-content ftco-animate">
-								<p>Franz Kafka’s The Metamorphosis is often introduced as an absurd story — a man waking up as an insect. But very quickly, the absurdity fades, and what remains feels disturbingly familiar.</p>
-                                <p>What struck me most was not Gregor Samsa’s transformation itself, but how little it actually changed anything fundamental. Even after waking up as a bug, Gregor’s first thoughts are not about fear, identity, or freedom, but about work — missing the train, disappointing his employer, and failing his family. His sense of self is so deeply tied to usefulness that even a complete physical transformation cannot interrupt it.</p>
-                                
-                                <p>Initially, I felt an overwhelming sadness for Gregor. He is isolated, misunderstood, and physically incapable of communicating his intentions. But as the story progressed, my sympathy became more complicated. The family’s response — especially their gradual emotional withdrawal — felt cruel at first, but eventually it felt painfully rational. They are not villains. They are exhausted people adapting to a new constraint.</p>
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+    }
+    .toc h4 {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 14px;
+    }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .toc li:last-child { border-bottom: none; }
+    .toc a { font-size: 0.88rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .toc a:hover { color: var(--accent); }
 
-                                <blockquote>
-                                    <p>What disturbed me most was the moment when the family realizes that they can, in fact, survive without Gregor... This calculation is devastating precisely because it is reasonable. From that point on, Gregor is no longer central to the household’s functioning. His presence becomes logistical rather than emotional, a problem to be managed rather than a life to be cared for.</p>
-                                </blockquote>
+    @media (max-width: 768px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
 
-                                <p>By the time Gregor dies, the family’s lack of mourning no longer feels shocking — it feels like the natural conclusion of a process that had already mentally removed him from their world. His death is not treated as a loss, but as a release. That, more than anything else, made the story feel strangely normal.</p>
-                                
-                                <p>Reading The Metamorphosis also forced me to reflect on how modern life quietly isolates people through routine and obligation. There were moments where Gregor’s isolation felt uncomfortably relatable — times when being busy with work creates emotional distance from family, not through conflict, but through absence. Kafka doesn’t dramatize this isolation; he normalizes it, which makes it harder to dismiss.</p>
-                                
-                                <p>One question that stayed with me after finishing the book was whether anything would have truly changed if Gregor had recovered. I don’t think it would have. He would have returned to the same routine, the same expectations, the same conditional value. The tragedy of the story is not the transformation itself, but the realization that no transformation was needed for Gregor to become expendable.</p>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/anni.jpeg" alt="" class="nav-logo-img" />
+      <span class="nav-logo-text">Anirudh Arora</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li class="active"><a href="readings.html">Readings</a></li>
+      <li><a href="life.html">Life</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Talks</a>
+  <a href="readings.html" class="active">Readings</a><a href="life.html">Life</a>
+</div>
 
-                                <p>The Metamorphosis doesn’t offer solutions or moral clarity. Instead, it sharpens awareness — of how systems quietly replace individuals, how usefulness can overshadow dignity, and how adaptation can look indistinguishable from indifference. It is an unsettling read, not because it is strange, but because it feels honest.</p>
-							</div>
-                            
-						
-                            
-                            <!-- About the Author Box -->
-							<!-- Separator Line -->
-							<hr class="article-separator">
+<!-- Breadcrumb hero -->
+<div class="page-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+      <a href="readings.html" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">← Readings</a>
+      <span style="color:var(--text-light);font-size:0.8rem;">/ Reflection</span>
+    </div>
+    <span class="section-label">Literary Reflection</span>
+    <h1 class="section-title" style="max-width:700px;">Reflections on Usefulness, Isolation, and Quiet Replacement</h1>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);margin-top:12px;">
+      A reflection on Franz Kafka's <em>The Metamorphosis</em>
+    </p>
+  </div>
+</div>
 
-							<!-- New About the Author Section -->
-							<div class="article-author-box">
-    							    <div class="author-image-container">
-       								<img src="../images/anni.jpeg" alt="Anirudh Arora">
-    						            </div>
-    						            <div class="author-info-container">
-        							<h4>Anirudh Arora</h4>
-      								<p>A final-year Environmental Science major at IISER Bhopal with a passion for understanding and communicating climate science. Currently a visiting researcher at the DST Centre of Excellence in Climate Modeling, IIT Delhi.</p>
-    							    </div>
-							</div>
+<section style="padding:70px 0;">
+  <div class="container">
 
-						</div>
-					</div>
-				</div>
-			</section>
-      
-			<footer id="contact-section" class="site-footer">
-                <div class="container">
-                    <div class="footer-content-centered">
-                        <h2 class="footer-heading">Contact Me</h2>
-                        <p class="footer-email">
-                            <a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a>
-                        </p>
-                        <div class="footer-social">
-                            <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" title="BlueSky"><i class="fa-brands fa-bluesky"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <p>© 2024 Anirudh Arora</p>
-                    </div>
-                </div>
-              </footer>
-		</div>
-	</div>
+    <!-- Author meta -->
+    <div class="article-meta" data-reveal>
+      <img src="images/anni.jpeg" alt="Anirudh Arora" class="meta-author-img" />
+      <div>
+        <div class="meta-name">Anirudh Arora</div>
+        <div class="meta-info">Climate Researcher · IISER Bhopal / KAUST</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;">
+        <span class="badge-tag">Fiction</span>
+        <span class="badge-tag">Franz Kafka</span>
+        <span class="badge-tag">Philosophy</span>
+      </div>
+    </div>
 
-    <!-- Scripts -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.easing.1.3.js"></script>
-    <script src="../js/jquery.waypoints.min.js"></script>
-    <script src="../js/jquery.stellar.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/jquery.magnific-popup.min.js"></script>
-    <script src="../js/aos.js"></script>
-    <script src="../js/jquery.animateNumber.min.js"></script>
-    <script src="../js/scrollax.min.js"></script>
-    <script src="../js/bootstrap-datepicker.js"></script>
-    <script src="../js/jquery.timepicker.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
-    <script src="../js/hero.js"></script>
-    <script src="../js/main.js"></script>
-  </body>
+    <div class="article-grid">
+
+      <!-- Main article -->
+      <div class="article-body" data-reveal>
+
+        <p>Franz Kafka's <em>The Metamorphosis</em> is often introduced as an absurd story — a man waking up as an insect. But very quickly, the absurdity fades, and what remains feels disturbingly familiar.</p>
+
+        <p>What struck me most was not Gregor Samsa's transformation itself, but how little it actually changed anything fundamental. Even after waking up as a bug, Gregor's first thoughts are not about fear, identity, or freedom, but about work — missing the train, disappointing his employer, and failing his family. His sense of self is so deeply tied to usefulness that even a complete physical transformation cannot interrupt it.</p>
+
+        <h2 id="section-sympathy">The Problem of Sympathy</h2>
+
+        <p>Initially, I felt an overwhelming sadness for Gregor. He is isolated, misunderstood, and physically incapable of communicating his intentions. But as the story progressed, my sympathy became more complicated. The family's response — especially their gradual emotional withdrawal — felt cruel at first, but eventually it felt painfully rational. They are not villains. They are exhausted people adapting to a new constraint.</p>
+
+        <blockquote>
+          What disturbed me most was the moment when the family realizes that they can, in fact, survive without Gregor. Not just survive — but perhaps live better. This calculation is devastating precisely because it is reasonable. From that point on, Gregor is no longer central to the household's functioning.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <p>The family's adaptation is a form of moral accounting that we rarely articulate but constantly perform. How much of our care for others is genuinely unconditional, and how much is contingent on what they contribute — financially, emotionally, practically?</p>
+
+        <h2 id="section-usefulness">On Usefulness and Identity</h2>
+
+        <p>The deeper reading is about the fragility of identity built on utility. Gregor's identity before the transformation was almost entirely defined by his role as a provider. He had no real inner life that we see — only obligations. The transformation does not create his isolation; it merely makes it visible. He was, in a sense, always a bug to the system that consumed his labour.</p>
+
+        <p>There is something here that resonates with how young academics and researchers experience their own worth. In competitive, output-driven environments, the tendency to tie one's value to productivity — papers published, grants secured, projects delivered — is almost universal. Gregor's story is a warning about what that looks like taken to its logical conclusion.</p>
+
+        <h2 id="section-ends">How the Story Ends</h2>
+
+        <p>Gregor dies, and the family experiences something close to relief. His death frees them. The final scene — the family taking a tram into the countryside, the parents noticing their daughter's youth and beauty — is quietly devastating. The world moves on. The grief is absent. Life optimises around the absence.</p>
+
+        <p>I don't think Kafka meant this as a cynical indictment of the family. I think he meant it as an honest portrayal of how systems — families, institutions, economies — adapt and continue. The tragedy is not that they are cruel. It is that they are ordinary.</p>
+
+        <blockquote>
+          Would anything have been different had Gregor stayed human? I don't think it would have. He would have returned to the same routine, the same expectations, the same conditional value. The tragedy of the story is not the transformation itself, but the realization that no transformation was needed for Gregor to become expendable.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-takeaway">What It Left Me With</h2>
+
+        <p><em>The Metamorphosis</em> doesn't offer solutions or moral clarity. Instead, it sharpens awareness — of how systems quietly replace individuals, how usefulness can overshadow dignity, and how adaptation can look indistinguishable from indifference.</p>
+
+        <p>It is an unsettling read, not because it is strange, but because it feels honest. And honesty, in Kafka's hands, is rarely comfortable.</p>
+
+        <!-- Back link -->
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
+          <a href="readings.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Back to Readings
+          </a>
+        </div>
+
+      </div><!-- /article-body -->
+
+      <!-- Sidebar -->
+      <div class="article-sidebar" data-reveal="right">
+
+        <!-- Book info card -->
+        <div class="book-card">
+          <div class="book-cover-placeholder">🪲</div>
+          <div class="book-meta-row">
+            <div class="book-title">The Metamorphosis</div>
+            <div class="book-author">Franz Kafka · 1915</div>
+            <span class="book-genre">Literary Fiction</span>
+          </div>
+          <div class="book-rating">★★★★★</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:12px;line-height:1.6;">A travelling salesman wakes one morning to find himself transformed into a monstrous insect. What follows is less about the surreal and more about the brutally ordinary.</p>
+        </div>
+
+        <!-- Table of contents -->
+        <div class="toc">
+          <h4>In this reflection</h4>
+          <ul>
+            <li><a href="#section-sympathy">The Problem of Sympathy</a></li>
+            <li><a href="#section-usefulness">On Usefulness and Identity</a></li>
+            <li><a href="#section-ends">How the Story Ends</a></li>
+            <li><a href="#section-takeaway">What It Left Me With</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Climate researcher at KAUST. Curious about most things.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="mailto:anirudh21@iiserb.ac.in" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="readings.html">Readings</a></li><li><a href="life.html">Life Outside Lab</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Anirudh Arora</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
