@@ -20,7 +20,7 @@ window.CONTENT = {
 
   /* ── Personal ──────────────────────────────────────────── */
   name:     "Anirudh Arora",
-  email:    "anirudh21@iiserb.ac.in",
+  email:    ["anirudh21","iiserb.ac.in"].join("@"),
   phone:    "+91-7987188136",
   location: "KAUST, Thuwal, Saudi Arabia",
 
