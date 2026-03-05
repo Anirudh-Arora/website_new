@@ -5,6 +5,13 @@
             scroll progress bar, pub/project filters
    ============================================================ */
 
+/* ── Ensure all content visible (override any reveal CSS) ── */
+(function() {
+  var style = document.createElement('style');
+  style.textContent = '[data-reveal],[data-reveal-stagger],[data-reveal="left"],[data-reveal="right"]{opacity:1!important;transform:none!important;transition:none!important;}';
+  document.head.appendChild(style);
+})();
+
 /* ── Dark / Light Mode ───────────────────────────────────── */
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon   = document.getElementById('theme-icon');
