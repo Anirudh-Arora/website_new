@@ -15,25 +15,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/main.css" />
   <style>
-    /* Hero layout */
-    .hero .container { display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;min-height:100vh;padding-top:68px; }
-    .hero-portrait { position:relative; }
-    .hero-portrait-img { width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,0.18); }
-    .hero-portrait-ring { position:absolute;inset:-12px;border-radius:28px;border:2px dashed var(--sand);opacity:0.5;pointer-events:none; }
-    .hero-portrait-tag { position:absolute;bottom:28px;left:-24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:14px 18px;box-shadow:0 12px 40px var(--shadow-md);min-width:180px; }
-    .hero-portrait-tag .label-top { font-family:var(--font-mono);font-size:0.7rem;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px; }
-    .hero-portrait-tag .label-main { font-size:0.92rem;font-weight:600;color:var(--text); }
-    .dot-pulse { display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;animation:pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4);}50%{box-shadow:0 0 0 6px rgba(34,197,94,0);} }
-    @media(max-width:960px){ .hero .container{grid-template-columns:1fr;padding-top:100px;padding-bottom:60px;min-height:unset;} .hero-portrait{display:none;} }
-    /* Stats */
-    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:60px;}
-    .stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px 20px;text-align:center;transition:all var(--transition);}
-    .stat-card:hover{transform:translateY(-4px);border-color:var(--sand);box-shadow:0 12px 40px var(--shadow);}
-    .stat-number{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:8px;}
-    .stat-label{font-size:0.82rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;}
-    @media(max-width:640px){.stats-row{grid-template-columns:1fr 1fr;}}
-    .section-alt{background:var(--bg-alt);}
+    /* ── Hero ── */
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 60px;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 68px;
+    }
+    .hero-portrait { position: relative; }
+    .hero-portrait-img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      object-position: top center; border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+    }
+    .hero-portrait-ring {
+      position: absolute; inset: -12px; border-radius: 28px;
+      border: 2px dashed var(--sand); opacity: 0.5; pointer-events: none;
+    }
+    .hero-portrait-tag {
+      position: absolute; bottom: 28px; left: -24px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 14px 18px;
+      box-shadow: 0 12px 40px var(--shadow-md); min-width: 180px;
+    }
+    .hero-portrait-tag .label-top {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text-light); letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 4px;
+    }
+    .hero-portrait-tag .label-main { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+    .dot-pulse {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: #22c55e; margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100%{ box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+      50%{ box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+    }
+    @media(max-width:960px){
+      .hero .container { grid-template-columns: 1fr; padding-top: 100px; padding-bottom: 60px; min-height: unset; }
+      .hero-portrait { display: none; }
+    }
+
+    /* ── About section — text only, no photo ── */
+    .about-text-only {
+      max-width: 800px;
+    }
+
+    /* ── Interests — 3-column ── */
+    .interests-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media(max-width:768px) { .interests-grid-3 { grid-template-columns: 1fr; } }
+
+    .section-alt { background: var(--bg-alt); }
   </style>
 </head>
 <body>
@@ -74,7 +114,9 @@
   </div>
 </div>
 
-<!-- HERO -->
+<!-- ════════════════════════════════
+     HERO
+════════════════════════════════ -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
@@ -94,6 +136,8 @@
       </div>
       <div id="hero-affiliations" class="hero-affiliations"></div>
     </div>
+
+    <!-- Single portrait — ONLY here, not duplicated below -->
     <div class="hero-portrait" aria-hidden="true">
       <div class="hero-portrait-ring"></div>
       <img src="images/Myanni.png" alt="Anirudh Arora" class="hero-portrait-img"/>
@@ -105,34 +149,31 @@
   </div>
 </section>
 
-<!-- ABOUT SNAPSHOT -->
+<!-- ════════════════════════════════
+     ABOUT SNAPSHOT — text only, no photo (photo already in hero)
+════════════════════════════════ -->
 <section class="section-alt" style="padding:90px 0;">
   <div class="container">
-    <div id="stats-row" class="stats-row" data-reveal-stagger></div>
-    <div class="about-grid">
-      <div class="about-photo-wrap" data-reveal="left">
-        <img src="images/Myanni.png" alt="Anirudh Arora" class="about-photo" loading="lazy"/>
-        <div class="about-photo-badge"><div class="number">9.15</div><div class="label">GPA / 10</div></div>
+    <div class="about-text-only" data-reveal>
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">Climate Scientist<br/><em style="font-weight:400;">in the making</em></h2>
+      <div class="divider"></div>
+      <div class="about-transition-banner" style="margin-bottom:24px;">
+        <span style="font-size:1.2rem;">🌍</span>
+        <span id="about-transition-text"></span>
       </div>
-      <div class="about-text" data-reveal="right">
-        <span class="section-label">About Me</span>
-        <h2 class="section-title">Climate Scientist<br/><em style="font-weight:400;">in the making</em></h2>
-        <div class="divider"></div>
-        <div class="about-transition-banner">
-          <span style="font-size:1.2rem;">🌍</span>
-          <span id="about-transition-text"></span>
-        </div>
-        <div id="index-bio"></div>
-        <div style="margin-top:32px;">
-          <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> Full Bio &amp; CV</a>
-          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
-        </div>
+      <div id="index-bio" style="font-size:1.02rem;line-height:1.8;color:var(--text-muted);"></div>
+      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="about.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> Full Bio &amp; CV</a>
+        <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH INTERESTS -->
+<!-- ════════════════════════════════
+     RESEARCH INTERESTS — 3 cards
+════════════════════════════════ -->
 <section style="padding:90px 0;">
   <div class="container">
     <div style="max-width:560px;margin-bottom:52px;" data-reveal>
@@ -140,11 +181,13 @@
       <h2 class="section-title">Research Interests</h2>
       <div class="divider"></div>
     </div>
-    <div id="interests-grid" class="interests-grid" data-reveal-stagger></div>
+    <div id="interests-grid" class="interests-grid-3" data-reveal-stagger></div>
   </div>
 </section>
 
-<!-- TIMELINE -->
+<!-- ════════════════════════════════
+     EDUCATION & EXPERIENCE TIMELINE
+════════════════════════════════ -->
 <section class="section-alt" style="padding:90px 0;">
   <div class="container">
     <div style="max-width:560px;margin-bottom:52px;" data-reveal>
@@ -165,25 +208,20 @@
   </div>
 </section>
 
-<!-- FEATURED PUBLICATIONS -->
+<!-- ════════════════════════════════
+     FEATURED PUBLICATIONS
+════════════════════════════════ -->
 <section style="padding:90px 0;">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;" data-reveal>
-      <div><span class="section-label">Research Output</span><h2 class="section-title">Featured Publications</h2><div class="divider"></div></div>
+      <div>
+        <span class="section-label">Research Output</span>
+        <h2 class="section-title">Featured Publications</h2>
+        <div class="divider"></div>
+      </div>
       <a href="publications.html" class="btn btn-outline">All Publications <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="pub-list" id="featured-pubs"></div>
-  </div>
-</section>
-
-<!-- AWARDS -->
-<section class="section-alt" style="padding:90px 0;">
-  <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;" data-reveal>
-      <div><span class="section-label">Recognition</span><h2 class="section-title">Honours &amp; Awards</h2><div class="divider"></div></div>
-      <a href="about.html#awards" class="btn btn-outline">All Awards <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="awards-grid" id="index-awards" data-reveal-stagger></div>
   </div>
 </section>
 
@@ -197,9 +235,12 @@
         <div id="footer-social" class="footer-social"></div>
       </div>
       <div class="footer-col"><h4>Navigate</h4><ul>
-        <li><a href="index.html">Home</a></li><li><a href="about.html">About &amp; CV</a></li>
-        <li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
-        <li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About &amp; CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="readings.html">Readings</a></li>
         <li><a href="life.html">Life Outside Lab</a></li>
       </ul></div>
       <div class="footer-col"><h4>Get in Touch</h4><ul>
@@ -211,7 +252,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 Anirudh Arora · Climate Researcher</span>
-      <span>Built with care · Hosted on GitHub Pages</span>
+      <span>Hosted on GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -220,54 +261,27 @@
 <script src="js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  /* Typing */
   RENDER.startTyping('typing-text');
 
-  /* Tagline */
   var tl = document.getElementById('hero-tagline');
   if (tl) tl.textContent = CONTENT.tagline;
 
-  /* Affiliations */
   RENDER.affiliations('hero-affiliations');
 
-  /* Stats */
-  RENDER.stats('stats-row');
-
-  /* About transition banner */
   var tb = document.getElementById('about-transition-text');
   if (tb) tb.innerHTML = CONTENT.bio.transition;
 
-  /* Bio (short) */
   RENDER.bio('index-bio', false);
-
-  /* Interests */
   RENDER.interests('interests-grid');
-
-  /* Timeline */
   RENDER.education('index-edu');
   RENDER.experience('index-exp');
-
-  /* Featured pubs */
   RENDER.featuredPubs('featured-pubs');
-
-  /* Awards (top 4) */
-  RENDER.awards('index-awards', 4);
-
-  /* Social */
   RENDER.socialLinks('footer-social');
 
   /* Responsive timeline */
   var g = document.getElementById('timeline-grid');
   function ck(){ if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
   ck(); window.addEventListener('resize', ck);
-
-  /* Re-observe dynamic content */
-  if (window._revealObs) {
-    ['stats-row','interests-grid','featured-pubs','index-awards'].forEach(function(id){
-      var el = document.getElementById(id);
-      if (el) el.querySelectorAll(':scope > *').forEach(function(c){ _revealObs.observe(c); });
-    });
-  }
 });
 </script>
 </body>
