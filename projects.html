@@ -21,6 +21,39 @@
     .thumb-ethno    { background: linear-gradient(135deg,#5C3A1B,#C8A96E); }
     .thumb-fire     { background: linear-gradient(135deg,#B71C1C,#FF7043); }
     .thumb-default  { background: linear-gradient(135deg,#37474F,#90A4AE); }
+    /* Thumbnail icon — centered and large */
+    .project-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      overflow: hidden;
+    }
+    .project-thumb-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.2rem;
+      opacity: 0.85;
+      z-index: 1;
+    }
+    .project-category-pill {
+      position: absolute;
+      top: 14px; left: 14px;
+      z-index: 2;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 99px;
+      padding: 5px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.6);
+    }
     /* Project count badge */
     .project-count {
       font-family: var(--font-mono); font-size: 0.78rem;
@@ -93,7 +126,7 @@
         <li><a href="life.html">Life Outside Lab</a></li>
       </ul></div>
       <div class="footer-col"><h4>Contact</h4><ul>
-        <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#3b5a5552494e5f53090a7b5252485e4959155a58155255"><span class="__cf_email__" data-cfemail="d4b5babda6a1b0bce6e594bdbda7b1a6b6fab5b7fabdba">[email&#160;protected]</span></a></li>
         <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
         <li><a href="contact.html">Contact Form</a></li>
       </ul></div>
@@ -102,7 +135,7 @@
   </div>
 </footer>
 
-<script src="js/content.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/content.js"></script>
 <script src="js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -140,16 +173,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var f = btn.dataset.filter;
       var count = 0;
-      allCards.forEach(function(card) {
-        var show = (f === 'All' || card.dataset.category === f);
-        card.style.display = show ? '' : 'none';
-        if (show) count++;
-      });
-      updateCount(count);
-    });
-  });
-
-});
-</script>
-</body>
-</html>
+      allCard
