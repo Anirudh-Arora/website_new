@@ -363,11 +363,10 @@ window.addEventListener('load', function() {
   var tb = document.getElementById('about-transition-text');
   if (tb) tb.innerHTML = CONTENT.bio.transition;
 
-  RENDER.bio('index-bio', false);
-  RENDER.interests('interests-grid');
-  RENDER.education('index-edu');
-  RENDER.experience('index-exp');
-  RENDER.featuredPubs('featured-pubs');
+  RENDER.bio('about-bio-full', true);
+  RENDER.education('about-edu');
+  RENDER.experience('about-exp');
+  RENDER.awards('about-awards');
   RENDER.socialLinks('footer-social');
 
   var g = document.getElementById('timeline-grid');
@@ -375,6 +374,3 @@ window.addEventListener('load', function() {
   ck(); window.addEventListener('resize', ck);
 });
 </script>
-
-  /* responsive grids */
-  var g = docu
