@@ -173,4 +173,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var f = btn.dataset.filter;
       var count = 0;
-      allCard
+      allCards.forEach(function(card) {
+        var match = (f === 'All') || (card.dataset.category === f);
+        card.style.display = match ? '' : 'none';
+        if (match) count++;
+      });
+      updateCount(count);
+    });
+  });
+
+});
+</script>
