@@ -321,6 +321,32 @@ window.CONTENT = {
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
+      id:         "gcm-credibility",
+      title:      "GCM Credibility over the Global South",
+      year:       2025,
+      category:   "Climate Modeling",
+      thumbIcon:  "📊",
+      thumbClass: "thumb-climate",
+      tags:       ["CMIP6", "Model Evaluation", "Global South"],
+      desc:       "Systematic evaluation of CMIP5/CMIP6 multi-model ensemble performance over the Global South. Finds that despite doubling the number of models over a decade, credibility metrics over South Asia and Africa remain poor — raising questions about where and how models are validated.",
+      pdf:        "",
+      url:        "project-detail.html",
+      advisor:    "Prof. Saroj Mishra, IIT Delhi",
+    },
+    {
+      id:         "large-ensemble",
+      title:      "Internal Variability in Large Ensemble Simulations",
+      year:       2025,
+      category:   "Climate Modeling",
+      thumbIcon:  "🌀",
+      thumbClass: "thumb-climate",
+      tags:       ["Large Ensembles", "Internal Variability", "KAUST"],
+      desc:       "Master's thesis research at KAUST's CLIMATics Group. Quantifying the role of internal climate variability versus forced response in regional climate projections using large ensemble simulations, with implications for uncertainty attribution in climate services.",
+      pdf:        "",
+      url:        "project-detail.html",
+      advisor:    "Prof. Ibrahim Hoteit, KAUST",
+    },
+    {
       id:         "pollution",
       title:      "Air Pollution Dynamics over the Indo-Gangetic Plain",
       year:       2024,
@@ -428,9 +454,36 @@ window.CONTENT = {
 
   /* ── Research Interests ────────────────────────────────── */
   interests: [
-    { icon:"🌐", title:"Climate Model Evaluation", desc:"Assessing GCM performance and credibility — especially CMIP5/CMIP6 ensembles — over South Asia and the Global South, where model uncertainty is greatest." },
-    { icon:"☁️", title:"Solar Geoengineering",     desc:"Investigating atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations, and their monsoon implications." },
-    { icon:"📜", title:"Climate Policy & Ethics",  desc:"Principled frameworks for sequential climate decision-making using MDPs, and Kantian ethics of geoengineering governance and public enlightenment." },
+    {
+      icon: "🌐",
+      title: "Climate Model Evaluation",
+      desc: "Assessing the performance and credibility of GCMs — especially CMIP5/CMIP6 multi-model ensembles — over South Asia and the Global South, where model uncertainty and observational gaps are greatest."
+    },
+    {
+      icon: "☁️",
+      title: "Solar Geoengineering",
+      desc: "Investigating the atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations, with a focus on monsoon implications and circulation changes."
+    },
+    {
+      icon: "🌧️",
+      title: "Indian Summer Monsoon",
+      desc: "Understanding the dynamics, multi-decadal variability, and future projections of the Indian monsoon — and how anthropogenic forcing and geoengineering interventions alter its character and predictability."
+    },
+    {
+      icon: "🏭",
+      title: "Atmospheric Aerosols & Air Quality",
+      desc: "Multi-scale analysis of natural and anthropogenic aerosol sources over the Indo-Gangetic Plain, their interactions with cloud microphysics, radiative forcing, and implications for regional air quality policy."
+    },
+    {
+      icon: "📜",
+      title: "Climate Policy & Decision Theory",
+      desc: "Developing principled frameworks for sequential climate decision-making using Markov Decision Processes (MDPs), and examining the ethical dimensions of geoengineering governance under uncertainty."
+    },
+    {
+      icon: "🧭",
+      title: "Science, Society & Philosophy",
+      desc: "Exploring the socio-political dimensions of climate action — from transboundary carbon migration to Kantian frameworks for public enlightenment, epistemic justice, and the moral philosophy of collective climate responsibility."
+    },
   ],
 
 };
