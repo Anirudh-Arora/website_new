@@ -106,31 +106,30 @@ function initPubFilter() {
 document.addEventListener('DOMContentLoaded', function() {
   initPubFilter();
 
-  /* Typing — uses CONTENT from content.js if available,
-     otherwise falls back to old SITE_DATA */
-  var phrases = null;
-  if (window.CONTENT && CONTENT.typingRoles) {
-    phrases = CONTENT.typingRoles;
-  } else if (window.SITE_DATA && SITE_DATA.typingRoles) {
-    phrases = SITE_DATA.typingRoles;
-  }
-
-  if (phrases) {
+  /* Typing animation — single authoritative instance.
+     RENDER.startTyping in content.js is intentionally NOT called
+     to avoid double-running the animation. */
+  (function() {
+    var phrases = (window.CONTENT && CONTENT.typingRoles) ? CONTENT.typingRoles
+                : (window.SITE_DATA && SITE_DATA.typingRoles) ? SITE_DATA.typingRoles
+                : null;
+    if (!phrases) return;
     var el = document.getElementById('typing-text');
-    if (el) {
-      var pi = 0, ci = 0, del = false;
-      function tick() {
-        var cur = phrases[pi];
-        if (del) { ci--; el.textContent = cur.slice(0, ci); }
-        else     { ci++; el.textContent = cur.slice(0, ci); }
-        var d = del ? 45 : 80;
-        if (!del && ci === cur.length)  { d = 2200; del = true; }
-        else if (del && ci === 0)       { del = false; pi = (pi + 1) % phrases.length; d = 400; }
-        setTimeout(tick, d);
-      }
-      setTimeout(tick, 700);
+    if (!el) return;
+    var pi = 0, ci = 0, del = false, running = false;
+    if (running) return;   // guard: never start twice
+    running = true;
+    function tick() {
+      var cur = phrases[pi];
+      if (del) { ci--; el.textContent = cur.slice(0, ci); }
+      else     { ci++; el.textContent = cur.slice(0, ci); }
+      var d = del ? 45 : 80;
+      if (!del && ci === cur.length)  { d = 2200; del = true; }
+      else if (del && ci === 0)       { del = false; pi = (pi + 1) % phrases.length; d = 400; }
+      setTimeout(tick, d);
     }
-  }
+    setTimeout(tick, 700);
+  })();
 
   /* Re-observe anything rendered dynamically after DOMContentLoaded */
   setTimeout(function() {
