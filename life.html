@@ -61,7 +61,24 @@
       display: block;
       transition: transform 0.5s ease;
     }
+    .photo-card.photo-focus-left img { object-position: 35% center; }
+    .photo-card.photo-contain img {
+      object-fit: contain;
+      background: #071D28;
+    }
     .photo-card:hover img { transform: scale(1.04); }
+    .photo-card.photo-contain:hover img { transform: none; }
+    .photo-caption {
+      position: absolute;
+      left: 12px; right: 12px; bottom: 12px;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      background: rgba(17,18,23,0.72);
+      color: #fff;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      backdrop-filter: blur(8px);
+    }
     /* Placeholder shown when image missing */
     .photo-placeholder {
       width: 100%; height: 100%;
@@ -292,7 +309,7 @@
 
       <!-- Photo: MUN executive board -->
       <div>
-        <div class="photo-card" data-photo="images/life/mun.jpg" data-alt="Executive Board at MUN">
+        <div class="photo-card photo-focus-left" data-photo="images/life/mun.jpg" data-alt="Executive Board at MUN" data-caption="Executive Board at Model United Nations">
           <div class="photo-placeholder">
             <div class="ph-icon">🎤</div>
             <div class="ph-label">MUN photograph coming soon</div>
@@ -313,7 +330,7 @@
 
       <!-- Pickleball photo -->
       <div>
-        <div class="photo-card" data-photo="images/life/pickleball.jpg" data-alt="Pickleball win">
+        <div class="photo-card" data-photo="images/life/pickleball.jpg" data-alt="Pickleball tournament podium" data-caption="Pickleball tournament night">
           <div class="photo-placeholder">
             <div class="ph-icon">🏓</div>
             <div class="ph-label">Sport photograph coming soon</div>
@@ -327,6 +344,7 @@
         <div class="life-card-body">
           <p>Sport is where I switch the analytical part of my brain off. It works about 60% of the time.</p>
           <p>I run regularly — partly for fitness, partly because it's the one hour of the day where nothing requires a citation. I also play <strong>Pickleball, Table Tennis, and Squash</strong>, all at a level best described as "competitive but humbling."</p>
+          <p>I also hold a <strong>PADI Open Water Diver</strong> certification. Scuba is a different kind of attention: slow, quiet, bodily, and very good at reminding you that the physical world is not an abstraction.</p>
           <p>There's something I find genuinely useful about sport: it gives you immediate, unambiguous feedback. You win or you don't. The ball was in or it wasn't. Research almost never works that way, so I appreciate the clarity.</p>
         </div>
         <div class="sport-chips">
@@ -334,6 +352,7 @@
           <span class="sport-chip"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Pickleball</span>
           <span class="sport-chip"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Table Tennis</span>
           <span class="sport-chip"><i class="fa-solid fa-circle"></i> Squash</span>
+          <span class="sport-chip"><i class="fa-solid fa-water"></i> PADI Open Water</span>
         </div>
       </div>
 
@@ -406,48 +425,42 @@
 
     <div class="photo-grid-3">
 
-      <!-- Slot 1: First day at KAUST -->
-      <div class="photo-card" data-photo="images/life/kaust-day1.jpg" data-alt="First day at KAUST">
+      <div class="photo-card" data-photo="images/life/kaust-day1.jpg" data-alt="Friends at KAUST by the waterfront" data-caption="KAUST / Jeddah evenings">
         <div class="photo-placeholder">
           <div class="ph-icon">🌊</div>
           <div class="ph-label">KAUST photograph coming soon</div>
         </div>
       </div>
 
-      <!-- Slot 2: KAUST friends -->
-      <div class="photo-card" data-photo="images/life/kaust-friends.jpg" data-alt="Friends at KAUST">
+      <div class="photo-card" data-photo="images/life/kaust-friends.jpg" data-alt="Dinner with friends at KAUST" data-caption="Dinner with KAUST friends">
         <div class="photo-placeholder">
           <div class="ph-icon">👥</div>
           <div class="ph-label">KAUST photograph coming soon</div>
         </div>
       </div>
 
-      <!-- Slot 3: IISER Bhopal friends -->
-      <div class="photo-card" data-photo="images/life/iiserb-friends.jpg" data-alt="IISER Bhopal friends">
+      <div class="photo-card" data-photo="images/life/iiserb-friends.jpg" data-alt="IISER Bhopal friends" data-caption="IISER Bhopal people">
         <div class="photo-placeholder">
           <div class="ph-icon">🎓</div>
           <div class="ph-label">IISER photograph coming soon</div>
         </div>
       </div>
 
-      <!-- Slot 4: DST CoE lab -->
-      <div class="photo-card" data-photo="images/life/dst-lab.jpg" data-alt="DST CoE Lab, IIT Delhi">
+      <div class="photo-card photo-focus-left" data-photo="images/life/mun.jpg" data-alt="Executive Board at Model United Nations" data-caption="Debate and committee rooms">
         <div class="photo-placeholder">
           <div class="ph-icon">🔬</div>
           <div class="ph-label">Lab photograph coming soon</div>
         </div>
       </div>
 
-      <!-- Slot 5: spare / your choice -->
-      <div class="photo-card" data-photo="images/life/extra1.jpg" data-alt="">
+      <div class="photo-card" data-photo="images/life/pickleball.jpg" data-alt="Pickleball tournament podium" data-caption="Sport and movement">
         <div class="photo-placeholder">
           <div class="ph-icon">📷</div>
           <div class="ph-label">Photo coming soon</div>
         </div>
       </div>
 
-      <!-- Slot 6: spare / your choice -->
-      <div class="photo-card" data-photo="images/life/extra2.jpg" data-alt="">
+      <div class="photo-card photo-contain" data-photo="images/life/scuba.jpg" data-alt="Scuba diving collage" data-caption="PADI Open Water Diver">
         <div class="photo-placeholder">
           <div class="ph-icon">📷</div>
           <div class="ph-label">Photo coming soon</div>
@@ -504,11 +517,18 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.photo-card[data-photo]').forEach(function(card) {
     var src = card.getAttribute('data-photo');
     var alt = card.getAttribute('data-alt') || '';
+    var caption = card.getAttribute('data-caption') || '';
     var img = new Image();
     img.onload = function() {
       img.alt = alt;
       card.innerHTML = '';
       card.appendChild(img);
+      if (caption) {
+        var cap = document.createElement('span');
+        cap.className = 'photo-caption';
+        cap.textContent = caption;
+        card.appendChild(cap);
+      }
     };
     img.src = src;
   });
