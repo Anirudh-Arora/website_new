@@ -20,18 +20,18 @@ window.CONTENT = {
 
   /* ── Personal ──────────────────────────────────────────── */
   name:     "Anirudh Arora",
-  email:    ["anirudh21","iiserb.ac.in"].join("@"),
+  email:    "anirudh.arora.research@gmail.com",
   phone:    "+91-7987188136",
-  location: "KAUST, Thuwal, Saudi Arabia",
+  location: "New Delhi, India",
 
   typingRoles: [
     "Climate Researcher",
-    "Atmospheric Scientist",
-    "MS Student @ KAUST",
+    "Researcher @ IIT Delhi",
+    "Incoming Research Associate @ MPI-M",
     "Environmental Scientist",
   ],
 
-  tagline: "Studying climate risk where uncertainty matters most: South Asian monsoon dynamics, aerosol and geoengineering impacts, and the credibility of global climate models over the Global South.",
+  tagline: "Studying tropical precipitation, Indian summer monsoon dynamics, kilometer-scale climate simulations, large ensembles, atmospheric composition, and model credibility over the Global South.",
 
   /* ── Social Links ──────────────────────────────────────── */
   social: {
@@ -52,30 +52,33 @@ window.CONTENT = {
 
   /* ── Hero Affiliations ─────────────────────────────────── */
   affiliations: [
-    { label: "KAUST · CLIMATics Group", dot: "blue", icon: "" },
-    { label: "IIT Delhi · DST CoE", dot: "sand", icon: "" },
+    { label: "IIT Delhi · DST CoE for Climate Information", dot: "blue", icon: "" },
+    { label: "MPI-M · Incoming Research Associate", dot: "sand", icon: "" },
+    { label: "KAUST · CLIMATics Group alumnus", dot: "none", icon: "" },
     { label: "Rhodes Scholarship India Finalist", dot: "none", icon: "" },
   ],
 
   /* ── Stats Row ─────────────────────────────────────────── */
   stats: [
     { number: "5+",   label: "Publications & Preprints" },
-    { number: "2",    label: "Research Institutions"    },
+    { number: "3",    label: "Research Institutions"    },
     { number: "9.15", label: "GPA (out of 10)"         },
     { number: "8+",   label: "Honours & Awards"         },
   ],
 
   /* ── Bio ───────────────────────────────────────────────── */
   bio: {
-    transition: "Final-year BS at IISER Bhopal · Now a visiting researcher at <strong>KAUST's CLIMATics Group</strong>, co-supervised by Prof. Ibrahim Hoteit for my master's thesis.",
+    transition: "BS-MS Environmental Science at IISER Bhopal · Currently at the <strong>DST CoE for Climate Information, IIT Delhi</strong> · Incoming <strong>Research Associate at MPI-M</strong> from July 2026.",
     paragraphs: [
-      "My work sits at the intersection of <strong>atmospheric dynamics</strong>, <strong>climate model evaluation</strong>, and <strong>solar geoengineering</strong>. I use CMIP5/CMIP6 ensembles, GeoMIP simulations, reanalysis products, and large climate datasets to ask where models are credible, where they fail, and what that means for decisions.",
-      "The scientific center of gravity is South Asia and the Global South: regions where monsoon risk, aerosol forcing, data gaps, and model uncertainty are not abstract technical issues but practical constraints on climate adaptation.",
+      "My work sits at the intersection of <strong>tropical precipitation</strong>, <strong>Indian summer monsoon dynamics</strong>, <strong>climate model evaluation</strong>, and <strong>climate model uncertainty</strong>. I use CMIP-class archives, kilometer-scale simulations, large ensembles, reanalysis products, and satellite retrievals to ask where models are credible, where they fail, and what that means for decisions.",
+      "The scientific center of gravity is South Asia and the Global South: regions where monsoon risk, atmospheric composition, aerosol forcing, data gaps, and model uncertainty are not abstract technical issues but practical constraints on climate adaptation.",
       "Alongside the modeling, I work on the <strong>ethics and governance of climate action</strong>: how evidence becomes policy, how uncertainty should be communicated, and how public reason can support more equitable climate decisions.",
     ],
     fullParagraphs: [
-      "I am a climate researcher interested in <strong>how atmospheric systems respond to natural variability, anthropogenic forcing, and proposed interventions</strong> — from the Indian summer monsoon to the regional consequences of stratospheric aerosol injection.",
-      "My work combines statistical analysis of CMIP5/CMIP6 multi-model ensembles, offline processing of large NetCDF datasets with Python (Xarray, NumPy, Matplotlib), and decision-theoretic approaches to climate policy. I have been fortunate to work with Prof. Saroj Mishra (IIT Delhi) and Prof. Ibrahim Hoteit (KAUST).",
+      "I am a climate researcher interested in <strong>how atmospheric systems respond to natural variability, anthropogenic forcing, and proposed interventions</strong> — from the Indian summer monsoon to kilometer-scale simulations and regional consequences of stratospheric aerosol injection.",
+      "I completed my BS-MS in Environmental Science at IISER Bhopal, with my master's thesis research carried out at KAUST's CLIMATics Group under Prof. Ibrahim Hoteit and co-supervision from Prof. Saroj K. Mishra at IIT Delhi. I am currently working again at the DST Centre of Excellence for Climate Information at IIT Delhi, and from July 2026 I will join the Max Planck Institute for Meteorology as a Research Associate.",
+      "My thesis, <em>Toward Reliable Tropical Precipitation Simulations by Assessing the Added Value of Large Ensembles and Kilometer-Scale Simulations</em>, evaluates Indian summer monsoon precipitation across CMIP-class archives, large ensembles, and kilometer-scale simulations. I work with IMD, GPCP, ERA5, CMIP6 multi-model means, IFS-FESOM nextGEMS, CESM2-LE, MPI-GE, and CESM2-PPE.",
+      "My work combines statistical analysis of CMIP5/CMIP6 multi-model ensembles, kilometer-scale Earth system simulations, ensemble convergence diagnostics such as effective ensemble size, satellite-based atmospheric composition retrievals, and decision-theoretic approaches to climate policy.",
       "A recurring question in my work is credibility: when a global climate model performs poorly over the Global South, what does that mean for the communities expected to use its projections? That question is scientific, political, and ethical at the same time.",
       "Beyond modelling, I am invested in <strong>science communication and climate governance</strong>. I have co-hosted a podcast on climate governance, authored commentary for The India Forum, and presented at the GeoMIP 2024 meeting at Cornell University. I was shortlisted as a <strong>Rhodes Scholarship India finalist</strong>.",
       "Outside research I lead <em>Prayaas</em>, a volunteer organisation working with underprivileged communities through education, and I was formerly president of IISER Bhopal's Debating Society.",
@@ -85,34 +88,18 @@ window.CONTENT = {
   /* ── Skills ────────────────────────────────────────────── */
   skills: [
     "Python", "Xarray", "NumPy", "Matplotlib", "NCL",
-    "MATLAB", "Mathematica", "CDO", "LaTeX", "SQL", "C", "HTML/CSS",
-    "CMIP6", "GeoMIP", "NetCDF",
+    "MATLAB", "Mathematica", "CDO", "NCO", "NetCDF", "Slurm", "Levante", "Shaheen III", "Bash", "Git",
+    "CMIP6", "GeoMIP", "Large Ensembles", "IFS-FESOM", "LaTeX", "HTML/CSS",
   ],
 
   /* ── Education ─────────────────────────────────────────── */
   education: [
     {
-      degree:      "Visiting Researcher",
-      institution: "King Abdullah University of Science and Technology (KAUST)",
-      location:    "Thuwal, Saudi Arabia",
-      period:      "July 2025 – Present",
-      detail:      "Master's thesis under Prof. Ibrahim Hoteit (CLIMATics Group). Quantifying internal variability in large ensemble climate simulations.",
-      badge:       "Current",
-    },
-    {
-      degree:      "BS Environmental Sciences",
+      degree:      "BS-MS Environmental Science",
       institution: "IISER Bhopal",
       location:    "Bhopal, India",
-      period:      "2021 – 2025",
-      detail:      "CPI: 9.15/10 · CNR Rao Prize for highest CPI (10/10) in first semester",
-      badge:       "",
-    },
-    {
-      degree:      "High School STEM Diploma",
-      institution: "St. Paul H.S. School",
-      location:    "Indore, India",
-      period:      "2006 – 2021",
-      detail:      "10th (CBSE): 95.2% · 12th (CBSE): 95.6%",
+      period:      "2021 – 2026",
+      detail:      "Bachelor and Master of Science in Environmental Science · CPI: 9.15/10 · Master's thesis research carried out at KAUST's CLIMATics Group.",
       badge:       "",
     },
   ],
@@ -120,29 +107,41 @@ window.CONTENT = {
   /* ── Experience ────────────────────────────────────────── */
   experience: [
     {
-      role:       "Visiting Researcher",
-      org:        "CLIMATics Group, KAUST",
-      location:   "Saudi Arabia",
-      period:     "July 2025 – Present",
-      supervisor: "Prof. Ibrahim Hoteit",
-      bullets: [
-        "Co-supervised for master's thesis on large ensemble simulations.",
-        "Quantifying internal variability and uncertainty in regional climate responses.",
-      ],
-    },
-    {
-      role:       "Research Intern",
+      role:       "Researcher",
       org:        "DST Centre of Excellence for Climate Information, IIT Delhi",
       location:   "New Delhi, India",
       period:     "May 2023 – Present",
-      supervisor: "Prof. Saroj Mishra",
+      supervisor: "Prof. Saroj K. Mishra",
       bullets: [
-        "CMIP5/CMIP6 multi-model ensemble analysis of historical precipitation and monsoon variability over India.",
-        "Developed a novel framework for sequential decision-making for efficient climate actions.",
-        "Investigated circulation-driven precipitation changes under solar geoengineering (GeoMIP G1, G6sulfur).",
-        "Presented results at the 14th Annual GeoMIP Meeting 2024, Cornell University.",
-        "First-authored commentary on China Plus One strategy and transboundary carbon migration.",
-        "Multi-scale analysis of air pollution sources over the Indo-Gangetic Plain.",
+        "Evaluating CMIP5/CMIP6 multi-model ensembles and IFS-FESOM kilometer-scale simulations of historical precipitation and the Indian summer monsoon over South Asia.",
+        "Investigating circulation-driven precipitation and temperature responses under solar geoengineering using GeoMIP G1 and G6sulfur simulations.",
+        "Co-developing a sequential decision-making framework for efficient climate action and contributing to SARCI climate services work for South Asia.",
+        "Contributed to multi-scale source attribution of natural and anthropogenic air pollution over the Indo-Gangetic Plain using reanalysis and satellite datasets.",
+      ],
+      badge:      "Current",
+    },
+    {
+      role:       "Incoming Research Associate",
+      org:        "Max Planck Institute for Meteorology",
+      location:   "Hamburg, Germany",
+      period:     "July 2026 – November 2026",
+      supervisor: "Climate Physics Department",
+      bullets: [
+        "Five-month research appointment in the Climate Physics Department working on cloud microphysics.",
+      ],
+      badge:      "Incoming",
+    },
+    {
+      role:       "Visiting Researcher",
+      org:        "CLIMATics Group, KAUST",
+      location:   "Saudi Arabia",
+      period:     "July 2025 – May 2026",
+      supervisor: "Prof. Ibrahim Hoteit",
+      bullets: [
+        "Completed master's thesis work: Toward Reliable Tropical Precipitation Simulations by Assessing the Added Value of Large Ensembles and Kilometer-Scale Simulations.",
+        "Evaluated the IFS-FESOM nextGEMS production historical simulation against IMD, GPCP, ERA5, and CMIP6 benchmarks.",
+        "Quantified ensemble convergence for CESM2-LE, MPI-GE, and CESM2-PPE precipitation using four criteria, including a probabilistic Brier Skill Score formulation.",
+        "Studied methane variability, persistent hotspots, and shamal-driven seasonality over the Arabian Peninsula using blended TROPOMI+GOSAT XCH4 retrievals.",
       ],
     },
     {
@@ -163,15 +162,28 @@ window.CONTENT = {
     {
       id:        "bams-sarci-2025",
       type:      "journal",
-      status:    "published",
-      year:      2025,
+      status:    "accepted",
+      year:      2026,
       authors:   "Bhuyan, D. P., Upadhyaya, P., Pathak, R., Namdev, P., Salunke, P., Anand, A., Suresh, A. D., <strong>Arora, A.</strong>, Baraik, S. K., Jain, S., Parihar, R. S., Dwivedi, A., Sahany, S., Sharan, M., Dash, S. K., Fasullo, J. T., Behera, S. K., Tribbia, J., & Mishra, S. K.",
       title:     "Advancing climate services in South Asia: The SARCI Framework for actionable information, capability, and capacity",
-      venue:     "Bulletin of the American Meteorological Society",
+      venue:     "Bulletin of the American Meteorological Society (accepted)",
       doi:       "10.1175/BAMS-D-25-0172.1",
       url:       "https://doi.org/10.1175/BAMS-D-25-0172.1",
       tags:      ["Climate Services", "South Asia", "Monsoon"],
-      highlight: false,
+      highlight: true,
+    },
+    {
+      id:        "nextgems-monsoon-2026",
+      type:      "conference",
+      status:    "published",
+      year:      2026,
+      authors:   "<strong>Arora, A.</strong>, Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.",
+      title:     "Evaluating Indian Summer Monsoon Precipitation in the IFS-FESOM nextGEMS Production Historical Simulation at Kilometre Scale",
+      venue:     "km-Scale Global Modelling Summit 2026, Hamburg, Germany",
+      doi:       "",
+      url:       "",
+      tags:      ["nextGEMS", "IFS-FESOM", "Monsoon"],
+      highlight: true,
     },
     {
       id:        "india-forum-2025",
@@ -199,6 +211,19 @@ window.CONTENT = {
       url:       "",
       tags:      ["Climate Ethics", "Philosophy", "Policy"],
       highlight: true,
+    },
+    {
+      id:        "methane-arabian-peninsula-2026",
+      type:      "journal",
+      status:    "in-prep",
+      year:      2026,
+      authors:   "<strong>Arora, A.</strong>, Gandhi, H., Hoteit, I.",
+      title:     "Methane variability, persistent hotspots, and shamal-driven seasonality over the Arabian Peninsula from blended TROPOMI+GOSAT XCH4 retrievals (2018-2025)",
+      venue:     "In preparation for Atmospheric Chemistry and Physics",
+      doi:       "",
+      url:       "",
+      tags:      ["Methane", "Satellite Retrievals", "Arabian Peninsula"],
+      highlight: false,
     },
     {
       id:        "gcm-global-south-2026",
@@ -251,6 +276,16 @@ window.CONTENT = {
       date:     "July 10–12, 2024",
       authors:  "Arora, A., Upadhyaya, P., Mishra, S. K.",
       note:     "Full travel & accommodation support awarded",
+      url:      "",
+    },
+    {
+      type:     "Talk",
+      title:    "Evaluating Indian Summer Monsoon Precipitation in the IFS-FESOM nextGEMS Production Historical Simulation at Kilometre Scale",
+      event:    "km-Scale Global Modelling Summit 2026",
+      location: "Hamburg, Germany",
+      date:     "2026",
+      authors:  "Arora, A., Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.",
+      note:     "Accepted contribution",
       url:      "",
     },
   ],
@@ -349,7 +384,7 @@ window.CONTENT = {
       thumbIcon:  "🌀",
       thumbClass: "thumb-climate",
       tags:       ["Large Ensembles", "Internal Variability", "KAUST"],
-      desc:       "Master's thesis research at KAUST's CLIMATics Group. Quantifying the role of internal climate variability versus forced response in regional climate projections using large ensemble simulations, with implications for uncertainty attribution in climate services.",
+      desc:       "Master's thesis research completed at KAUST's CLIMATics Group. Quantifying the role of internal climate variability versus forced response in regional climate projections using large ensemble simulations, with implications for uncertainty attribution in climate services.",
       pdf:        "",
       url:        "project-detail.html?id=large-ensemble",
       advisor:    "Prof. Ibrahim Hoteit, KAUST",
@@ -563,7 +598,7 @@ window.RENDER = {
       return '<div class="timeline-item">'
         +'<div class="timeline-dot'+(i===0?'':' sand')+'"></div>'
         +'<div class="timeline-period">'+e.period+'</div>'
-        +'<div class="timeline-title">'+e.role+'</div>'
+        +'<div class="timeline-title">'+e.role+(e.badge?'<span class="timeline-badge">'+e.badge+'</span>':'')+'</div>'
         +'<div class="timeline-org">'+e.org+' · '+e.location+'</div>'
         +'<div class="timeline-detail">Supervised by '+e.supervisor+'</div>'
         +'<ul style="margin-top:8px;padding-left:18px;">'+bullets+'</ul>'
@@ -573,7 +608,14 @@ window.RENDER = {
 
   featuredPubs: function(id) {
     var el=document.getElementById(id); if(!el) return;
-    var featured=CONTENT.publications.filter(function(p){return p.status==='published'||p.highlight;}).slice(0,3);
+    var featured=CONTENT.publications
+      .filter(function(p){return p.status==='published'||p.status==='accepted'||p.highlight;})
+      .sort(function(a,b){
+        if(a.id==='bams-sarci-2025') return -1;
+        if(b.id==='bams-sarci-2025') return 1;
+        return (b.year||0)-(a.year||0);
+      })
+      .slice(0,3);
     el.innerHTML=featured.map(function(p){return RENDER._pubCard(p);}).join('');
   },
 
@@ -581,6 +623,7 @@ window.RENDER = {
     var list=document.getElementById(listId); if(!list) return;
     var groups={
       published:  {label:'Published',items:[]},
+      accepted:   {label:'Accepted',items:[]},
       'under-review':{label:'Under Review',items:[]},
       'in-prep':  {label:'In Preparation',items:[]},
       conference: {label:'Conference',items:[]}
