@@ -20,6 +20,12 @@
       overflow: hidden;
       border-bottom: 1px solid var(--border);
     }
+    .proj-hero .breadcrumb span,
+    .proj-hero .proj-meta-item,
+    .proj-hero .proj-meta-item i,
+    .proj-hero .proj-hero-title {
+      color: #fff;
+    }
     .proj-hero-bg {
       position: absolute; inset: 0;
       opacity: 0.06;
@@ -90,6 +96,10 @@
       gap: 56px;
       align-items: start;
       padding: 64px 0;
+    }
+    .project-detail-section {
+      background: var(--bg);
+      color: var(--text);
     }
 
     /* ── PDF Viewer ── */
@@ -218,11 +228,12 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li class="active"><a href="projects.html">Projects</a></li>
+      <li class="active"><a href="projects.html">Research</a></li>
       <li><a href="publications.html">Publications</a></li>
-      <li><a href="talks.html">Talks</a></li>
-      <li><a href="readings.html">Readings</a></li>
+      <li><a href="talks.html">Speaking</a></li>
+      <li><a href="readings.html">Writing</a></li>
       <li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
@@ -232,9 +243,10 @@
 </nav>
 <div class="nav-mobile" id="nav-mobile">
   <a href="index.html">Home</a><a href="about.html">About</a>
-  <a href="projects.html" class="active">Projects</a>
-  <a href="publications.html">Publications</a><a href="talks.html">Talks</a>
-  <a href="readings.html">Readings</a><a href="life.html">Life</a>
+  <a href="projects.html" class="active">Research</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a>
+  <a href="readings.html">Writing</a><a href="life.html">Life</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <!-- HERO — filled by JS -->
@@ -254,7 +266,7 @@
 </div>
 
 <!-- BODY -->
-<section>
+<section class="project-detail-section">
   <div class="container">
     <div class="proj-body-grid">
 
@@ -302,8 +314,8 @@
         <!-- No-PDF placeholder -->
         <div class="no-pdf-box" id="no-pdf-box" style="display:none;">
           <div class="icon">🔬</div>
-          <h3>Research in Progress</h3>
-          <p>A full write-up or report for this project will be added soon. Check back or reach out if you'd like to discuss the work.</p>
+          <h3>Summary Available</h3>
+          <p>This page currently hosts the project summary and context. A report, poster, or manuscript link will be added when it is ready to share publicly.</p>
           <a href="contact.html" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
         </div>
 
@@ -352,18 +364,19 @@
       </div>
       <div class="footer-col"><h4>Navigate</h4><ul>
         <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
-        <li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li>
-        <li><a href="life.html">Life Outside Lab</a></li>
+        <li><a href="projects.html">Research</a></li><li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Speaking</a></li><li><a href="readings.html">Writing</a></li>
+        <li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div class="footer-col"><h4>Contact</h4><ul>
         <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
         <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
-        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Anirudh Arora</span>
+      <span>© 2026 Anirudh Arora</span>
       <span>Hosted on GitHub Pages</span>
     </div>
   </div>

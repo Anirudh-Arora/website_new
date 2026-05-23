@@ -1,45 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script
-    src="https://kit.fontawesome.com/eecc9ab967.js"
-    crossorigin="anonymous"
-  ></script>
-    <title>Location Map</title>
-    <style>
-        /* Set the size of the map container */
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="0; url=contact.html" />
+  <title>Redirecting — Anirudh Arora</title>
+  <base href="/website_new/" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <!-- Create a div element to hold the map -->
-    <div id="map"></div>
-
-    <script>
-        // Initialize and add the map
-        function initMap() {
-            // Coordinates of the location
-            var location = {lat: 40.7128, lng: -74.0060}; // New York City coordinates
-
-            // Create a map object and specify the DOM element for display.
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: location,
-                zoom: 12 // Adjust the zoom level as needed
-            });
-
-            // Create a marker and set its position.
-            var marker = new google.maps.Marker({
-                map: map,
-                position: location,
-                title: 'New York City'
-            });
-        }
-    </script>
-
-    <!-- Load the Google Maps JavaScript API -->
-  
+  <main class="legacy-redirect">
+    <div class="legacy-redirect-box">
+      <span class="section-label">Redirecting</span>
+      <h1 class="section-title">This page has moved</h1>
+      <p>You are being sent to the current version of the site.</p>
+      <a class="btn btn-primary" href="contact.html">Continue</a>
+    </div>
+  </main>
+  <script>window.location.replace("contact.html");</script>
 </body>
 </html>

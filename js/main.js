@@ -94,10 +94,14 @@ function initPubFilter() {
       btns.forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
       var f = btn.dataset.filter;
+      var visible = 0;
       cards.forEach(function(card) {
         var show = f === 'all' || card.dataset.status === f || card.dataset.type === f || card.dataset.year === f;
         card.style.display = show ? '' : 'none';
+        if (show) visible++;
       });
+      var vc = document.getElementById('visible-count');
+      if (vc) vc.textContent = visible;
     });
   });
 }

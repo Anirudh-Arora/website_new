@@ -31,7 +31,7 @@ window.CONTENT = {
     "Environmental Scientist",
   ],
 
-  tagline: "Studying how Earth's atmosphere responds to a changing climate — from Indian summer monsoon dynamics to stratospheric aerosol injection and the credibility of global climate models.",
+  tagline: "Studying climate risk where uncertainty matters most: South Asian monsoon dynamics, aerosol and geoengineering impacts, and the credibility of global climate models over the Global South.",
 
   /* ── Social Links ──────────────────────────────────────── */
   social: {
@@ -43,11 +43,18 @@ window.CONTENT = {
     twitter:       "",
   },
 
+  /* ── Contact Form ────────────────────────────────────────
+     Create a Formspree form and paste only the ID here.
+     Example endpoint: https://formspree.io/f/xpzgbwkr → formspreeId: "xpzgbwkr"
+     If empty, the contact page uses a mailto fallback instead of a broken form.
+  */
+  formspreeId: "xaqkbegv",
+
   /* ── Hero Affiliations ─────────────────────────────────── */
   affiliations: [
-    { label: "KAUST · CLIMATics Group",     dot: "blue", icon: "" },
-    { label: "IIT Delhi · DST CoE",         dot: "sand", icon: "" },
-    { label: "Rhodes Scholar Finalist '26", dot: "none", icon: "🏆" },
+    { label: "KAUST · CLIMATics Group", dot: "blue", icon: "" },
+    { label: "IIT Delhi · DST CoE", dot: "sand", icon: "" },
+    { label: "Rhodes Scholarship India Finalist", dot: "none", icon: "" },
   ],
 
   /* ── Stats Row ─────────────────────────────────────────── */
@@ -62,14 +69,15 @@ window.CONTENT = {
   bio: {
     transition: "Final-year BS at IISER Bhopal · Now a visiting researcher at <strong>KAUST's CLIMATics Group</strong>, co-supervised by Prof. Ibrahim Hoteit for my master's thesis.",
     paragraphs: [
-      "My work sits at the intersection of <strong>atmospheric dynamics</strong>, <strong>solar geoengineering</strong>, and <strong>climate model evaluation</strong>. I work with large CMIP5/CMIP6 multi-model ensembles, GeoMIP simulations, and reanalysis datasets to understand how the climate system responds — and how well our models capture it.",
-      "I am particularly drawn to questions about the <strong>Indian summer monsoon</strong>, <strong>stratospheric aerosol injection</strong>, and the credibility of global climate models over the Global South — a region critically underrepresented in the literature.",
-      "Beyond modelling, I think deeply about the <strong>socio-political dimensions</strong> of climate action: how scientific evidence translates into governance, and what philosophical frameworks can guide equitable climate policy.",
+      "My work sits at the intersection of <strong>atmospheric dynamics</strong>, <strong>climate model evaluation</strong>, and <strong>solar geoengineering</strong>. I use CMIP5/CMIP6 ensembles, GeoMIP simulations, reanalysis products, and large climate datasets to ask where models are credible, where they fail, and what that means for decisions.",
+      "The scientific center of gravity is South Asia and the Global South: regions where monsoon risk, aerosol forcing, data gaps, and model uncertainty are not abstract technical issues but practical constraints on climate adaptation.",
+      "Alongside the modeling, I work on the <strong>ethics and governance of climate action</strong>: how evidence becomes policy, how uncertainty should be communicated, and how public reason can support more equitable climate decisions.",
     ],
     fullParagraphs: [
-      "I am a climate researcher with a broad interest in <strong>how the atmosphere responds to natural and forced changes</strong> — from the interannual variability of the Indian monsoon to the large-scale dynamical consequences of stratospheric aerosol injection.",
-      "My work spans statistical analysis of CMIP5/CMIP6 multi-model ensembles, offline processing of large NetCDF datasets with Python (Xarray, NumPy, Matplotlib), and the development of novel decision-theoretic frameworks for climate policy. I have been fortunate to be supervised by Prof. Saroj Mishra (IIT Delhi) and Prof. Ibrahim Hoteit (KAUST).",
-      "Beyond the modelling side, I am deeply invested in <strong>science communication and policy</strong>. I have co-hosted a podcast on climate governance, authored commentary for The India Forum, and presented at the GeoMIP 2024 meeting at Cornell University. I was shortlisted as a <strong>Rhodes Scholarship 2026 India finalist</strong> — among the top 13 out of 1,000 applicants.",
+      "I am a climate researcher interested in <strong>how atmospheric systems respond to natural variability, anthropogenic forcing, and proposed interventions</strong> — from the Indian summer monsoon to the regional consequences of stratospheric aerosol injection.",
+      "My work combines statistical analysis of CMIP5/CMIP6 multi-model ensembles, offline processing of large NetCDF datasets with Python (Xarray, NumPy, Matplotlib), and decision-theoretic approaches to climate policy. I have been fortunate to work with Prof. Saroj Mishra (IIT Delhi) and Prof. Ibrahim Hoteit (KAUST).",
+      "A recurring question in my work is credibility: when a global climate model performs poorly over the Global South, what does that mean for the communities expected to use its projections? That question is scientific, political, and ethical at the same time.",
+      "Beyond modelling, I am invested in <strong>science communication and climate governance</strong>. I have co-hosted a podcast on climate governance, authored commentary for The India Forum, and presented at the GeoMIP 2024 meeting at Cornell University. I was shortlisted as a <strong>Rhodes Scholarship India finalist</strong>.",
       "Outside research I lead <em>Prayaas</em>, a volunteer organisation working with underprivileged communities through education, and I was formerly president of IISER Bhopal's Debating Society.",
     ],
   },
@@ -317,7 +325,7 @@ window.CONTENT = {
       tags:       ["GeoMIP", "Geoengineering", "Monsoon"],
       desc:       "Analyzed GeoMIP G6 outputs (CESM-WACCM) to assess impacts of SAI on precipitation patterns, temperature gradients, and atmospheric circulation. Presented at GeoMIP 2024, Cornell University.",
       pdf:        "",          // no PDF for this one — linked to poster
-      url:        "project-geomip.html",
+      url:        "project-detail.html?id=geomip",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
@@ -330,7 +338,7 @@ window.CONTENT = {
       tags:       ["CMIP6", "Model Evaluation", "Global South"],
       desc:       "Systematic evaluation of CMIP5/CMIP6 multi-model ensemble performance over the Global South. Finds that despite doubling the number of models over a decade, credibility metrics over South Asia and Africa remain poor — raising questions about where and how models are validated.",
       pdf:        "",
-      url:        "project-detail.html",
+      url:        "project-detail.html?id=gcm-credibility",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
@@ -343,7 +351,7 @@ window.CONTENT = {
       tags:       ["Large Ensembles", "Internal Variability", "KAUST"],
       desc:       "Master's thesis research at KAUST's CLIMATics Group. Quantifying the role of internal climate variability versus forced response in regional climate projections using large ensemble simulations, with implications for uncertainty attribution in climate services.",
       pdf:        "",
-      url:        "project-detail.html",
+      url:        "project-detail.html?id=large-ensemble",
       advisor:    "Prof. Ibrahim Hoteit, KAUST",
     },
     {
@@ -356,7 +364,7 @@ window.CONTENT = {
       tags:       ["Air Quality", "Satellite Data", "IGP"],
       desc:       "Multi-scale analysis of natural and anthropogenic sources of air pollution using reanalysis and satellite datasets. Co-authored policy commentary in The India Forum.",
       pdf:        "",          // linked to India Forum article instead
-      url:        "project-pollution.html",
+      url:        "project-detail.html?id=pollution",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
@@ -369,7 +377,7 @@ window.CONTENT = {
       tags:       ["MDPs", "Climate Policy", "Optimization"],
       desc:       "Developed a novel framework for sequential decision-making using Markov Decision Processes (MDPs) to promote efficient climate adaptation strategies.",
       pdf:        "",
-      url:        "project-policy.html",
+      url:        "project-detail.html?id=policy",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
     },
     {
@@ -382,7 +390,7 @@ window.CONTENT = {
       tags:       ["Aerosols", "GCMs", "Radiative Forcing"],
       desc:       "Comprehensive report on aerosol dynamics and representation in GCMs, focusing on aerosol microphysics, cloud interactions, and radiative forcing.",
       pdf:        "Documents/aerosol.pdf",
-      url:        "project-aerosols.html",
+      url:        "project-detail.html?id=aerosols",
       advisor:    "Prof. Ramya Sunder Raman, IISER Bhopal",
     },
     {
@@ -395,7 +403,7 @@ window.CONTENT = {
       tags:       ["Aerosols", "Monsoon", "South Asia"],
       desc:       "Co-authored review paper analyzing the influence of remote aerosol emissions on South Asian monsoon variability.",
       pdf:        "Documents/monsoon.pdf",
-      url:        "project-monsoon.html",
+      url:        "project-detail.html?id=monsoon-aerosols",
       advisor:    "Dr. Shubhi Agrawal, IISER Bhopal",
     },
     {
@@ -408,7 +416,7 @@ window.CONTENT = {
       tags:       ["Wildfire", "Aerosols", "Smoke Plumes"],
       desc:       "Analysis of forest fire dynamics and their interactions with the atmosphere, including smoke plume transport, aerosol emissions, and impacts on regional air quality and climate.",
       pdf:        "Documents/forest-fire.pdf",
-      url:        "project-forestfire.html",
+      url:        "project-detail.html?id=forest-fire",
       advisor:    "IISER Bhopal",
     },
     {
@@ -421,7 +429,7 @@ window.CONTENT = {
       tags:       ["Ethnography", "Science Studies", "Lab Culture"],
       desc:       "Comprehensive ethnographic study of two distinct laboratory settings over four months, examining socio-cultural dynamics, work practices, and interactions within scientific environments.",
       pdf:        "",
-      url:        "project-ethnography.html",
+      url:        "project-detail.html?id=ethnography",
       advisor:    "Dr. Renny Thomas, IISER Bhopal",
     },
     {
@@ -434,7 +442,7 @@ window.CONTENT = {
       tags:       ["Ethnography", "Ritual Studies", "Death & Culture"],
       desc:       "Field ethnography study examining the socio-cultural importance of Garuda Purana and death rituals across communities.",
       pdf:        "",
-      url:        "project-garuda.html",
+      url:        "project-detail.html?id=garuda-purana",
       advisor:    "Dr. Renny Thomas, IISER Bhopal",
     },
     {
@@ -447,7 +455,7 @@ window.CONTENT = {
       tags:       ["Fluid Dynamics", "Differential Equations", "Sports Science"],
       desc:       "Solved six coupled differential equations with varying initial conditions to obtain optimal velocities and spin values for a perfect football penalty kick.",
       pdf:        "Documents/penalty.pdf",
-      url:        "project-penalty.html",
+      url:        "project-detail.html?id=penalty",
       advisor:    "Independent project, IISER Bhopal",
     },
   ],

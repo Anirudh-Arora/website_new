@@ -178,8 +178,8 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img" /><span class="nav-logo-text">Anirudh Arora</span></a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li><li><a href="life.html">Life</a></li>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li><li><a href="talks.html">Speaking</a></li><li><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li><li class="active"><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
@@ -188,8 +188,8 @@
   </div>
 </nav>
 <div class="nav-mobile" id="nav-mobile">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
-  <a href="publications.html">Publications</a><a href="talks.html">Talks</a><a href="readings.html">Readings</a><a href="life.html">Life</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Research</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a><a href="readings.html">Writing</a><a href="life.html">Life</a><a href="contact.html" class="active">Contact</a>
 </div>
 
 <div class="page-hero">
@@ -259,14 +259,7 @@
             <div class="form-title">Send a Message</div>
             <p class="form-subtitle">Fill in the form and I'll get back to you as soon as I can — usually within a few days.</p>
 
-            <!--
-              SETUP: Replace YOUR_FORM_ID below with your Formspree form ID.
-              1. Go to https://formspree.io → sign up free
-              2. Create a new form → get your ID (looks like: xpzgbwkr)
-              3. Replace YOUR_FORM_ID with it
-              No backend required — works perfectly on GitHub Pages.
-            -->
-            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <form id="contact-form" action="" method="POST" novalidate>
 
               <div class="form-row">
                 <div class="form-group">
@@ -303,7 +296,7 @@
               <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
                 <i class="fa-solid fa-paper-plane"></i> Send Message
               </button>
-              <p class="form-note">Your message goes directly to my inbox. No spam, ever.</p>
+              <p class="form-note" id="form-note">If the contact service is not configured yet, this opens a prepared email instead.</p>
               <div id="form-error" style="display:none;margin-top:12px;padding:12px 16px;background:var(--terra-light);border-radius:var(--radius-sm);font-size:0.88rem;color:var(--terracotta);"></div>
             </form>
           </div>
@@ -334,13 +327,14 @@
           <a href="mailto:anirudh21@iiserb.ac.in" class="social-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
-      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li></ul></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="talks.html">Speaking</a></li><li><a href="readings.html">Writing</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li><li><a href="Anirudh_CV.pdf" download>Download CV</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2025 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
+    <div class="footer-bottom"><span>© 2026 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
   </div>
 </footer>
 
+<script src="js/content.js"></script>
 <script src="js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -349,8 +343,17 @@ document.addEventListener('DOMContentLoaded', function() {
   var err  = document.getElementById('form-error');
   var suc  = document.getElementById('success-message');
   var cont = document.getElementById('form-container');
+  var note = document.getElementById('form-note');
+  var formspreeId = window.CONTENT && CONTENT.formspreeId ? CONTENT.formspreeId.trim() : '';
+  var siteEmail = window.CONTENT && CONTENT.email ? CONTENT.email : 'anirudh21@iiserb.ac.in';
 
   if (!form) return;
+  if (formspreeId) {
+    form.action = 'https://formspree.io/f/' + formspreeId;
+    if (note) note.textContent = 'Your message goes directly to my inbox. No spam, ever.';
+  } else {
+    form.removeAttribute('action');
+  }
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -372,6 +375,15 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.disabled      = true;
     btn.innerHTML     = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
 
+    if (!formspreeId) {
+      var subject = document.getElementById('subject').value || 'Website message';
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\nTopic: ' + subject + '\n\n' + message;
+      window.location.href = 'mailto:' + siteEmail + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+      return;
+    }
+
     var data = new FormData(form);
     fetch(form.action, { method:'POST', body:data, headers:{ 'Accept':'application/json' } })
       .then(function(r) {
@@ -386,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.disabled     = false;
         btn.innerHTML    = '<i class="fa-solid fa-paper-plane"></i> Send Message';
         err.style.display = 'block';
-        err.textContent  = 'Something went wrong. Please email me directly at anirudh21@iiserb.ac.in';
+        err.textContent  = 'Something went wrong. Please email me directly at ' + siteEmail;
       });
   });
 });

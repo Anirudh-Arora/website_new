@@ -84,6 +84,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.light-locked {
+  --bg:           #FAF7F2;
+  --bg-alt:       #F3EDE3;
+  --bg-card:      #FFFFFF;
+  --text:         #1A1A1A;
+  --text-muted:   #6B6560;
+  --text-light:   #9B948D;
+  --border:       #E2D9CE;
+  --nav-bg:       rgba(250,247,242,0.92);
+}
+
 /* Grain texture overlay */
 body::before {
   content: '';
@@ -178,6 +189,56 @@ section { padding: 90px 0; }
   max-width: 600px;
 }
 
+.story-panel {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 36px;
+  align-items: start;
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 48px var(--shadow);
+}
+
+.story-panel-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 10px;
+}
+
+.story-panel h3 {
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+}
+
+.theme-list {
+  display: grid;
+  gap: 14px;
+}
+
+.theme-item {
+  padding: 16px 18px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.theme-item strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.theme-item span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .divider {
   width: 48px;
   height: 3px;
@@ -234,6 +295,10 @@ section { padding: 90px 0; }
 .btn-sand:hover {
   background: var(--sand);
   color: #fff;
+  border-color: var(--sand);
+}
+[data-theme="dark"] .btn-sand {
+  color: #F3EDE3;
   border-color: var(--sand);
 }
 
@@ -1118,6 +1183,25 @@ section { padding: 90px 0; }
   color: var(--text-light);
 }
 
+.legacy-redirect {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+}
+
+.legacy-redirect-box {
+  max-width: 520px;
+  padding: 36px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px var(--shadow-md);
+}
+
 /* ── Scroll Reveal Animations ────────────────────────────── */
 [data-reveal] {
   opacity: 0;
@@ -1198,6 +1282,11 @@ section { padding: 90px 0; }
     flex-direction: column;
     gap: 8px;
     text-align: center;
+  }
+
+  .story-panel {
+    grid-template-columns: 1fr;
+    padding: 24px;
   }
 }
 

@@ -192,9 +192,9 @@
     <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img"/><span class="nav-logo-text">Anirudh Arora</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
-      <li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li>
-      <li class="active"><a href="life.html">Life</a></li>
+      <li><a href="projects.html">Research</a></li><li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Speaking</a></li><li><a href="readings.html">Writing</a></li>
+        <li class="active"><a href="life.html">Life</a></li><li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
@@ -203,9 +203,9 @@
   </div>
 </nav>
 <div class="nav-mobile" id="nav-mobile">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
-  <a href="publications.html">Publications</a><a href="talks.html">Talks</a>
-  <a href="readings.html">Readings</a><a href="life.html" class="active">Life</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Research</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a>
+  <a href="readings.html">Writing</a><a href="life.html" class="active">Life</a><a href="contact.html">Contact</a>
 </div>
 
 <!-- ══════════════════════════
@@ -244,13 +244,10 @@
 
       <!-- Photo: MUN executive board -->
       <div>
-        <div class="photo-card">
-          <!-- Replace src with your actual MUN photo path, e.g. images/life/mun.jpg -->
-          <img src="images/life/mun.jpg" alt="Executive Board at MUN"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="photo-placeholder" style="display:none;">
+        <div class="photo-card" data-photo="images/life/mun.jpg" data-alt="Executive Board at MUN">
+          <div class="photo-placeholder">
             <div class="ph-icon">🎤</div>
-            <div class="ph-label">Add your MUN executive board photo here<br/>images/life/mun.jpg</div>
+            <div class="ph-label">MUN photograph coming soon</div>
           </div>
         </div>
       </div>
@@ -268,12 +265,10 @@
 
       <!-- Pickleball photo -->
       <div>
-        <div class="photo-card">
-          <img src="images/life/pickleball.jpg" alt="Pickleball win"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="photo-placeholder" style="display:none;">
+        <div class="photo-card" data-photo="images/life/pickleball.jpg" data-alt="Pickleball win">
+          <div class="photo-placeholder">
             <div class="ph-icon">🏓</div>
-            <div class="ph-label">Add your pickleball winning photo here<br/>images/life/pickleball.jpg</div>
+            <div class="ph-label">Sport photograph coming soon</div>
           </div>
         </div>
       </div>
@@ -411,62 +406,50 @@
     <div class="photo-grid-3">
 
       <!-- Slot 1: First day at KAUST -->
-      <div class="photo-card">
-        <img src="images/life/kaust-day1.jpg" alt="First day at KAUST"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="photo-placeholder" style="display:none;">
+      <div class="photo-card" data-photo="images/life/kaust-day1.jpg" data-alt="First day at KAUST">
+        <div class="photo-placeholder">
           <div class="ph-icon">🌊</div>
-          <div class="ph-label">First day at KAUST<br/>images/life/kaust-day1.jpg</div>
+          <div class="ph-label">KAUST photograph coming soon</div>
         </div>
       </div>
 
       <!-- Slot 2: KAUST friends -->
-      <div class="photo-card">
-        <img src="images/life/kaust-friends.jpg" alt="Friends at KAUST"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="photo-placeholder" style="display:none;">
+      <div class="photo-card" data-photo="images/life/kaust-friends.jpg" data-alt="Friends at KAUST">
+        <div class="photo-placeholder">
           <div class="ph-icon">👥</div>
-          <div class="ph-label">KAUST friends<br/>images/life/kaust-friends.jpg</div>
+          <div class="ph-label">KAUST photograph coming soon</div>
         </div>
       </div>
 
       <!-- Slot 3: IISER Bhopal friends -->
-      <div class="photo-card">
-        <img src="images/life/iiserb-friends.jpg" alt="IISER Bhopal friends"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="photo-placeholder" style="display:none;">
+      <div class="photo-card" data-photo="images/life/iiserb-friends.jpg" data-alt="IISER Bhopal friends">
+        <div class="photo-placeholder">
           <div class="ph-icon">🎓</div>
-          <div class="ph-label">IISER Bhopal friends<br/>images/life/iiserb-friends.jpg</div>
+          <div class="ph-label">IISER photograph coming soon</div>
         </div>
       </div>
 
       <!-- Slot 4: DST CoE lab -->
-      <div class="photo-card">
-        <img src="images/life/dst-lab.jpg" alt="DST CoE Lab, IIT Delhi"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="photo-placeholder" style="display:none;">
+      <div class="photo-card" data-photo="images/life/dst-lab.jpg" data-alt="DST CoE Lab, IIT Delhi">
+        <div class="photo-placeholder">
           <div class="ph-icon">🔬</div>
-          <div class="ph-label">DST CoE lab, IIT Delhi<br/>images/life/dst-lab.jpg</div>
+          <div class="ph-label">Lab photograph coming soon</div>
         </div>
       </div>
 
       <!-- Slot 5: spare / your choice -->
-      <div class="photo-card">
-        <img src="images/life/extra1.jpg" alt=""
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="photo-placeholder" style="display:none;">
+      <div class="photo-card" data-photo="images/life/extra1.jpg" data-alt="">
+        <div class="photo-placeholder">
           <div class="ph-icon">📷</div>
-          <div class="ph-label">Your choice<br/>images/life/extra1.jpg</div>
+          <div class="ph-label">Photo coming soon</div>
         </div>
       </div>
 
       <!-- Slot 6: spare / your choice -->
-      <div class="photo-card">
-        <img src="images/life/extra2.jpg" alt=""
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="photo-placeholder" style="display:none;">
+      <div class="photo-card" data-photo="images/life/extra2.jpg" data-alt="">
+        <div class="photo-placeholder">
           <div class="ph-icon">📷</div>
-          <div class="ph-label">Your choice<br/>images/life/extra2.jpg</div>
+          <div class="ph-label">Photo coming soon</div>
         </div>
       </div>
 
@@ -494,19 +477,41 @@
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
-          <a href="/cdn-cgi/l/email-protection#ed8c83849f988985dfdcad84849e889f8fc38c8ec38483" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+          <a href="mailto:anirudh21@iiserb.ac.in" class="social-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
       <div class="footer-col"><h4>Navigate</h4><ul>
         <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li><li><a href="publications.html">Publications</a></li>
-        <li><a href="talks.html">Talks</a></li><li><a href="readings.html">Readings</a></li>
-        <li><a href="life.html">Life Outside Lab</a></li>
+        <li><a href="projects.html">Research</a></li><li><a href="publications.html">Publications</a></li>
+        <li><a href="talks.html">Speaking</a></li><li><a href="readings.html">Writing</a></li>
+        <li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div class="footer-col"><h4>Contact</h4><ul>
-        <li><a href="/cdn-cgi/l/email-protection#2b4a4542595e4f43191a6b4242584e5949054a48054245"><span class="__cf_email__" data-cfemail="2b4a4542595e4f43191a6b4242584e5949054a48054245">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:anirudh21@iiserb.ac.in">anirudh21@iiserb.ac.in</a></li>
         <li><a href="Anirudh_CV.pdf" download>Download CV</a></li>
-        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul></div>
     </div>
-    <div cl
+    <div class="footer-bottom"><span>© 2026 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.photo-card[data-photo]').forEach(function(card) {
+    var src = card.getAttribute('data-photo');
+    var alt = card.getAttribute('data-alt') || '';
+    var img = new Image();
+    img.onload = function() {
+      img.alt = alt;
+      card.innerHTML = '';
+      card.appendChild(img);
+    };
+    img.src = src;
+  });
+});
+</script>
+</body>
+</html>
