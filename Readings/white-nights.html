@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/website_new/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection: White Nights — Anirudh Arora</title>
+  <meta name="description" content="A reflection on Fyodor Dostoevsky's White Nights — on longing, justification, and the dreamer's defense." />
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .article-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .article-body p { margin-bottom: 1.5em; }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--text);
+      margin: 2.5em 0 0.8em;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--sand);
+      padding: 16px 24px;
+      margin: 2em 0;
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .article-body blockquote footer {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-style: normal;
+      font-family: var(--font-mono);
+      margin-top: 8px;
+      display: block;
+    }
+
+    .article-sidebar { position: sticky; top: 90px; }
+
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #1B3A5C, #C8A96E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+    .book-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .book-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .book-author { font-size: 0.88rem; color: var(--text-muted); }
+    .book-genre {
+      display: inline-block;
+      padding: 3px 10px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+    .book-rating { color: var(--sand); font-size: 1rem; letter-spacing: 2px; margin-top: 8px; }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .meta-author-img {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+    .meta-name { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+    .meta-info { font-size: 0.82rem; color: var(--text-light); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+    }
+    .toc h4 {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 14px;
+    }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .toc li:last-child { border-bottom: none; }
+    .toc a { font-size: 0.88rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .toc a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/anni.jpeg" alt="" class="nav-logo-img" />
+      <span class="nav-logo-text">Anirudh Arora</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Speaking</a></li>
+      <li class="active"><a href="readings.html">Writing</a></li>
+      <li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Research</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a>
+  <a href="readings.html" class="active">Writing</a><a href="life.html">Life</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+      <a href="readings.html" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">← Readings</a>
+      <span style="color:var(--text-light);font-size:0.8rem;">/ Reflection</span>
+    </div>
+    <span class="section-label">Literary Reflection</span>
+    <h1 class="section-title" style="max-width:760px;">Reflections on Longing, Justification, and the Dreamer's Defense</h1>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);margin-top:12px;">
+      A reflection on Fyodor Dostoevsky's <em>White Nights</em>
+    </p>
+  </div>
+</div>
+
+<section style="padding:70px 0;">
+  <div class="container">
+
+    <div class="article-meta" data-reveal>
+      <img src="images/anni.jpeg" alt="Anirudh Arora" class="meta-author-img" />
+      <div>
+        <div class="meta-name">Anirudh Arora</div>
+        <div class="meta-info">Climate Researcher · IIT Delhi / IISER Bhopal</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;">
+        <span class="badge-tag">Novella</span>
+        <span class="badge-tag">Fyodor Dostoevsky</span>
+        <span class="badge-tag">Longing</span>
+      </div>
+    </div>
+
+    <div class="article-grid">
+
+      <div class="article-body" data-reveal>
+
+        <p><em>White Nights</em> is often described as a tender love story, a romantic novella about connection found briefly in the luminous St. Petersburg summer. What stayed with me was something less comfortable than tenderness.</p>
+
+        <p>The numbness arrived before I could name it. Nastenka leaves. Not cruelly, not carelessly. She leaves because the man she actually loves has returned, which is precisely what she said she was waiting for. Nothing she does is unreasonable. She told the narrator from the beginning not to fall in love with her. When she began to reciprocate, it was only after she had convinced herself the other man was gone for good. The logic is airtight. And yet I sat with the book closed for a while, unable to move to the next thing. That gap between what is justified and what is devastating, I didn't know what to do with it.</p>
+
+        <h2 id="section-prose">The Prose and the Distance It Creates</h2>
+
+        <p>Part of what makes this so affecting is how Dostoevsky writes it. The language is warm, unhurried, almost delicate, and yet there is something in it that keeps you at a slight remove from the narrator's pain. You feel it, but through gauze. I kept thinking that this was not an accident. The prose performs the same detachment the narrator himself has perfected. He describes his longing with a kind of luminous precision that would be impossible if he were truly inside it. The writing is beautiful in a way that quietly unsettles you, because beauty that controlled suggests a man who has already learned to hold his own life at arm's length.</p>
+
+        <h2 id="section-sympathy">The Complication of Sympathy</h2>
+
+        <p>At first, my sympathy was entirely with the narrator. He is gentle, unhurried, genuinely present with Nastenka in a way the absent lover never could be. He asks for nothing. He listens. For four nights he is, by any reasonable measure, the better man in the situation. But I found myself withdrawing that sympathy slowly, uncomfortably. Not because he did anything wrong, but because I started to notice how prepared he was for loss. His inner life is rich, elaborate, self-sufficient. The dreamer's life he describes at the beginning isn't a flaw he is trying to correct. It is a structure he has built and learned to inhabit. Nastenka is not really an interruption of that structure. She fits inside it perfectly. Four nights, no permanence, a beautiful interval.</p>
+
+        <blockquote>
+          That gap between what is justified and what is devastating is the place where the novella stayed with me.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-defense">The Defense That Was Always There</h2>
+
+        <p>The ending is what unsettled me most. The narrator does not end bitter or broken. He ends grateful, almost serenely so, for those four nights, as though they were always going to be exactly that and nothing more. It reads, on the surface, like emotional maturity. But I kept thinking about the moment early in the book where he essentially confesses that he has always known he will be alone, that dreaming is his natural condition. If that knowledge was already there at the start, then the gratitude at the end is not acceptance. It is a defense mechanism completing its cycle. He always knew how this would go. The four nights confirm a story he had already written about himself.</p>
+
+        <h2 id="section-ordinary-life">What This Looks Like in Ordinary Life</h2>
+
+        <p>What makes this hard to dismiss is that this is a recognizable way of moving through the world. Building an inner life so complete and self-sustaining that real connection becomes something that happens to you briefly, rather than something you construct and maintain. Longing for closeness while being, structurally, unavailable to it. The dreamer is not a type unique to nineteenth-century St. Petersburg. That recognition is where the book does its quietest damage, not in the loss itself, but in the realization that the narrator was never quite all the way in.</p>
+
+        <blockquote>
+          The four nights confirm a story he had already written about himself.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-takeaway">What It Left Me With</h2>
+
+        <p><em>White Nights</em> does not ask you to judge anyone. Nastenka is not a villain and the narrator is not simply a victim. It leaves you instead with a question that is harder to sit with: would anything have been different if Nastenka's lover had never returned? I am not sure it would have. I think the narrator would have found, eventually, a way to remain the dreamer, grateful, alone, illuminated by the memory of four nights in which he was briefly, almost accidentally, present in his own life.</p>
+
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
+          <a href="readings.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Back to Readings
+          </a>
+        </div>
+
+      </div>
+
+      <div class="article-sidebar" data-reveal="right">
+
+        <div class="book-card">
+          <div class="book-cover-placeholder">🌙</div>
+          <div class="book-meta-row">
+            <div class="book-title">White Nights</div>
+            <div class="book-author">Fyodor Dostoevsky · 1848</div>
+            <span class="book-genre">Literary Novella</span>
+          </div>
+          <div class="book-rating">★★★★★</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:12px;line-height:1.6;">A lonely dreamer meets Nastenka over four luminous nights in St. Petersburg. What begins as tenderness becomes a quieter study of longing, self-protection, and the stories people build around their own loneliness.</p>
+        </div>
+
+        <div class="toc">
+          <h4>In this reflection</h4>
+          <ul>
+            <li><a href="#section-prose">The Prose and the Distance It Creates</a></li>
+            <li><a href="#section-sympathy">The Complication of Sympathy</a></li>
+            <li><a href="#section-defense">The Defense That Was Always There</a></li>
+            <li><a href="#section-ordinary-life">What This Looks Like in Ordinary Life</a></li>
+            <li><a href="#section-takeaway">What It Left Me With</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Climate researcher at IIT Delhi. Curious about most things.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="mailto:anirudh.arora.research@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:anirudh.arora.research@gmail.com">anirudh.arora.research@gmail.com</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Anirudh Arora</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
