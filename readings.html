@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <base href="/website_new/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Readings — Anirudh Arora</title>
-  <meta name="description" content="Books, essays, and reflections that have shaped Anirudh Arora's thinking." />
+  <title>Writing & Reflections — Anirudh Arora</title>
+  <meta name="description" content="Public writing, literary reflections, and current reading by Anirudh Arora, connecting climate science, ethics, uncertainty, literature, and society." />
+  <meta property="og:title" content="Writing & Reflections — Anirudh Arora" />
+  <meta property="og:description" content="Public writing and literary reflections that shape Anirudh Arora's thinking about science, ethics, uncertainty, and society." />
   <link rel="icon" type="image/png" href="images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -116,6 +118,9 @@
     .cover-science    { background:linear-gradient(135deg,#1B5E8A,#26C6DA); }
 
     .cover-emoji { font-size:4rem; }
+    .writing-section-head { margin-bottom:16px; display:flex; align-items:end; justify-content:space-between; gap:20px; }
+    .writing-section-head p { max-width:560px; font-size:0.9rem; line-height:1.7; }
+    .public-writing-card { border-left:4px solid var(--terracotta); }
   </style>
 </head>
 <body>
@@ -145,9 +150,9 @@
 <div class="page-hero">
   <div class="container">
     <span class="section-label">Beyond the Papers</span>
-    <h1 class="section-title">Readings &amp; Reflections</h1>
+    <h1 class="section-title">Writing &amp; Reflections</h1>
     <div class="divider"></div>
-    <p class="section-subtitle">A curated collection of books and essays that have shaped my thinking — on science, society, ethics, and what it means to be human.</p>
+    <p class="section-subtitle">Public writing and literary reflections that shape how I think about science, ethics, uncertainty, and society.</p>
   </div>
 </div>
 
@@ -157,13 +162,42 @@
     <!-- Intro note -->
     <div style="max-width:680px;margin-bottom:56px;padding:24px 28px;background:var(--bg-card);border:1px solid var(--border);border-left:4px solid var(--sand);border-radius:var(--radius-md);" data-reveal>
       <p style="margin:0;font-size:0.95rem;color:var(--text-muted);line-height:1.8;">
-        I believe good science requires broad reading. The books below have shaped how I think about climate, ethics, power, and the human condition. Where I've written reflections, I've linked them — otherwise I share a brief thought on what stayed with me.
+        Broad reading belongs here because it shapes the way I think about science: what counts as evidence, how uncertainty should be held, and what technical knowledge owes to society. Where I've written reflections, I've linked them — otherwise I share a brief thought on what stayed with me.
       </p>
     </div>
 
+    <!-- Published / Public Writing -->
+    <div class="writing-section-head" data-reveal>
+      <div>
+        <span class="section-label">Published / Public Writing</span>
+      </div>
+      <p>Short public pieces where climate science has to meet policy, evidence, and public language.</p>
+    </div>
+    <div class="readings-grid" style="margin-bottom:72px;" data-reveal-stagger>
+      <div class="reading-card public-writing-card">
+        <div class="reading-cover cover-science">
+          <div class="cover-emoji">📰</div>
+          <div class="reading-cover-gradient"></div>
+          <span class="reading-genre">Op-ed</span>
+        </div>
+        <div class="reading-body">
+          <div class="reading-author">The India Forum</div>
+          <div class="reading-title">To Solve North India's Air Crisis, Look Beyond Stubble and Fireworks</div>
+          <div class="reading-reflection">A policy commentary arguing that the Indo-Gangetic Plain's air pollution problem needs a wider source-attribution frame than the usual seasonal blame cycle.</div>
+          <div class="reading-footer">
+            <div class="reading-rating">Published</div>
+            <a href="https://www.theindiaforum.in/environment/solve-north-indias-air-crisis-look-beyond-stubble-and-fireworks-0" target="_blank" rel="noopener" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Fiction & Literary -->
-    <div style="margin-bottom:16px;" data-reveal>
-      <span class="section-label">Fiction &amp; Literary</span>
+    <div class="writing-section-head" data-reveal>
+      <div>
+        <span class="section-label">Literary Reflections</span>
+      </div>
+      <p>Notes on books that keep pressing on questions of personhood, work, longing, and moral imagination.</p>
     </div>
     <div class="readings-grid" style="margin-bottom:72px;" data-reveal-stagger>
 
@@ -223,8 +257,11 @@
     </div>
 
     <!-- Non-fiction / Science -->
-    <div style="margin-bottom:16px;" data-reveal>
-      <span class="section-label">Science &amp; Non-fiction</span>
+    <div class="writing-section-head" data-reveal>
+      <div>
+        <span class="section-label">Science &amp; Non-fiction</span>
+      </div>
+      <p>Books that treat climate as a scientific, political, and communicative problem at once.</p>
     </div>
     <div class="readings-grid" style="margin-bottom:72px;" data-reveal-stagger>
 
@@ -263,9 +300,11 @@
     </div>
 
     <!-- Currently reading / On the list -->
-    <div data-reveal>
-      <span class="section-label">Currently On My Nightstand</span>
-      <h2 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:32px;color:var(--text);">Reading Now</h2>
+    <div class="writing-section-head" data-reveal>
+      <div>
+        <span class="section-label">Currently Reading</span>
+        <h2 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:0;color:var(--text);">Reading Now</h2>
+      </div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;" data-reveal-stagger>
 

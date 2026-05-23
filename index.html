@@ -73,7 +73,7 @@
     .dot-pulse {
       display: inline-block; width: 8px; height: 8px;
       border-radius: 50%; background: #22c55e; margin-right: 6px;
-      animation: pulse 2s infinite;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.14);
     }
     @keyframes pulse {
       0%,100%{ box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
@@ -157,14 +157,24 @@
     <div class="hero-content">
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name">Anirudh<br/>Arora</h1>
-      <p class="hero-role-line" aria-live="polite">
-        <span id="typing-text"></span><span class="typing-cursor" aria-hidden="true"></span>
-      </p>
+      <p class="hero-role-line hero-role-static">Climate researcher at IIT Delhi · Incoming Research Associate at MPI-M · BS-MS Environmental Science, IISER Bhopal</p>
       <p class="hero-tagline" id="hero-tagline"></p>
       <div class="hero-cta">
         <a href="projects.html" class="btn btn-primary"><i class="fa-solid fa-flask"></i> Research</a>
         <a href="publications.html" class="btn btn-outline"><i class="fa-solid fa-book-open"></i> Publications</a>
         <a href="Anirudh_CV.pdf" class="btn btn-sand" download><i class="fa-solid fa-download"></i> CV</a>
+      </div>
+      <div class="hero-focus-band" aria-label="Current research focus">
+        <span>Monsoon precipitation</span>
+        <span>km-scale simulations</span>
+        <span>Large ensembles</span>
+        <span>Model credibility over the Global South</span>
+      </div>
+      <div class="proof-strip" aria-label="Selected proof of work">
+        <span><strong>BAMS</strong> published</span>
+        <span><strong>km-scale summit</strong> 2026</span>
+        <span><strong>Rhodes</strong> finalist</span>
+        <span><strong>KAUST</strong> thesis</span>
       </div>
       <div id="hero-affiliations" class="hero-affiliations"></div>
     </div>

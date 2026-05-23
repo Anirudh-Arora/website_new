@@ -106,9 +106,29 @@ function initPubFilter() {
   });
 }
 
+function initCitationCopy() {
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.citation-copy');
+    if (!btn || !window.CONTENT || !CONTENT.publications) return;
+    var pub = CONTENT.publications.find(function(p) { return p.id === btn.dataset.pubId; });
+    if (!pub) return;
+    var authors = pub.authors.replace(/<[^>]+>/g, '');
+    var citation = authors + ' (' + pub.year + '). ' + pub.title + '. ' + pub.venue + (pub.doi ? '. https://doi.org/' + pub.doi : '');
+    function markCopied() {
+      var original = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
+      setTimeout(function() { btn.innerHTML = original; }, 1600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(citation).then(markCopied).catch(function() {});
+    }
+  });
+}
+
 /* ── DOM Ready ───────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function() {
   initPubFilter();
+  initCitationCopy();
 
   /* Typing animation — single authoritative instance.
      RENDER.startTyping in content.js is intentionally NOT called

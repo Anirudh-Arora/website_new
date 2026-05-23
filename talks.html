@@ -5,6 +5,9 @@
   <base href="/website_new/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Talks & Presentations — Anirudh Arora</title>
+  <meta name="description" content="Scientific talks, posters, outreach, and leadership by Anirudh Arora, including km-scale modelling, GeoMIP, climate governance, and science communication." />
+  <meta property="og:title" content="Talks & Presentations — Anirudh Arora" />
+  <meta property="og:description" content="Conference presentations, scientific posters, public outreach, and leadership work connected to climate science and policy." />
   <link rel="icon" type="image/png" href="images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +18,9 @@
     .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
     .talks-section-title { font-family:var(--font-display); font-size:1.5rem; margin-bottom:28px; color:var(--text); }
     .talks-list { display:flex; flex-direction:column; gap:20px; }
+    .talks-primary-block { padding:30px; border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:var(--radius-lg); background:var(--bg-card); margin-bottom:72px; box-shadow:0 16px 48px var(--shadow); }
+    .talks-primary-note { color:var(--text-muted); font-size:0.92rem; line-height:1.7; margin:-16px 0 24px; max-width:680px; }
+    .talks-secondary-block { margin-bottom:72px; opacity:0.94; }
   </style>
 </head>
 <body>
@@ -53,42 +59,45 @@
   <div class="container">
 
     <!-- Scientific Presentations -->
-    <div data-reveal>
-      <span class="section-label">Conference Presentations</span>
-      <div class="talks-section-title">Scientific Talks &amp; Posters</div>
-    </div>
-    <div class="talks-list" style="margin-bottom:72px;">
-
-      <div class="talk-card" data-reveal>
-        <div class="talk-type-badge">Poster</div>
-        <div>
-          <div class="talk-title">Evaluating Indian Summer Monsoon Precipitation in the IFS-FESOM nextGEMS Production Historical Simulation at Kilometre Scale</div>
-          <div class="talk-meta" style="margin-top:6px;"><strong>km-Scale Global Modelling Summit 2026</strong></div>
-          <div class="talk-meta">Hamburg, Germany &nbsp;·&nbsp; 2026</div>
-          <div class="talk-meta" style="margin-top:4px;font-style:italic;">Arora, A., Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.</div>
-          <div class="talk-note">Accepted contribution</div>
-        </div>
+    <div class="talks-primary-block">
+      <div data-reveal>
+        <span class="section-label">Conference Presentations</span>
+        <div class="talks-section-title">Scientific Talks &amp; Posters</div>
+        <p class="talks-primary-note">Primary scientific presentations most relevant to climate modelling, monsoon precipitation, and model-evaluation audiences. Poster files can be linked here as they become available.</p>
       </div>
+      <div class="talks-list">
 
-      <div class="talk-card" data-reveal>
-        <div class="talk-type-badge">Poster</div>
-        <div>
-          <div class="talk-title">Circulation Changes under Geoengineering and their Implications in Regional Precipitation and Temperature</div>
-          <div class="talk-meta" style="margin-top:6px;"><strong>14th Annual GeoMIP Meeting 2024</strong></div>
-          <div class="talk-meta">Cornell University, Ithaca, USA &nbsp;·&nbsp; July 10–12, 2024</div>
-          <div class="talk-meta" style="margin-top:4px;font-style:italic;">Arora, A., Upadhyaya, P., Mishra, S. K.</div>
-          <div class="talk-note">Full travel &amp; accommodation support awarded</div>
+        <div class="talk-card" data-reveal>
+          <div class="talk-type-badge">Poster</div>
+          <div>
+            <div class="talk-title">Evaluating Indian Summer Monsoon Precipitation in the IFS-FESOM nextGEMS Production Historical Simulation at Kilometre Scale</div>
+            <div class="talk-meta" style="margin-top:6px;"><strong>km-Scale Global Modelling Summit 2026</strong></div>
+            <div class="talk-meta">Hamburg, Germany &nbsp;·&nbsp; 2026</div>
+            <div class="talk-meta" style="margin-top:4px;font-style:italic;">Arora, A., Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.</div>
+            <div class="talk-note">Accepted contribution</div>
+          </div>
         </div>
+
+        <div class="talk-card" data-reveal>
+          <div class="talk-type-badge">Poster</div>
+          <div>
+            <div class="talk-title">Circulation Changes under Geoengineering and their Implications in Regional Precipitation and Temperature</div>
+            <div class="talk-meta" style="margin-top:6px;"><strong>14th Annual GeoMIP Meeting 2024</strong></div>
+            <div class="talk-meta">Cornell University, Ithaca, USA &nbsp;·&nbsp; July 10–12, 2024</div>
+            <div class="talk-meta" style="margin-top:4px;font-style:italic;">Arora, A., Upadhyaya, P., Mishra, S. K.</div>
+            <div class="talk-note">Full travel &amp; accommodation support awarded</div>
+          </div>
+        </div>
+
       </div>
 
     </div>
 
     <!-- Science Communication -->
-    <div data-reveal>
+    <div class="talks-secondary-block" data-reveal>
       <span class="section-label">Science Communication</span>
       <div class="talks-section-title">Public Outreach &amp; Writing</div>
-    </div>
-    <div class="talks-list" style="margin-bottom:72px;">
+      <div class="talks-list">
 
       <div class="talk-card" data-reveal>
         <div class="talk-type-badge" style="background:var(--sand-light);color:#7A5C1E;">Op-Ed</div>
@@ -109,14 +118,14 @@
         </div>
       </div>
 
+      </div>
     </div>
 
     <!-- Leadership -->
-    <div data-reveal>
+    <div class="talks-secondary-block" data-reveal>
       <span class="section-label">Leadership &amp; Service</span>
       <div class="talks-section-title">Positions of Responsibility</div>
-    </div>
-    <div class="talks-list">
+      <div class="talks-list">
 
       <div class="talk-card" data-reveal>
         <div class="talk-type-badge" style="background:var(--accent-light);color:var(--accent);">Volunteer</div>
@@ -135,6 +144,7 @@
         </div>
       </div>
 
+      </div>
     </div>
   </div>
 </section>

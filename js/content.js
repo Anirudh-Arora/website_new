@@ -162,11 +162,11 @@ window.CONTENT = {
     {
       id:        "bams-sarci-2025",
       type:      "journal",
-      status:    "accepted",
+      status:    "published",
       year:      2026,
       authors:   "Bhuyan, D. P., Upadhyaya, P., Pathak, R., Namdev, P., Salunke, P., Anand, A., Suresh, A. D., <strong>Arora, A.</strong>, Baraik, S. K., Jain, S., Parihar, R. S., Dwivedi, A., Sahany, S., Sharan, M., Dash, S. K., Fasullo, J. T., Behera, S. K., Tribbia, J., & Mishra, S. K.",
       title:     "Advancing climate services in South Asia: The SARCI Framework for actionable information, capability, and capacity",
-      venue:     "Bulletin of the American Meteorological Society (accepted)",
+      venue:     "Bulletin of the American Meteorological Society",
       doi:       "10.1175/BAMS-D-25-0172.1",
       url:       "https://doi.org/10.1175/BAMS-D-25-0172.1",
       tags:      ["Climate Services", "South Asia", "Monsoon"],
@@ -355,9 +355,13 @@ window.CONTENT = {
       title:      "Stratospheric Aerosol Injection & the South Asian Monsoon",
       year:       2024,
       category:   "Climate Modeling",
+      tier:       "Current / Core Climate Research",
+      tierDesc:   "The work that best represents my current climate-science direction.",
+      pinned:     true,
       thumbIcon:  "🌐",
       thumbClass: "thumb-climate",
       tags:       ["GeoMIP", "Geoengineering", "Monsoon"],
+      methods:    ["GeoMIP", "G1/G6sulfur", "CESM-WACCM", "Monsoon circulation"],
       desc:       "Analyzed GeoMIP G6 outputs (CESM-WACCM) to assess impacts of SAI on precipitation patterns, temperature gradients, and atmospheric circulation. Presented at GeoMIP 2024, Cornell University.",
       pdf:        "",          // no PDF for this one — linked to poster
       url:        "project-detail.html?id=geomip",
@@ -368,9 +372,13 @@ window.CONTENT = {
       title:      "GCM Credibility over the Global South",
       year:       2025,
       category:   "Climate Modeling",
+      tier:       "Current / Core Climate Research",
+      tierDesc:   "The work that best represents my current climate-science direction.",
+      pinned:     true,
       thumbIcon:  "📊",
       thumbClass: "thumb-climate",
       tags:       ["CMIP6", "Model Evaluation", "Global South"],
+      methods:    ["CMIP5/CMIP6", "Global South", "Model evaluation", "Regional credibility"],
       desc:       "Systematic evaluation of CMIP5/CMIP6 multi-model ensemble performance over the Global South. Finds that despite doubling the number of models over a decade, credibility metrics over South Asia and Africa remain poor — raising questions about where and how models are validated.",
       pdf:        "",
       url:        "project-detail.html?id=gcm-credibility",
@@ -378,13 +386,17 @@ window.CONTENT = {
     },
     {
       id:         "large-ensemble",
-      title:      "Internal Variability in Large Ensemble Simulations",
+      title:      "Tropical Precipitation in Large Ensembles and km-Scale Simulations",
       year:       2025,
       category:   "Climate Modeling",
+      tier:       "Current / Core Climate Research",
+      tierDesc:   "The work that best represents my current climate-science direction.",
+      pinned:     true,
       thumbIcon:  "🌀",
       thumbClass: "thumb-climate",
-      tags:       ["Large Ensembles", "Internal Variability", "KAUST"],
-      desc:       "Master's thesis research completed at KAUST's CLIMATics Group. Quantifying the role of internal climate variability versus forced response in regional climate projections using large ensemble simulations, with implications for uncertainty attribution in climate services.",
+      tags:       ["nextGEMS", "IFS-FESOM", "Large Ensembles"],
+      methods:    ["IFS-FESOM", "nextGEMS", "CESM2-LE", "MPI-GE", "Brier Skill Score"],
+      desc:       "Master's thesis research completed at KAUST's CLIMATics Group, evaluating tropical and Indian summer monsoon precipitation across IFS-FESOM nextGEMS, CMIP6 benchmarks, and large ensembles to ask what resolution and ensemble size add to model credibility.",
       pdf:        "",
       url:        "project-detail.html?id=large-ensemble",
       advisor:    "Prof. Ibrahim Hoteit, KAUST",
@@ -394,6 +406,8 @@ window.CONTENT = {
       title:      "Air Pollution Dynamics over the Indo-Gangetic Plain",
       year:       2024,
       category:   "Atmospheric Science",
+      tier:       "Atmospheric Science & Policy",
+      tierDesc:   "Applied atmospheric work with direct policy and communication consequences.",
       thumbIcon:  "🏭",
       thumbClass: "thumb-atmos",
       tags:       ["Air Quality", "Satellite Data", "IGP"],
@@ -407,6 +421,8 @@ window.CONTENT = {
       title:      "Sequential Decision-Making for Climate Action",
       year:       2023,
       category:   "Decision Theory",
+      tier:       "Atmospheric Science & Policy",
+      tierDesc:   "Applied atmospheric work with direct policy and communication consequences.",
       thumbIcon:  "📜",
       thumbClass: "thumb-decision",
       tags:       ["MDPs", "Climate Policy", "Optimization"],
@@ -420,6 +436,8 @@ window.CONTENT = {
       title:      "Modeling Atmospheric Aerosols in Climate Systems",
       year:       2024,
       category:   "Climate Modeling",
+      tier:       "Atmospheric Science & Policy",
+      tierDesc:   "Applied atmospheric work with direct policy and communication consequences.",
       thumbIcon:  "🔬",
       thumbClass: "thumb-climate",
       tags:       ["Aerosols", "GCMs", "Radiative Forcing"],
@@ -433,6 +451,8 @@ window.CONTENT = {
       title:      "Aerosol Influence on Indian Monsoon Rainfall",
       year:       2024,
       category:   "Atmospheric Science",
+      tier:       "Atmospheric Science & Policy",
+      tierDesc:   "Applied atmospheric work with direct policy and communication consequences.",
       thumbIcon:  "🌧️",
       thumbClass: "thumb-atmos",
       tags:       ["Aerosols", "Monsoon", "South Asia"],
@@ -446,6 +466,8 @@ window.CONTENT = {
       title:      "Forest Fire Dynamics & Atmospheric Interactions",
       year:       2024,
       category:   "Atmospheric Science",
+      tier:       "Atmospheric Science & Policy",
+      tierDesc:   "Applied atmospheric work with direct policy and communication consequences.",
       thumbIcon:  "🔥",
       thumbClass: "thumb-fire",
       tags:       ["Wildfire", "Aerosols", "Smoke Plumes"],
@@ -459,6 +481,8 @@ window.CONTENT = {
       title:      "Ethnography of Laboratory Life at IISER Bhopal",
       year:       2024,
       category:   "Ethnography",
+      tier:       "Interdisciplinary / Earlier Work",
+      tierDesc:   "Earlier work that shows range without competing with the climate-science center of the site.",
       thumbIcon:  "🔭",
       thumbClass: "thumb-ethno",
       tags:       ["Ethnography", "Science Studies", "Lab Culture"],
@@ -472,6 +496,8 @@ window.CONTENT = {
       title:      "Socio-Cultural Importance of Garuda Purana",
       year:       2023,
       category:   "Ethnography",
+      tier:       "Interdisciplinary / Earlier Work",
+      tierDesc:   "Earlier work that shows range without competing with the climate-science center of the site.",
       thumbIcon:  "📖",
       thumbClass: "thumb-ethno",
       tags:       ["Ethnography", "Ritual Studies", "Death & Culture"],
@@ -485,6 +511,8 @@ window.CONTENT = {
       title:      "Modelling the Perfect Penalty Kick",
       year:       2022,
       category:   "Computational Physics",
+      tier:       "Interdisciplinary / Earlier Work",
+      tierDesc:   "Earlier work that shows range without competing with the climate-science center of the site.",
       thumbIcon:  "⚽",
       thumbClass: "thumb-comp",
       tags:       ["Fluid Dynamics", "Differential Equations", "Sports Science"],
@@ -622,11 +650,11 @@ window.RENDER = {
   allPubs: function(listId, countId) {
     var list=document.getElementById(listId); if(!list) return;
     var groups={
-      published:  {label:'Published',items:[]},
       accepted:   {label:'Accepted',items:[]},
+      published:  {label:'Published',items:[]},
+      conference: {label:'Conference',items:[]},
       'under-review':{label:'Under Review',items:[]},
-      'in-prep':  {label:'In Preparation',items:[]},
-      conference: {label:'Conference',items:[]}
+      'in-prep':  {label:'In Preparation',items:[]}
     };
     CONTENT.publications.forEach(function(p){
       var key=p.type==='conference'?'conference':p.status;
@@ -644,6 +672,7 @@ window.RENDER = {
 
   _pubCard: function(p) {
     var viewBtn=p.url?'<a href="'+p.url+'" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 14px;font-size:0.8rem;margin-top:8px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>':'';
+    var citeBtn=(p.status==='published'||p.status==='accepted')?'<button type="button" class="btn btn-outline citation-copy" data-pub-id="'+p.id+'" style="padding:8px 14px;font-size:0.8rem;margin-top:8px;"><i class="fa-regular fa-copy"></i> Copy citation</button>':'';
     var doiStr=p.doi?' · <a href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener" style="color:var(--accent);">DOI</a>':'';
     var dateStr=p.date?' · '+p.date:'';
     return '<div class="pub-card'+(p.highlight?' highlight':'')+'" data-status="'+p.status+'" data-type="'+p.type+'" data-year="'+p.year+'">'
@@ -654,7 +683,7 @@ window.RENDER = {
       +'<div class="pub-tags" style="margin-top:10px;"><span class="badge-status '+p.status+'">'+p.status.replace('-',' ')+'</span>'
       +p.tags.map(function(t){return '<span class="badge-tag">'+t+'</span>';}).join('')+'</div>'
       +'</div>'
-      +'<div class="pub-card-meta"><div class="pub-year">'+p.year+'</div>'+viewBtn+'</div>'
+      +'<div class="pub-card-meta"><div class="pub-year">'+p.year+'</div><div class="pub-actions">'+viewBtn+citeBtn+'</div></div>'
       +'</div>';
   },
 
@@ -680,22 +709,49 @@ window.RENDER = {
 
   projects: function(id) {
     var el=document.getElementById(id); if(!el) return;
-    el.innerHTML=CONTENT.projects.map(function(p){
+    var tiers=[
+      "Current / Core Climate Research",
+      "Atmospheric Science & Policy",
+      "Interdisciplinary / Earlier Work"
+    ];
+    var projectOrder={
+      "large-ensemble": 1,
+      "gcm-credibility": 2,
+      "geomip": 3
+    };
+    function card(p){
       var readMore=p.url
         ?'<div style="margin-top:20px;"><a href="'+p.url+'" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a></div>'
         :'';
-      return '<div class="project-card" data-category="'+p.category+'">'
-        +'<div class="project-thumb '+p.thumbClass+'">'
-        +'<span class="project-category-pill">'+p.category+'</span>'
-        +'<div class="project-thumb-icon">'+p.thumbIcon+'</div>'
-        +'</div>'
+      var methodChips=(p.methods&&p.methods.length)?'<div class="project-methods">'+p.methods.map(function(m){return '<span>'+m+'</span>';}).join('')+'</div>':'';
+      var pin=p.pinned?'<span class="project-pin-inline">Selected</span>':'';
+      return '<div class="project-card'+(p.pinned?' pinned':'')+'" data-category="'+p.category+'" data-tier="'+(p.tier||'Other')+'">'
         +'<div class="project-body">'
+        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span>'+pin+'</div>'
         +'<div class="project-meta">'+p.year+'</div>'
         +'<div class="project-title">'+(p.url?'<a href="'+p.url+'">'+p.title+'</a>':p.title)+'</div>'
         +'<div class="project-desc">'+p.desc+'</div>'
+        +methodChips
         +'<div class="project-tags">'+p.tags.map(function(t){return '<span class="badge-tag">'+t+'</span>';}).join('')+'</div>'
         +readMore
         +'</div></div>';
+    }
+    el.innerHTML=tiers.map(function(tier){
+      var items=CONTENT.projects
+        .filter(function(p){return (p.tier||'Other')===tier;})
+        .sort(function(a,b){
+          var ao=projectOrder[a.id]||100;
+          var bo=projectOrder[b.id]||100;
+          if(ao!==bo) return ao-bo;
+          if(!!a.pinned!==!!b.pinned) return a.pinned?-1:1;
+          return (b.year||0)-(a.year||0);
+        });
+      if(!items.length) return '';
+      var desc=items[0].tierDesc||'';
+      return '<section class="project-tier" data-tier="'+tier+'">'
+        +'<div class="project-tier-head"><div><span class="section-label">'+tier+'</span>'+(desc?'<p>'+desc+'</p>':'')+'</div><span class="project-tier-count">'+items.length+' items</span></div>'
+        +'<div class="projects-grid project-tier-grid">'+items.map(card).join('')+'</div>'
+        +'</section>';
     }).join('');
   },
 

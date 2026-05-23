@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <base href="/website_new/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Anirudh Arora</title>
+  <title>Research — Anirudh Arora</title>
+  <meta name="description" content="Research by Anirudh Arora on monsoon precipitation, km-scale climate simulations, large ensembles, model credibility over the Global South, aerosols, and climate policy." />
+  <meta property="og:title" content="Research — Anirudh Arora" />
+  <meta property="og:description" content="A research agenda centered on climate model credibility, tropical precipitation, km-scale simulations, and the Global South." />
   <link rel="icon" type="image/png" href="images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,6 +63,13 @@
       color: var(--text-light); margin-bottom: 36px;
     }
     .project-count span { color: var(--accent); font-weight: 700; }
+    .agenda-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; }
+    .agenda-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:22px 24px; }
+    .agenda-card strong { display:block; font-family:var(--font-display); font-size:1.05rem; color:var(--text); line-height:1.45; margin-bottom:10px; }
+    .agenda-card span { display:block; color:var(--text-muted); font-size:0.88rem; line-height:1.65; }
+    .method-strip { display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; }
+    .method-strip span { padding:5px 11px; border:1px solid var(--border); border-radius:99px; background:var(--bg-alt); color:var(--text-muted); font-family:var(--font-mono); font-size:0.72rem; }
+    @media(max-width:840px){ .agenda-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -94,12 +104,30 @@
     <span class="section-label">Research Work</span>
     <h1 class="section-title">Research</h1>
     <div class="divider"></div>
-    <p class="section-subtitle">From atmospheric aerosols and solar geoengineering to ethnographic fieldwork and computational physics — a record of research across disciplines.</p>
+    <p class="section-subtitle">Selected research on monsoon precipitation, climate-model credibility, km-scale simulations, aerosols, and policy-relevant climate information.</p>
   </div>
 </div>
 
 <section style="padding:70px 0;">
   <div class="container">
+
+    <div class="story-panel" style="margin-bottom:44px;" data-reveal>
+      <div>
+        <div class="story-panel-kicker">Research Agenda</div>
+        <h3>Climate models are not equally credible everywhere.</h3>
+        <p>My current work asks where model confidence comes from, what higher resolution actually buys us, and how much ensemble information is enough before climate signals become useful for South Asia and the wider Global South.</p>
+      </div>
+      <div>
+        <div class="agenda-grid">
+          <div class="agenda-card"><strong>Can climate models be trusted over the Global South?</strong><span>Evaluating regional model credibility where observational gaps, monsoon dynamics, and development stakes overlap.</span></div>
+          <div class="agenda-card"><strong>What does km-scale modelling add for tropical precipitation?</strong><span>Testing whether IFS-FESOM / nextGEMS improves precipitation structure beyond conventional benchmarks.</span></div>
+          <div class="agenda-card"><strong>How much ensemble size is enough for reliable monsoon signals?</strong><span>Using large ensembles and convergence diagnostics to separate forced change from internal variability.</span></div>
+        </div>
+        <div class="method-strip" aria-label="Research methods and datasets">
+          <span>CMIP5/CMIP6</span><span>IFS-FESOM / nextGEMS</span><span>CESM2-LE</span><span>MPI-GE</span><span>CESM2-PPE</span><span>IMD</span><span>GPCP</span><span>ERA5</span>
+        </div>
+      </div>
+    </div>
 
     <!-- Filter bar — built from content.js categories -->
     <div id="filter-bar" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;"></div>
@@ -108,7 +136,7 @@
     <p class="project-count" id="project-count"></p>
 
     <!-- Projects grid -->
-    <div class="projects-grid" id="projects-grid"></div>
+    <div id="projects-grid"></div>
 
   </div>
 </section>
@@ -180,6 +208,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var match = (f === 'All') || (card.dataset.category === f);
         card.style.display = match ? '' : 'none';
         if (match) count++;
+      });
+      document.querySelectorAll('.project-tier').forEach(function(tier) {
+        var visibleCards = tier.querySelectorAll('.project-card:not([style*="display: none"])');
+        tier.style.display = visibleCards.length ? '' : 'none';
       });
       updateCount(count);
     });
