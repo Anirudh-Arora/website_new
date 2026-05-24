@@ -75,13 +75,11 @@ window.CONTENT = {
       "Alongside the modeling, I work on the <strong>ethics and governance of climate action</strong>: how evidence becomes policy, how uncertainty should be communicated, and how public reason can support more equitable climate decisions.",
     ],
     fullParagraphs: [
-      "I am a climate researcher interested in <strong>how atmospheric systems respond to natural variability, anthropogenic forcing, and proposed interventions</strong> — from the Indian summer monsoon to kilometer-scale simulations and regional consequences of stratospheric aerosol injection.",
-      "I completed my BS-MS in Environmental Science at IISER Bhopal, with my master's thesis research carried out at KAUST's CLIMATics Group under Prof. Ibrahim Hoteit and co-supervision from Prof. Saroj K. Mishra at IIT Delhi. I am currently working again at the DST Centre of Excellence for Climate Information at IIT Delhi, and from July 2026 I will join the Max Planck Institute for Meteorology as a Research Associate.",
-      "My thesis, <em>Toward Reliable Tropical Precipitation Simulations by Assessing the Added Value of Large Ensembles and Kilometer-Scale Simulations</em>, evaluates Indian summer monsoon precipitation across CMIP-class archives, large ensembles, and kilometer-scale simulations. I work with IMD, GPCP, ERA5, CMIP6 multi-model means, IFS-FESOM nextGEMS, CESM2-LE, MPI-GE, and CESM2-PPE.",
-      "My work combines statistical analysis of CMIP5/CMIP6 multi-model ensembles, kilometer-scale Earth system simulations, ensemble convergence diagnostics such as effective ensemble size, satellite-based atmospheric composition retrievals, and decision-theoretic approaches to climate policy.",
-      "A recurring question in my work is credibility: when a global climate model performs poorly over the Global South, what does that mean for the communities expected to use its projections? That question is scientific, political, and ethical at the same time.",
-      "Beyond modelling, I am invested in <strong>science communication and climate governance</strong>. I have co-hosted a podcast on climate governance, authored commentary for The India Forum, and presented at the GeoMIP 2024 meeting at Cornell University. I was shortlisted as a <strong>Rhodes Scholarship India finalist</strong>.",
-      "Outside research I lead <em>Prayaas</em>, a volunteer organisation working with underprivileged communities through education, and I was formerly president of IISER Bhopal's Debating Society.",
+      "I am a climate researcher interested in <strong>how tropical precipitation, monsoon dynamics, and atmospheric systems respond to variability, forcing, and model resolution</strong>.",
+      "I completed my BS-MS in Environmental Science at IISER Bhopal, with my master's thesis research carried out at KAUST's CLIMATics Group under Prof. Ibrahim Hoteit and co-supervision from Prof. Saroj K. Mishra at IIT Delhi.",
+      "I am currently working at the DST Centre of Excellence for Climate Information at IIT Delhi. From July 2026, I will join the Max Planck Institute for Meteorology as a Research Associate.",
+      "My work uses CMIP-class archives, large ensembles, kilometer-scale simulations, reanalysis, and observational products to ask a recurring question: when can climate models be trusted over the Global South?",
+      "Beyond modelling, I am invested in science communication and climate governance. I have co-authored public commentary, presented at GeoMIP 2024, and was shortlisted as a Rhodes Scholarship India finalist.",
     ],
   },
 
@@ -362,6 +360,7 @@ window.CONTENT = {
       thumbClass: "thumb-climate",
       tags:       ["GeoMIP", "Geoengineering", "Monsoon"],
       methods:    ["GeoMIP", "G1/G6sulfur", "CESM-WACCM", "Monsoon circulation"],
+      summary:    "Regional monsoon and circulation response under stratospheric aerosol injection scenarios.",
       desc:       "Analyzed GeoMIP G6 outputs (CESM-WACCM) to assess impacts of SAI on precipitation patterns, temperature gradients, and atmospheric circulation. Presented at GeoMIP 2024, Cornell University.",
       pdf:        "",          // no PDF for this one — linked to poster
       url:        "project-detail.html?id=geomip",
@@ -379,6 +378,7 @@ window.CONTENT = {
       thumbClass: "thumb-climate",
       tags:       ["CMIP6", "Model Evaluation", "Global South"],
       methods:    ["CMIP5/CMIP6", "Global South", "Model evaluation", "Regional credibility"],
+      summary:    "A model-evaluation project asking where CMIP credibility remains weak over the Global South.",
       desc:       "Systematic evaluation of CMIP5/CMIP6 multi-model ensemble performance over the Global South. Finds that despite doubling the number of models over a decade, credibility metrics over South Asia and Africa remain poor — raising questions about where and how models are validated.",
       pdf:        "",
       url:        "project-detail.html?id=gcm-credibility",
@@ -396,7 +396,11 @@ window.CONTENT = {
       thumbClass: "thumb-climate",
       tags:       ["nextGEMS", "IFS-FESOM", "Large Ensembles"],
       methods:    ["IFS-FESOM", "nextGEMS", "CESM2-LE", "MPI-GE", "Brier Skill Score"],
+      summary:    "Master's thesis research on whether km-scale simulations and large ensembles improve tropical precipitation credibility.",
       desc:       "Master's thesis research completed at KAUST's CLIMATics Group, evaluating tropical and Indian summer monsoon precipitation across IFS-FESOM nextGEMS, CMIP6 benchmarks, and large ensembles to ask what resolution and ensemble size add to model credibility.",
+      detail:     "This project is my master's thesis work at KAUST's CLIMATics Group. It evaluates tropical precipitation and Indian summer monsoon precipitation across CMIP6 benchmarks, the IFS-FESOM nextGEMS production historical simulation, and large ensembles including CESM2-LE, MPI-GE, and CESM2-PPE. The central question is whether higher model resolution and larger ensemble size meaningfully improve the reliability of tropical precipitation simulations, or whether structural model limitations remain dominant.",
+      thesisTitle:"TOWARD RELIABLE TROPICAL PRECIPITATION SIMULATIONS BY ASSESSING THE ADDED VALUE OF LARGE ENSEMBLES AND KILOMETER-SCALE MODEL SIMULATIONS",
+      thesisAccess:"The thesis is not publicly downloadable from this website. Please email me to request a copy.",
       pdf:        "",
       url:        "project-detail.html?id=large-ensemble",
       advisor:    "Prof. Ibrahim Hoteit, KAUST",
@@ -411,6 +415,7 @@ window.CONTENT = {
       thumbIcon:  "🏭",
       thumbClass: "thumb-atmos",
       tags:       ["Air Quality", "Satellite Data", "IGP"],
+      summary:    "Source-attribution and policy-facing work on air pollution over North India.",
       desc:       "Multi-scale analysis of natural and anthropogenic sources of air pollution using reanalysis and satellite datasets. Co-authored policy commentary in The India Forum.",
       pdf:        "",          // linked to India Forum article instead
       url:        "project-detail.html?id=pollution",
@@ -426,6 +431,7 @@ window.CONTENT = {
       thumbIcon:  "📜",
       thumbClass: "thumb-decision",
       tags:       ["MDPs", "Climate Policy", "Optimization"],
+      summary:    "A decision-theory framework for climate action under uncertainty.",
       desc:       "Developed a novel framework for sequential decision-making using Markov Decision Processes (MDPs) to promote efficient climate adaptation strategies.",
       pdf:        "",
       url:        "project-detail.html?id=policy",
@@ -441,6 +447,7 @@ window.CONTENT = {
       thumbIcon:  "🔬",
       thumbClass: "thumb-climate",
       tags:       ["Aerosols", "GCMs", "Radiative Forcing"],
+      summary:    "A technical report on aerosol processes, cloud interactions, and radiative forcing.",
       desc:       "Comprehensive report on aerosol dynamics and representation in GCMs, focusing on aerosol microphysics, cloud interactions, and radiative forcing.",
       pdf:        "Documents/aerosol.pdf",
       url:        "project-detail.html?id=aerosols",
@@ -456,6 +463,7 @@ window.CONTENT = {
       thumbIcon:  "🌧️",
       thumbClass: "thumb-atmos",
       tags:       ["Aerosols", "Monsoon", "South Asia"],
+      summary:    "Review work on how remote aerosol emissions influence South Asian monsoon variability.",
       desc:       "Co-authored review paper analyzing the influence of remote aerosol emissions on South Asian monsoon variability.",
       pdf:        "Documents/monsoon.pdf",
       url:        "project-detail.html?id=monsoon-aerosols",
@@ -471,6 +479,7 @@ window.CONTENT = {
       thumbIcon:  "🔥",
       thumbClass: "thumb-fire",
       tags:       ["Wildfire", "Aerosols", "Smoke Plumes"],
+      summary:    "Atmosphere-fire interactions through smoke transport, emissions, and regional air quality.",
       desc:       "Analysis of forest fire dynamics and their interactions with the atmosphere, including smoke plume transport, aerosol emissions, and impacts on regional air quality and climate.",
       pdf:        "Documents/forest-fire.pdf",
       url:        "project-detail.html?id=forest-fire",
@@ -486,6 +495,7 @@ window.CONTENT = {
       thumbIcon:  "🔭",
       thumbClass: "thumb-ethno",
       tags:       ["Ethnography", "Science Studies", "Lab Culture"],
+      summary:    "Ethnographic observation of laboratory culture, work practices, and scientific interaction.",
       desc:       "Comprehensive ethnographic study of two distinct laboratory settings over four months, examining socio-cultural dynamics, work practices, and interactions within scientific environments.",
       pdf:        "",
       url:        "project-detail.html?id=ethnography",
@@ -501,6 +511,7 @@ window.CONTENT = {
       thumbIcon:  "📖",
       thumbClass: "thumb-ethno",
       tags:       ["Ethnography", "Ritual Studies", "Death & Culture"],
+      summary:    "Field ethnography on ritual, death, and the socio-cultural role of Garuda Purana.",
       desc:       "Field ethnography study examining the socio-cultural importance of Garuda Purana and death rituals across communities.",
       pdf:        "",
       url:        "project-detail.html?id=garuda-purana",
@@ -516,6 +527,7 @@ window.CONTENT = {
       thumbIcon:  "⚽",
       thumbClass: "thumb-comp",
       tags:       ["Fluid Dynamics", "Differential Equations", "Sports Science"],
+      summary:    "A computational physics project modelling velocity and spin for a football penalty kick.",
       desc:       "Solved six coupled differential equations with varying initial conditions to obtain optimal velocities and spin values for a perfect football penalty kick.",
       pdf:        "Documents/penalty.pdf",
       url:        "project-detail.html?id=penalty",
@@ -730,7 +742,7 @@ window.RENDER = {
         +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span>'+pin+'</div>'
         +'<div class="project-meta">'+p.year+'</div>'
         +'<div class="project-title">'+(p.url?'<a href="'+p.url+'">'+p.title+'</a>':p.title)+'</div>'
-        +'<div class="project-desc">'+p.desc+'</div>'
+        +'<div class="project-desc">'+(p.summary||p.desc)+'</div>'
         +methodChips
         +'<div class="project-tags">'+p.tags.map(function(t){return '<span class="badge-tag">'+t+'</span>';}).join('')+'</div>'
         +readMore

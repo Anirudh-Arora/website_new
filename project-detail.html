@@ -28,7 +28,7 @@
     }
     .proj-hero-bg {
       position: absolute; inset: 0;
-      opacity: 0.06;
+      opacity: 0.03;
       font-size: 28rem;
       display: flex; align-items: center; justify-content: flex-end;
       padding-right: 8%;
@@ -208,6 +208,37 @@
     .no-pdf-box h3 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 8px; color: var(--text); }
     .no-pdf-box p  { font-size: 0.9rem; color: var(--text-muted); max-width: 400px; margin: 0 auto 24px; }
 
+    .thesis-request-box {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      margin: 0 0 36px;
+      box-shadow: 0 14px 42px var(--shadow);
+    }
+    .thesis-request-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .thesis-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .thesis-request-box p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
     @media (max-width: 900px) {
       .proj-body-grid { grid-template-columns: 1fr; }
       .proj-sidebar { position: static; }
@@ -281,6 +312,16 @@
           <p id="proj-desc-text" style="font-size:1rem;line-height:1.8;color:var(--text-muted);"></p>
         </div>
 
+        <div class="thesis-request-box" id="thesis-request-box">
+          <span class="section-label">Master's Thesis</span>
+          <h3>Thesis available by request</h3>
+          <div class="thesis-title" id="thesis-title"></div>
+          <p id="thesis-access-text"></p>
+          <a href="mailto:anirudh.arora.research@gmail.com?subject=Request%20for%20master%27s%20thesis%20copy" class="btn btn-primary">
+            <i class="fa-solid fa-envelope"></i> Request Thesis Copy
+          </a>
+        </div>
+
         <!-- PDF section — shown only if pdf exists -->
         <div class="pdf-section" id="pdf-section" style="display:none;">
           <span class="section-label">Project Document</span>
@@ -315,7 +356,7 @@
         <div class="no-pdf-box" id="no-pdf-box" style="display:none;">
           <div class="icon">🔬</div>
           <h3>Summary Available</h3>
-          <p>This page currently hosts the project summary and context. A report, poster, or manuscript link will be added when it is ready to share publicly.</p>
+          <p id="no-pdf-message">This page currently hosts the project summary and context. A report, poster, or manuscript link will be added when it is ready to share publicly.</p>
           <a href="contact.html" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
         </div>
 
@@ -453,7 +494,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }).join('');
 
   // Description
-  document.getElementById('proj-desc-text').textContent = project.desc;
+  document.getElementById('proj-desc-text').textContent = project.detail || project.desc;
+
+  if (project.thesisTitle) {
+    document.getElementById('thesis-request-box').style.display = 'block';
+    document.getElementById('thesis-title').textContent = project.thesisTitle;
+    document.getElementById('thesis-access-text').textContent = project.thesisAccess || 'Please email me to request a copy.';
+  }
 
   // PDF or placeholder
   if (project.pdf) {
@@ -474,6 +521,11 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     document.getElementById('pdf-section').style.display = 'none';
     document.getElementById('no-pdf-box').style.display  = 'block';
+    if (project.thesisTitle) {
+      document.querySelector('#no-pdf-box .icon').textContent = '📄';
+      document.querySelector('#no-pdf-box h3').textContent = 'Thesis Not Publicly Hosted';
+      document.getElementById('no-pdf-message').textContent = 'For this project, please use the thesis request box above to ask for a copy by email.';
+    }
   }
 
   // Sidebar info
