@@ -513,7 +513,7 @@ window.CONTENT = {
       tags:       ["Ethnography", "Ritual Studies", "Death & Culture"],
       summary:    "Field ethnography on ritual, death, and the socio-cultural role of Garuda Purana.",
       desc:       "Field ethnography study examining the socio-cultural importance of Garuda Purana and death rituals across communities.",
-      pdf:        "",
+      pdf:        "Documents/Anirudh-EthnographyOfGarudaPurana.pdf",
       url:        "project-detail.html?id=garuda-purana",
       advisor:    "Dr. Renny Thomas, IISER Bhopal",
     },
