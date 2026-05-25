@@ -733,13 +733,14 @@ window.RENDER = {
     };
     function card(p){
       var readMore=p.url
-        ?'<div style="margin-top:20px;"><a href="'+p.url+'" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a></div>'
+        ?'<div style="margin-top:20px;"><a href="'+p.url+'" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">'+(p.pdf?'View Report':'Read More')+' <i class="fa-solid fa-arrow-right"></i></a></div>'
         :'';
       var methodChips=(p.methods&&p.methods.length)?'<div class="project-methods">'+p.methods.map(function(m){return '<span>'+m+'</span>';}).join('')+'</div>':'';
       var pin=p.pinned?'<span class="project-pin-inline">Selected</span>':'';
+      var report=p.pdf?'<span class="project-report-inline"><i class="fa-solid fa-file-pdf"></i> Report available</span>':'';
       return '<div class="project-card'+(p.pinned?' pinned':'')+'" data-category="'+p.category+'" data-tier="'+(p.tier||'Other')+'">'
         +'<div class="project-body">'
-        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span>'+pin+'</div>'
+        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span><span class="project-head-badges">'+report+pin+'</span></div>'
         +'<div class="project-meta">'+p.year+'</div>'
         +'<div class="project-title">'+(p.url?'<a href="'+p.url+'">'+p.title+'</a>':p.title)+'</div>'
         +'<div class="project-desc">'+(p.summary||p.desc)+'</div>'

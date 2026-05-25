@@ -1089,10 +1089,20 @@ section { padding: 90px 0; }
   margin-bottom: 18px;
 }
 
-.project-category-inline,
-.project-pin-inline {
+.project-head-badges {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-category-inline,
+.project-pin-inline,
+.project-report-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   border-radius: 99px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -1115,6 +1125,13 @@ section { padding: 90px 0; }
   background: var(--terra-light);
   color: var(--terracotta);
   border: 1px solid rgba(196,98,45,0.22);
+}
+
+.project-report-inline {
+  padding: 6px 11px;
+  background: var(--sand-light);
+  color: #7A5C1E;
+  border: 1px solid rgba(200,169,110,0.42);
 }
 
 .project-meta {
