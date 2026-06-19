@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/website_new/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection: Never Let Me Go — Anirudh Arora</title>
+  <meta name="description" content="A reflection on Kazuo Ishiguro's Never Let Me Go — on normalization, withholding, and what gets held anyway." />
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .article-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .article-body p { margin-bottom: 1.5em; }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--text);
+      margin: 2.5em 0 0.8em;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--sand);
+      padding: 16px 24px;
+      margin: 2em 0;
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .article-body blockquote footer {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-style: normal;
+      font-family: var(--font-mono);
+      margin-top: 8px;
+      display: block;
+    }
+
+    .article-sidebar { position: sticky; top: 90px; }
+
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #1a1a2e, #4A2D7A);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+    .book-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .book-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .book-author { font-size: 0.88rem; color: var(--text-muted); }
+    .book-genre {
+      display: inline-block;
+      padding: 3px 10px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+    .book-rating { color: var(--sand); font-size: 1rem; letter-spacing: 2px; margin-top: 8px; }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .meta-author-img {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+    .meta-name { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+    .meta-info { font-size: 0.82rem; color: var(--text-light); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+    }
+    .toc h4 {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 14px;
+    }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .toc li:last-child { border-bottom: none; }
+    .toc a { font-size: 0.88rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .toc a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/anni.jpeg" alt="" class="nav-logo-img" />
+      <span class="nav-logo-text">Anirudh Arora</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Speaking</a></li>
+      <li class="active"><a href="readings.html">Writing</a></li>
+      <li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Research</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a>
+  <a href="readings.html" class="active">Writing</a><a href="life.html">Life</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+      <a href="readings.html" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">← Readings</a>
+      <span style="color:var(--text-light);font-size:0.8rem;">/ Reflection</span>
+    </div>
+    <span class="section-label">Literary Reflection</span>
+    <h1 class="section-title" style="max-width:800px;">Reflections on Normalization, Withholding, and What Gets Held Anyway</h1>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);margin-top:12px;">
+      A reflection on Kazuo Ishiguro's <em>Never Let Me Go</em>
+    </p>
+  </div>
+</div>
+
+<section style="padding:70px 0;">
+  <div class="container">
+
+    <div class="article-meta" data-reveal>
+      <img src="images/anni.jpeg" alt="Anirudh Arora" class="meta-author-img" />
+      <div>
+        <div class="meta-name">Anirudh Arora</div>
+        <div class="meta-info">Climate Researcher · IIT Delhi / IISER Bhopal</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;">
+        <span class="badge-tag">Novel</span>
+        <span class="badge-tag">Kazuo Ishiguro</span>
+        <span class="badge-tag">Speculative Fiction</span>
+      </div>
+    </div>
+
+    <div class="article-grid">
+
+      <div class="article-body" data-reveal>
+
+        <p><em>Never Let Me Go</em> is often described as a dystopian novel, a speculative story about a world that harvests human organs. What stayed with me was how quickly that description stops being adequate.</p>
+
+        <p>The thing that was hardest to process was not any single moment of horror but the absence of one. The unbearable is distributed so evenly across the entire book that it becomes, by design, difficult to locate. These children are being raised like crops, cared for and fed and educated, so that their bodies can be taken apart for others. The institution is, in the plainest terms, a farm. And yet the horror of that never arrives as horror. It arrives as ordinary life, as memory, as the texture of growing up. By the time I had the vocabulary for what I was reading, I was already inside it.</p>
+
+        <h2 id="section-withholds">The Narrator Who Withholds</h2>
+
+        <p>Kathy narrates her own dispossession in a tone so even and unhurried that it takes a while to notice what is missing. She describes loss the way someone might describe a change in weather, present, observed, then set aside. I trusted her, mostly. But I kept feeling that there was something she was not saying, something she had decided, at some point, not to bring all the way to the surface. The restraint in her narration did not read as Ishiguro's stylistic choice alone. It read as Kathy's own, as a woman who has learned that some things are more survivable if they are described rather than felt.</p>
+
+        <h2 id="section-sympathy">The Complication of Sympathy</h2>
+
+        <p>At first I felt the weight of their situation entirely on their behalf. They are gentle, curious, full of the small desires and attachments that make anyone recognizable. Tommy with his art. Ruth with her need to be at the center of things. Kathy with her quiet, patient watching. But my sympathy shifted uncomfortably when I realized they were not fighting it. They do not run. They do not seriously revolt. They complete their donations and become carers and then donors themselves, as though the sequence were simply what life is. At first that felt like resignation. Eventually it felt like something harder to name. They do not resist because resistance requires believing that another life is possible, and that belief was taken from them before they were old enough to form it.</p>
+
+        <blockquote>
+          They do not resist because resistance requires believing that another life is possible, and that belief was taken from them before they were old enough to form it.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-farm">The Farm and the Ordinary World</h2>
+
+        <p>What makes this impossible to set aside is the suspicion that the machinery Ishiguro describes is not as distant as it appears. The careful management of people who exist to serve a function, the institutions that provide just enough comfort and meaning to prevent the question from being asked too loudly, the way entire lives can be oriented around a purpose that was never chosen. The novel is speculative in its premise and uncomfortably literal in its logic.</p>
+
+        <h2 id="section-scene">The Scene That Stays</h2>
+
+        <p>There is a moment where Madame sees a young girl dancing alone, holding something to her chest as though it were a baby. She watches and she cries. What she is seeing, I think, is not a child who doesn't understand what she can never have. She is seeing a child who understands perfectly, and is holding it anyway. That distinction is where the book's quiet devastation is concentrated. The longing is not innocent. It is entirely clear-eyed. The girl knows. She holds it anyway.</p>
+
+        <p>That image stayed with me longer than anything else in the book, not because it is the saddest moment, but because it is the most honest one. It is the only moment where what is withheld and what is felt exist in the same frame at the same time.</p>
+
+        <blockquote>
+          The girl knows. She holds it anyway.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-left-me">What It Left Me With</h2>
+
+        <p><em>Never Let Me Go</em> does not ask you to be angry on their behalf, though anger is available. It asks something quieter and more difficult, which is to stay inside the experience of people who have accepted the unacceptable, not because they are weak, but because acceptance was built into them from the beginning.</p>
+
+        <p>Would anything have been different if they had known earlier, more completely, with no softening? I am not sure knowledge would have changed the architecture of what they were. The more unsettling question is whether the things we hold carefully, clear-eyed about their impossibility, are so different from what that girl was holding.</p>
+
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
+          <a href="readings.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Back to Readings
+          </a>
+        </div>
+
+      </div>
+
+      <div class="article-sidebar" data-reveal="right">
+
+        <div class="book-card">
+          <div class="book-cover-placeholder">🌿</div>
+          <div class="book-meta-row">
+            <div class="book-title">Never Let Me Go</div>
+            <div class="book-author">Kazuo Ishiguro · 2005</div>
+            <span class="book-genre">Speculative Fiction</span>
+          </div>
+          <div class="book-rating">★★★★★</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:12px;line-height:1.6;">A restrained, devastating novel about care, compliance, withheld knowledge, and lives shaped around purposes they never chose.</p>
+        </div>
+
+        <div class="toc">
+          <h4>In this reflection</h4>
+          <ul>
+            <li><a href="#section-withholds">The Narrator Who Withholds</a></li>
+            <li><a href="#section-sympathy">The Complication of Sympathy</a></li>
+            <li><a href="#section-farm">The Farm and the Ordinary World</a></li>
+            <li><a href="#section-scene">The Scene That Stays</a></li>
+            <li><a href="#section-left-me">What It Left Me With</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Climate researcher at IIT Delhi. Curious about most things.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="mailto:anirudh.arora.research@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:anirudh.arora.research@gmail.com">anirudh.arora.research@gmail.com</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Anirudh Arora</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
