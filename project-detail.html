@@ -239,6 +239,26 @@
       margin-bottom: 18px;
     }
 
+    .project-links-box {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin: 0 0 36px;
+    }
+    .project-links-box p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0 0 18px;
+    }
+    .project-link-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     @media (max-width: 900px) {
       .proj-body-grid { grid-template-columns: 1fr; }
       .proj-sidebar { position: static; }
@@ -320,6 +340,13 @@
           <a href="mailto:anirudh.arora.research@gmail.com?subject=Request%20for%20master%27s%20thesis%20copy" class="btn btn-primary">
             <i class="fa-solid fa-envelope"></i> Request Thesis Copy
           </a>
+        </div>
+
+        <div class="project-links-box" id="project-links-box">
+          <span class="section-label">Explore the Work</span>
+          <h2 style="font-family:var(--font-display);font-size:1.5rem;margin:10px 0 12px;color:var(--text);">Research Artifacts</h2>
+          <p>Code, notebooks, reports, and other shareable materials connected to this project.</p>
+          <div class="project-link-actions" id="project-link-actions"></div>
         </div>
 
         <!-- PDF section — shown only if pdf exists -->
@@ -486,6 +513,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (project.pdf) {
     metaHTML += '<div class="proj-meta-item"><i class="fa-solid fa-file-pdf"></i> Report available</div>';
   }
+  if ((project.links || []).some(function(l){ return l.type === 'code'; })) {
+    metaHTML += '<div class="proj-meta-item"><i class="fa-brands fa-github"></i> Code available</div>';
+  }
   document.getElementById('hero-meta').innerHTML = metaHTML;
 
   // Tags
@@ -500,6 +530,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('thesis-request-box').style.display = 'block';
     document.getElementById('thesis-title').textContent = project.thesisTitle;
     document.getElementById('thesis-access-text').textContent = project.thesisAccess || 'Please email me to request a copy.';
+  }
+
+  if (project.links && project.links.length) {
+    document.getElementById('project-links-box').style.display = 'block';
+    document.getElementById('project-link-actions').innerHTML = project.links.map(function(l){
+      return '<a href="'+l.url+'" target="_blank" rel="noopener" class="btn btn-outline">'
+        + '<i class="'+(l.icon || 'fa-solid fa-arrow-up-right-from-square')+'"></i> '+l.label
+        + '</a>';
+    }).join('');
   }
 
   // PDF or placeholder
@@ -533,7 +572,10 @@ document.addEventListener('DOMContentLoaded', function() {
       '<div class="sidebar-info-row"><i class="fa-solid fa-tag"></i><div><div class="label">Category</div><div class="val">'+project.category+'</div></div></div>'
     + '<div class="sidebar-info-row"><i class="fa-solid fa-calendar"></i><div><div class="label">Year</div><div class="val">'+project.year+'</div></div></div>'
     + '<div class="sidebar-info-row"><i class="fa-solid fa-user-tie"></i><div><div class="label">Advisor / Institution</div><div class="val">'+project.advisor+'</div></div></div>'
-    + (project.pdf ? '<div class="sidebar-info-row"><i class="fa-solid fa-file-pdf"></i><div><div class="label">Report</div><div class="val"><a href="'+project.pdf+'" download style="color:var(--accent);">Download PDF</a></div></div></div>' : '');
+    + (project.pdf ? '<div class="sidebar-info-row"><i class="fa-solid fa-file-pdf"></i><div><div class="label">Report</div><div class="val"><a href="'+project.pdf+'" download style="color:var(--accent);">Download PDF</a></div></div></div>' : '')
+    + ((project.links || []).map(function(l){
+        return '<div class="sidebar-info-row"><i class="'+(l.icon || 'fa-solid fa-arrow-up-right-from-square')+'"></i><div><div class="label">Artifact</div><div class="val"><a href="'+l.url+'" target="_blank" rel="noopener" style="color:var(--accent);">'+l.label+'</a></div></div></div>';
+      }).join(''));
 
   // Related projects (same category, different project)
   var related = CONTENT.projects.filter(function(p){ return p.id !== project.id && p.category === project.category; }).slice(0, 4);

@@ -482,6 +482,14 @@ window.CONTENT = {
       summary:    "Atmosphere-fire interactions through smoke transport, emissions, and regional air quality.",
       desc:       "Analysis of forest fire dynamics and their interactions with the atmosphere, including smoke plume transport, aerosol emissions, and impacts on regional air quality and climate.",
       pdf:        "Documents/forest-fire.pdf",
+      links:      [
+        {
+          label: "GitHub Repository",
+          url:   "https://github.com/saurabh-3110/Forest-fires-in-India/tree/main",
+          icon:  "fa-brands fa-github",
+          type:  "code",
+        },
+      ],
       url:        "project-detail.html?id=forest-fire",
       advisor:    "IISER Bhopal",
     },
@@ -732,21 +740,27 @@ window.RENDER = {
       "geomip": 3
     };
     function card(p){
+      var codeLinks=(p.links||[]).filter(function(l){return l.type==='code';});
       var readMore=p.url
-        ?'<div style="margin-top:20px;"><a href="'+p.url+'" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">'+(p.pdf?'View Report':'Read More')+' <i class="fa-solid fa-arrow-right"></i></a></div>'
+        ?'<a href="'+p.url+'" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">'+(p.pdf?'View Report':'Read More')+' <i class="fa-solid fa-arrow-right"></i></a>'
         :'';
+      var externalLinks=(p.links||[]).map(function(l){
+        return '<a href="'+l.url+'" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;"><i class="'+(l.icon||'fa-solid fa-arrow-up-right-from-square')+'"></i> '+l.label+'</a>';
+      }).join('');
+      var actions=(readMore||externalLinks)?'<div class="project-actions">'+readMore+externalLinks+'</div>':'';
       var methodChips=(p.methods&&p.methods.length)?'<div class="project-methods">'+p.methods.map(function(m){return '<span>'+m+'</span>';}).join('')+'</div>':'';
       var pin=p.pinned?'<span class="project-pin-inline">Selected</span>':'';
       var report=p.pdf?'<span class="project-report-inline"><i class="fa-solid fa-file-pdf"></i> Report available</span>':'';
+      var code=codeLinks.length?'<span class="project-code-inline"><i class="fa-brands fa-github"></i> Code available</span>':'';
       return '<div class="project-card'+(p.pinned?' pinned':'')+'" data-category="'+p.category+'" data-tier="'+(p.tier||'Other')+'">'
         +'<div class="project-body">'
-        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span><span class="project-head-badges">'+report+pin+'</span></div>'
+        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span><span class="project-head-badges">'+report+code+pin+'</span></div>'
         +'<div class="project-meta">'+p.year+'</div>'
         +'<div class="project-title">'+(p.url?'<a href="'+p.url+'">'+p.title+'</a>':p.title)+'</div>'
         +'<div class="project-desc">'+(p.summary||p.desc)+'</div>'
         +methodChips
         +'<div class="project-tags">'+p.tags.map(function(t){return '<span class="badge-tag">'+t+'</span>';}).join('')+'</div>'
-        +readMore
+        +actions
         +'</div></div>';
     }
     el.innerHTML=tiers.map(function(tier){
