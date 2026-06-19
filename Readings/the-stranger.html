@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/website_new/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection: The Stranger — Anirudh Arora</title>
+  <meta name="description" content="A reflection on Albert Camus' The Stranger — on isolation, recognition, social verdicts, and the arithmetic of happiness." />
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .article-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .article-body p { margin-bottom: 1.5em; }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--text);
+      margin: 2.5em 0 0.8em;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--sand);
+      padding: 16px 24px;
+      margin: 2em 0;
+      background: var(--bg-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .article-body blockquote footer {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-style: normal;
+      font-family: var(--font-mono);
+      margin-top: 8px;
+      display: block;
+    }
+
+    .article-sidebar { position: sticky; top: 90px; }
+
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #5C3A1B, #C8A96E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+    .book-meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .book-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--text); }
+    .book-author { font-size: 0.88rem; color: var(--text-muted); }
+    .book-genre {
+      display: inline-block;
+      padding: 3px 10px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+    .book-rating { color: var(--sand); font-size: 1rem; letter-spacing: 2px; margin-top: 8px; }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .meta-author-img {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+    .meta-name { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+    .meta-info { font-size: 0.82rem; color: var(--text-light); }
+
+    .toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+    }
+    .toc h4 {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 14px;
+    }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+    .toc li:last-child { border-bottom: none; }
+    .toc a { font-size: 0.88rem; color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .toc a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/anni.jpeg" alt="" class="nav-logo-img" />
+      <span class="nav-logo-text">Anirudh Arora</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Speaking</a></li>
+      <li class="active"><a href="readings.html">Writing</a></li>
+      <li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Research</a>
+  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a>
+  <a href="readings.html" class="active">Writing</a><a href="life.html">Life</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+      <a href="readings.html" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">← Readings</a>
+      <span style="color:var(--text-light);font-size:0.8rem;">/ Reflection</span>
+    </div>
+    <span class="section-label">Literary Reflection</span>
+    <h1 class="section-title" style="max-width:800px;">Reflections on Isolation, Recognition, and the Arithmetic of Happiness</h1>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);margin-top:12px;">
+      A reflection on Albert Camus' <em>The Stranger</em>
+    </p>
+  </div>
+</div>
+
+<section style="padding:70px 0;">
+  <div class="container">
+
+    <div class="article-meta" data-reveal>
+      <img src="images/anni.jpeg" alt="Anirudh Arora" class="meta-author-img" />
+      <div>
+        <div class="meta-name">Anirudh Arora</div>
+        <div class="meta-info">Climate Researcher · IIT Delhi / IISER Bhopal</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;">
+        <span class="badge-tag">Novel</span>
+        <span class="badge-tag">Albert Camus</span>
+        <span class="badge-tag">Absurdism</span>
+      </div>
+    </div>
+
+    <div class="article-grid">
+
+      <div class="article-body" data-reveal>
+
+        <p><em>The Stranger</em> is often introduced as the foundational text of absurdism, a philosophical novel about a man who refuses to lie about his inner life. What stayed with me was something more personal and less comfortable than philosophy.</p>
+
+        <p>I felt connected to Meursault almost immediately. Not because I admired him, but because his isolation felt recognizable. He moves through his life at a remove from it, not in distress, not in protest, simply at a remove. His mother dies and his first coherent thoughts are about the inconvenience of the funeral, the missed work, the effort involved. I did not find this monstrous. I found it, in a way I could not entirely account for, familiar.</p>
+
+        <h2 id="section-recognition">The Terror of Recognition</h2>
+
+        <p>What unsettled me was the point where that familiarity stopped feeling like empathy and started feeling like something I needed to look at more carefully. Meursault's detachment is not a wound or a coping mechanism. It is his actual relationship with the world. And the terrifying thing is not that he is broken. It is that he functions. He has friends, a girlfriend, a job. He participates in the surface of life without ever being inside it. I sat with the discomfort of recognizing that mode, faintly but enough to notice it, in myself. That recognition did not leave cleanly.</p>
+
+        <h2 id="section-sympathy">The Complication of Sympathy</h2>
+
+        <p>At first, I felt something close to tenderness for him. He is not cruel. He is not calculating. He is simply, constitutionally, somewhere else. But my sympathy became complicated when I realized that Meursault does not need it. He is not suffering from his isolation in any way he is aware of. The suffering belongs entirely to the reader. There is something quietly disorienting about feeling devastated on behalf of a man who is, by every indication, fine.</p>
+
+        <blockquote>
+          The suffering belongs entirely to the reader.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-trial">The Trial as Social Verdict</h2>
+
+        <p>The murder itself is almost incidental to what the book is actually doing. The trial is not about the death of a man on a beach. It is about the fact that Meursault did not cry at his mother's funeral, went to the beach the next day, and watched a comedy film the night after. The prosecution builds its case not from the act but from the failure to perform grief in the expected register. The jury does not convict him for what he did. They convict him for what he is.</p>
+
+        <p>That logic is not unique to courtrooms. It operates quietly in most social situations, in the way people read a person who does not react visibly to loss, or who seems too composed at the wrong moment, or who simply does not produce the emotions a given situation is supposed to require. Meursault's crime, in the world's eyes, is that he refuses to lie about his inner life even when lying would cost him nothing. That refusal is what they cannot forgive.</p>
+
+        <blockquote>
+          The jury does not convict him for what he did. They convict him for what he is.
+          <footer>— Personal reflection</footer>
+        </blockquote>
+
+        <h2 id="section-line">The Line That Stayed</h2>
+
+        <p>The moment I kept returning to was a single line from Meursault's time in prison. He recalls that his mother used to say that you can find happiness in any situation. He offers it without commentary, almost as a passing observation. But it is the only moment in the book where something like inherited wisdom appears. And sitting where he is, in a cell, waiting to be executed, the line lands differently than it would anywhere else.</p>
+
+        <p>I was not sure whether to read it as genuine consolation or as the mind doing what it must to remain intact. His mother apparently lived by it. He is about to die with it. Whether that makes it true or simply necessary is not a question the book answers.</p>
+
+        <h2 id="section-left-me">What It Left Me With</h2>
+
+        <p>Meursault's outburst at the priest near the end, his embrace of the universe's indifference, felt to me like the first moment he is fully present in the novel. Not because he has changed but because he has finally been forced to articulate what he has always known. The indifference was always there. The priest just made it visible.</p>
+
+        <p>Would Meursault have lived differently had he been capable of performing what was expected of him? I do not think performance was available to him. The more uncomfortable question is whether anything would have been different had he wanted it.</p>
+
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
+          <a href="readings.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Back to Readings
+          </a>
+        </div>
+
+      </div>
+
+      <div class="article-sidebar" data-reveal="right">
+
+        <div class="book-card">
+          <div class="book-cover-placeholder">☀️</div>
+          <div class="book-meta-row">
+            <div class="book-title">The Stranger</div>
+            <div class="book-author">Albert Camus · 1942</div>
+            <span class="book-genre">Philosophical Novel</span>
+          </div>
+          <div class="book-rating">★★★★★</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:12px;line-height:1.6;">A spare novel about Meursault, whose emotional detachment becomes the evidence by which society judges him.</p>
+        </div>
+
+        <div class="toc">
+          <h4>In this reflection</h4>
+          <ul>
+            <li><a href="#section-recognition">The Terror of Recognition</a></li>
+            <li><a href="#section-sympathy">The Complication of Sympathy</a></li>
+            <li><a href="#section-trial">The Trial as Social Verdict</a></li>
+            <li><a href="#section-line">The Line That Stayed</a></li>
+            <li><a href="#section-left-me">What It Left Me With</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Climate researcher at IIT Delhi. Curious about most things.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="mailto:anirudh.arora.research@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:anirudh.arora.research@gmail.com">anirudh.arora.research@gmail.com</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Anirudh Arora</span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
