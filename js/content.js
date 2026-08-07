@@ -567,8 +567,8 @@ window.CONTENT = {
     },
     {
       icon: "🏭",
-      title: "Cloud Microphysics, Aerosols & Air Quality",
-      desc: "Studying how cloud microphysics, aerosol processes, and atmospheric composition shape precipitation, radiative forcing, and regional air-quality risk."
+      title: "Cloud Microphysics",
+      desc: "Studying how superdroplet resolution, stochastic sampling, and initialization shape droplet-size distributions and bulk cloud microphysics."
     },
     {
       icon: "📜",
