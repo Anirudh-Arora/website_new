@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anirudh-arora.github.io/website_new/</loc><priority>1.0</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/projects.html</loc><priority>0.9</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/publications.html</loc><priority>0.9</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/about.html</loc><priority>0.8</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/talks.html</loc><priority>0.7</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/readings.html</loc><priority>0.7</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/Readings/white-nights.html</loc><priority>0.6</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/Readings/the-stranger.html</loc><priority>0.6</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/Readings/never-let-me-go.html</loc><priority>0.6</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/life.html</loc><priority>0.6</priority></url>
-  <url><loc>https://anirudh-arora.github.io/website_new/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/</loc><lastmod>2026-08-07</lastmod><priority>1.0</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/projects.html</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/publications.html</loc><lastmod>2026-08-07</lastmod><priority>0.9</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/about.html</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/contact.html</loc><lastmod>2026-08-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/talks.html</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/readings.html</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/life.html</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/project-detail.html?id=large-ensemble</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/project-detail.html?id=gcm-credibility</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/project-detail.html?id=geomip</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/project-detail.html?id=pollution</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/project-detail.html?id=forest-fire</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/project-detail.html?id=garuda-purana</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/Readings/metamorphosis.html</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/Readings/white-nights.html</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/Readings/the-stranger.html</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://anirudh-arora.github.io/website_new/Readings/never-let-me-go.html</loc><lastmod>2026-08-07</lastmod><priority>0.6</priority></url>
 </urlset>

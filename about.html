@@ -5,7 +5,14 @@
   <base href="/website_new/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Anirudh Arora</title>
-  <meta name="description" content="About Anirudh Arora — climate researcher at IIT Delhi, incoming Research Associate at MPI-M, Rhodes Scholarship finalist, and IISER Bhopal BS-MS Environmental Science graduate." />
+  <meta name="description" content="About Anirudh Arora — Research Assistant at the Max Planck Institute for Meteorology, Rhodes Scholarship finalist, and IISER Bhopal BS-MS Environmental Science graduate." />
+  <meta property="og:title" content="About — Anirudh Arora" />
+  <meta property="og:description" content="Research Assistant at MPI-M working across cloud microphysics, tropical precipitation, and climate-model uncertainty." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://anirudh-arora.github.io/website_new/about.html" />
+  <meta property="og:image" content="https://anirudh-arora.github.io/website_new/images/Myanni.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://anirudh-arora.github.io/website_new/about.html" />
   <link rel="icon" type="image/png" href="images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -149,8 +156,8 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="theme-toggle" id="theme-toggle"><span id="theme-icon">🌙</span></button>
-      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -196,7 +203,7 @@
       <div>
         <img src="images/Myanni.png" alt="Anirudh Arora" class="about-sidebar-photo" loading="lazy"/>
         <div class="about-sidebar-info">
-          <div class="info-row"><i class="fa-solid fa-location-dot"></i> New Delhi, India</div>
+          <div class="info-row"><i class="fa-solid fa-location-dot"></i> Hamburg, Germany</div>
           <div class="info-row"><i class="fa-solid fa-envelope"></i> <a href="mailto:anirudh.arora.research@gmail.com">anirudh.arora.research@gmail.com</a></div>
           <div class="info-row"><i class="fa-solid fa-graduation-cap"></i> BS-MS Environmental Science</div>
           <div class="info-row"><i class="fa-solid fa-flask"></i> Atmospheric Science &amp; Geoengineering</div>
@@ -207,6 +214,9 @@
           </a>
           <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content:center;">
             <i class="fa-brands fa-google-scholar"></i> Google Scholar
+          </a>
+          <a href="https://github.com/Arora-Anirudh" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content:center;">
+            <i class="fa-brands fa-github"></i> GitHub
           </a>
         </div>
       </div>
@@ -221,11 +231,11 @@
         <div class="glance-grid" aria-label="Academic snapshot">
           <div class="glance-item">
             <div class="glance-label">Current</div>
-            <div class="glance-value">DST CoE for Climate Information, IIT Delhi</div>
+            <div class="glance-value">Research Assistant, MPI-M</div>
           </div>
           <div class="glance-item">
-            <div class="glance-label">Incoming</div>
-            <div class="glance-value">Research Associate, MPI-M</div>
+            <div class="glance-label">Group</div>
+            <div class="glance-value">Climate Surface Interaction, Climate Physics</div>
           </div>
           <div class="glance-item">
             <div class="glance-label">Training</div>
@@ -251,13 +261,13 @@
       <h2 class="section-title">Education &amp; Research Experience</h2>
       <div class="divider"></div>
     </div>
-    <div id="about-timeline-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;">
-      <div>
-        <h3 style="font-size:1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--sand);margin-bottom:36px;">Education</h3>
-        <div class="timeline" id="about-edu"></div>
+    <div class="academic-history">
+      <div class="education-summary">
+        <h3 class="academic-section-kicker">Education</h3>
+        <div class="timeline education-timeline" id="about-edu"></div>
       </div>
-      <div>
-        <h3 style="font-size:1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--sand);margin-bottom:36px;">Research Experience</h3>
+      <div class="experience-history">
+        <h3 class="academic-section-kicker">Research Experience</h3>
         <div class="timeline" id="about-exp"></div>
       </div>
     </div>
@@ -374,7 +384,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-name">Anirudh Arora</div>
-        <p>Climate researcher at IIT Delhi studying tropical precipitation, monsoon dynamics, model uncertainty, and policy-relevant climate information.</p>
+        <p>Research Assistant at MPI-M working across cloud microphysics, tropical precipitation, monsoon dynamics, and climate-model uncertainty.</p>
         <div id="footer-social" class="footer-social"></div>
       </div>
       <div class="footer-col"><h4>Navigate</h4><ul>
@@ -401,11 +411,6 @@
 <script src="js/main.js"></script>
 <script>
 window.addEventListener('load', function() {
-  RENDER.startTyping('typing-text');
-
-  var tl = document.getElementById('hero-tagline');
-  if (tl) tl.textContent = CONTENT.tagline;
-
   RENDER.affiliations('hero-affiliations');
 
   var tb = document.getElementById('about-transition-text');
@@ -417,8 +422,5 @@ window.addEventListener('load', function() {
   RENDER.awards('about-awards');
   RENDER.socialLinks('footer-social');
 
-  var g = document.getElementById('timeline-grid');
-  function ck() { if(g) g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr'; }
-  ck(); window.addEventListener('resize', ck);
 });
 </script>

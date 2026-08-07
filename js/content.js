@@ -22,14 +22,7 @@ window.CONTENT = {
   name:     "Anirudh Arora",
   email:    "anirudh.arora.research@gmail.com",
   phone:    "+91-7987188136",
-  location: "New Delhi, India",
-
-  typingRoles: [
-    "Climate Researcher",
-    "Researcher @ IIT Delhi",
-    "Incoming Research Associate @ MPI-M",
-    "Environmental Scientist",
-  ],
+  location: "Hamburg, Germany",
 
   tagline: "Studying tropical precipitation, Indian summer monsoon dynamics, kilometer-scale climate simulations, large ensembles, atmospheric composition, and model credibility over the Global South.",
 
@@ -39,7 +32,7 @@ window.CONTENT = {
     googleScholar: "https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en",
     orcid:         "",   // e.g. "https://orcid.org/0000-0000-0000-0000"
     bluesky:       "",
-    github:        "",
+    github:        "https://github.com/Arora-Anirudh",
     twitter:       "",
   },
 
@@ -52,8 +45,8 @@ window.CONTENT = {
 
   /* ── Hero Affiliations ─────────────────────────────────── */
   affiliations: [
-    { label: "IIT Delhi · DST CoE for Climate Information", dot: "blue", icon: "" },
-    { label: "MPI-M · Incoming Research Associate", dot: "sand", icon: "" },
+    { label: "MPI-M · Climate Surface Interaction Group", dot: "blue", icon: "" },
+    { label: "IIT Delhi · DST CoE alumnus", dot: "sand", icon: "" },
     { label: "KAUST · CLIMATics Group alumnus", dot: "none", icon: "" },
     { label: "Rhodes Scholarship India Finalist", dot: "none", icon: "" },
   ],
@@ -68,7 +61,7 @@ window.CONTENT = {
 
   /* ── Bio ───────────────────────────────────────────────── */
   bio: {
-    transition: "BS-MS Environmental Science at IISER Bhopal · Currently at the <strong>DST CoE for Climate Information, IIT Delhi</strong> · Incoming <strong>Research Associate at MPI-M</strong> from July 2026.",
+    transition: "BS-MS Environmental Science at IISER Bhopal · Research Assistant at the <strong>Max Planck Institute for Meteorology</strong> · Former researcher at the <strong>DST CoE for Climate Information, IIT Delhi</strong>.",
     paragraphs: [
       "My work sits at the intersection of <strong>tropical precipitation</strong>, <strong>Indian summer monsoon dynamics</strong>, <strong>climate model evaluation</strong>, and <strong>climate model uncertainty</strong>. I use CMIP-class archives, kilometer-scale simulations, large ensembles, reanalysis products, and satellite retrievals to ask where models are credible, where they fail, and what that means for decisions.",
       "The scientific center of gravity is South Asia and the Global South: regions where monsoon risk, atmospheric composition, aerosol forcing, data gaps, and model uncertainty are not abstract technical issues but practical constraints on climate adaptation.",
@@ -77,7 +70,7 @@ window.CONTENT = {
     fullParagraphs: [
       "I am a climate researcher interested in <strong>how tropical precipitation, monsoon dynamics, and atmospheric systems respond to variability, forcing, and model resolution</strong>.",
       "I completed my BS-MS in Environmental Science at IISER Bhopal, with my master's thesis research carried out at KAUST's CLIMATics Group under Prof. Ibrahim Hoteit and co-supervision from Prof. Saroj K. Mishra at IIT Delhi.",
-      "I am currently working at the DST Centre of Excellence for Climate Information at IIT Delhi. From July 2026, I will join the Max Planck Institute for Meteorology as a Research Associate.",
+      "I am currently a Research Assistant in the Climate Surface Interaction Group within the Climate Physics Department at the Max Planck Institute for Meteorology, where I work with Dr. Clara Bayley on cloud microphysics and convergence in the superdroplet model CLEO.",
       "My work uses CMIP-class archives, large ensembles, kilometer-scale simulations, reanalysis, and observational products to ask a recurring question: when can climate models be trusted over the Global South?",
       "Beyond modelling, I am invested in science communication and climate governance. I have co-authored public commentary, presented at GeoMIP 2024, and was shortlisted as a Rhodes Scholarship India finalist.",
     ],
@@ -97,7 +90,7 @@ window.CONTENT = {
       institution: "IISER Bhopal",
       location:    "Bhopal, India",
       period:      "2021 – 2026",
-      detail:      "Bachelor and Master of Science in Environmental Science · CPI: 9.15/10 · Master's thesis research carried out at KAUST's CLIMATics Group.",
+      detail:      "Bachelor and Master of Science in Environmental Science · Overall CPI: 9.22/10 · Master's CPI: 10.00/10 · Master's thesis research carried out at KAUST's CLIMATics Group.",
       badge:       "",
     },
   ],
@@ -105,35 +98,34 @@ window.CONTENT = {
   /* ── Experience ────────────────────────────────────────── */
   experience: [
     {
-      role:       "Researcher",
-      org:        "DST Centre of Excellence for Climate Information, IIT Delhi",
-      location:   "New Delhi, India",
-      period:     "May 2023 – Present",
-      supervisor: "Prof. Saroj K. Mishra",
+      role:       "Research Assistant",
+      org:        "Max Planck Institute for Meteorology · Climate Surface Interaction Group",
+      location:   "Hamburg, Germany",
+      period:     "July 2026 – November 2026",
+      supervisor: "Dr. Clara Bayley",
       bullets: [
-        "Evaluating CMIP5/CMIP6 multi-model ensembles and IFS-FESOM kilometer-scale simulations of historical precipitation and the Indian summer monsoon over South Asia.",
-        "Investigating circulation-driven precipitation and temperature responses under solar geoengineering using GeoMIP G1 and G6sulfur simulations.",
-        "Co-developing a sequential decision-making framework for efficient climate action and contributing to SARCI climate services work for South Asia.",
-        "Contributed to multi-scale source attribution of natural and anthropogenic air pollution over the Indo-Gangetic Plain using reanalysis and satellite datasets.",
+        "Developing a convergence framework for the superdroplet model CLEO, quantifying how superdroplet resolution, stochastic sampling, and initialization affect droplet-size distributions and bulk cloud microphysics.",
       ],
       badge:      "Current",
     },
     {
-      role:       "Incoming Research Associate",
-      org:        "Max Planck Institute for Meteorology",
-      location:   "Hamburg, Germany",
-      period:     "July 2026 – November 2026",
-      supervisor: "Climate Physics Department",
+      role:       "Researcher",
+      org:        "DST Centre of Excellence for Climate Information, IIT Delhi",
+      location:   "New Delhi, India",
+      period:     "May 2023 – June 2026",
+      supervisor: "Prof. Saroj K. Mishra",
       bullets: [
-        "Five-month research appointment in the Climate Physics Department working on cloud microphysics.",
+        "Evaluated CMIP5/CMIP6 multi-model ensembles and IFS-FESOM kilometer-scale simulations of historical precipitation and the Indian summer monsoon over South Asia.",
+        "Investigated circulation-driven precipitation and temperature responses under solar geoengineering using GeoMIP G1 and G6sulfur simulations.",
+        "Co-developed a sequential decision-making framework for efficient climate action and contributed to SARCI climate services work for South Asia.",
+        "Contributed to multi-scale source attribution of natural and anthropogenic air pollution over the Indo-Gangetic Plain using reanalysis and satellite datasets.",
       ],
-      badge:      "Incoming",
     },
     {
       role:       "Visiting Researcher",
       org:        "CLIMATics Group, KAUST",
       location:   "Saudi Arabia",
-      period:     "July 2025 – May 2026",
+      period:     "July 2025 – June 2026",
       supervisor: "Prof. Ibrahim Hoteit",
       bullets: [
         "Completed master's thesis work: Toward Reliable Tropical Precipitation Simulations by Assessing the Added Value of Large Ensembles and Kilometer-Scale Simulations.",
@@ -173,7 +165,7 @@ window.CONTENT = {
     {
       id:        "nextgems-monsoon-2026",
       type:      "conference",
-      status:    "published",
+      status:    "conference",
       year:      2026,
       authors:   "<strong>Arora, A.</strong>, Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.",
       title:     "Evaluating Indian Summer Monsoon Precipitation in the IFS-FESOM nextGEMS Production Historical Simulation at Kilometre Scale",
@@ -181,7 +173,7 @@ window.CONTENT = {
       doi:       "",
       url:       "",
       tags:      ["nextGEMS", "IFS-FESOM", "Monsoon"],
-      highlight: true,
+      highlight: false,
     },
     {
       id:        "india-forum-2025",
@@ -196,6 +188,19 @@ window.CONTENT = {
       url:       "https://www.theindiaforum.in/environment/solve-north-indias-air-crisis-look-beyond-stubble-and-fireworks-0",
       tags:      ["Air Pollution", "Indo-Gangetic Plain", "Policy"],
       highlight: false,
+    },
+    {
+      id:        "nextgems-climatedynamics-2026",
+      type:      "journal",
+      status:    "under-review",
+      year:      2026,
+      authors:   "<strong>Arora, A.</strong>, Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.",
+      title:     "Km-scale resolution improves monsoon precipitation characteristics but leaves large-scale dynamical biases: evidence from IFS-FESOM nextGEMS",
+      venue:     "Climate Dynamics (under review)",
+      doi:       "",
+      url:       "",
+      tags:      ["nextGEMS", "IFS-FESOM", "Monsoon"],
+      highlight: true,
     },
     {
       id:        "npj-kantian-2026",
@@ -562,8 +567,8 @@ window.CONTENT = {
     },
     {
       icon: "🏭",
-      title: "Atmospheric Aerosols & Air Quality",
-      desc: "Multi-scale analysis of natural and anthropogenic aerosol sources over the Indo-Gangetic Plain, their interactions with cloud microphysics, radiative forcing, and implications for regional air quality policy."
+      title: "Cloud Microphysics, Aerosols & Air Quality",
+      desc: "Studying how cloud microphysics, aerosol processes, and atmospheric composition shape precipitation, radiative forcing, and regional air-quality risk."
     },
     {
       icon: "📜",
@@ -583,21 +588,6 @@ window.CONTENT = {
    RENDER ENGINE — do not edit below this line
 ═══════════════════════════════════════════════════════════ */
 window.RENDER = {
-
-  startTyping: function(id) {
-    var phrases=CONTENT.typingRoles, el=document.getElementById(id);
-    if(!el||!phrases.length) return;
-    var pi=0,ci=0,del=false;
-    function tick(){
-      var cur=phrases[pi];
-      if(del){ci--;el.textContent=cur.slice(0,ci);}else{ci++;el.textContent=cur.slice(0,ci);}
-      var d=del?45:80;
-      if(!del&&ci===cur.length){d=2200;del=true;}
-      else if(del&&ci===0){del=false;pi=(pi+1)%phrases.length;d=400;}
-      setTimeout(tick,d);
-    }
-    setTimeout(tick,800);
-  },
 
   stats: function(id) {
     var el=document.getElementById(id); if(!el) return;
@@ -683,7 +673,7 @@ window.RENDER = {
     var html='';
     Object.keys(groups).forEach(function(k){
       var g=groups[k]; if(!g.items.length) return;
-      html+='<div class="section-divider"><h3>'+g.label+'</h3></div>';
+      html+='<div class="section-divider"><h2>'+g.label+'</h2></div>';
       html+='<div class="pub-list">'+g.items.map(function(p){return RENDER._pubCard(p);}).join('')+'</div>';
     });
     list.innerHTML=html;
@@ -695,12 +685,13 @@ window.RENDER = {
     var citeBtn=(p.status==='published'||p.status==='accepted')?'<button type="button" class="btn btn-outline citation-copy" data-pub-id="'+p.id+'" style="padding:8px 14px;font-size:0.8rem;margin-top:8px;"><i class="fa-regular fa-copy"></i> Copy citation</button>':'';
     var doiStr=p.doi?' · <a href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener" style="color:var(--accent);">DOI</a>':'';
     var dateStr=p.date?' · '+p.date:'';
+    var statusLabel=p.type==='conference'?'Poster':p.status.replace('-',' ');
     return '<div class="pub-card'+(p.highlight?' highlight':'')+'" data-status="'+p.status+'" data-type="'+p.type+'" data-year="'+p.year+'">'
       +'<div class="pub-card-body">'
       +'<div class="pub-authors">'+p.authors+'</div>'
       +'<div class="pub-title">'+p.title+'</div>'
       +'<div class="pub-venue">'+p.venue+doiStr+dateStr+'</div>'
-      +'<div class="pub-tags" style="margin-top:10px;"><span class="badge-status '+p.status+'">'+p.status.replace('-',' ')+'</span>'
+      +'<div class="pub-tags" style="margin-top:10px;"><span class="badge-status '+p.status+'">'+statusLabel+'</span>'
       +p.tags.map(function(t){return '<span class="badge-tag">'+t+'</span>';}).join('')+'</div>'
       +'</div>'
       +'<div class="pub-card-meta"><div class="pub-year">'+p.year+'</div><div class="pub-actions">'+viewBtn+citeBtn+'</div></div>'
@@ -740,7 +731,6 @@ window.RENDER = {
       "geomip": 3
     };
     function card(p){
-      var codeLinks=(p.links||[]).filter(function(l){return l.type==='code';});
       var readMore=p.url
         ?'<a href="'+p.url+'" class="btn btn-outline" style="padding:8px 16px;font-size:0.85rem;">'+(p.pdf?'View Report':'Read More')+' <i class="fa-solid fa-arrow-right"></i></a>'
         :'';
@@ -750,13 +740,11 @@ window.RENDER = {
       var actions=(readMore||externalLinks)?'<div class="project-actions">'+readMore+externalLinks+'</div>':'';
       var methodChips=(p.methods&&p.methods.length)?'<div class="project-methods">'+p.methods.map(function(m){return '<span>'+m+'</span>';}).join('')+'</div>':'';
       var pin=p.pinned?'<span class="project-pin-inline">Selected</span>':'';
-      var report=p.pdf?'<span class="project-report-inline"><i class="fa-solid fa-file-pdf"></i> Report available</span>':'';
-      var code=codeLinks.length?'<span class="project-code-inline"><i class="fa-brands fa-github"></i> Code available</span>':'';
       return '<div class="project-card'+(p.pinned?' pinned':'')+'" data-category="'+p.category+'" data-tier="'+(p.tier||'Other')+'">'
         +'<div class="project-body">'
-        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span><span class="project-head-badges">'+report+code+pin+'</span></div>'
+        +'<div class="project-card-head"><span class="project-category-inline">'+p.category+'</span><span class="project-head-badges">'+pin+'</span></div>'
         +'<div class="project-meta">'+p.year+'</div>'
-        +'<div class="project-title">'+(p.url?'<a href="'+p.url+'">'+p.title+'</a>':p.title)+'</div>'
+        +'<h3 class="project-title">'+(p.url?'<a href="'+p.url+'">'+p.title+'</a>':p.title)+'</h3>'
         +'<div class="project-desc">'+(p.summary||p.desc)+'</div>'
         +methodChips
         +'<div class="project-tags">'+p.tags.map(function(t){return '<span class="badge-tag">'+t+'</span>';}).join('')+'</div>'
@@ -776,7 +764,7 @@ window.RENDER = {
       if(!items.length) return '';
       var desc=items[0].tierDesc||'';
       return '<section class="project-tier" data-tier="'+tier+'">'
-        +'<div class="project-tier-head"><div><span class="section-label">'+tier+'</span>'+(desc?'<p>'+desc+'</p>':'')+'</div><span class="project-tier-count">'+items.length+' items</span></div>'
+        +'<div class="project-tier-head"><div><span class="section-label">Research group</span><h2 class="project-tier-title">'+tier+'</h2>'+(desc?'<p>'+desc+'</p>':'')+'</div><span class="project-tier-count">'+items.length+' items</span></div>'
         +'<div class="projects-grid project-tier-grid">'+items.map(card).join('')+'</div>'
         +'</section>';
     }).join('');
