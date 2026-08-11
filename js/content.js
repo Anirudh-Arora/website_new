@@ -24,7 +24,7 @@ window.CONTENT = {
   phone:    "+91-7987188136",
   location: "Hamburg, Germany",
 
-  tagline: "Studying tropical precipitation, Indian summer monsoon dynamics, kilometer-scale climate simulations, large ensembles, atmospheric composition, and model credibility over the Global South.",
+  tagline: "I study tropical precipitation, Indian summer monsoon dynamics, kilometer-scale simulations, large ensembles, and cloud microphysics.",
 
   /* ── Social Links ──────────────────────────────────────── */
   social: {
@@ -45,9 +45,9 @@ window.CONTENT = {
 
   /* ── Hero Affiliations ─────────────────────────────────── */
   affiliations: [
-    { label: "MPI-M · Climate Surface Interaction Group", dot: "blue", icon: "" },
-    { label: "IIT Delhi · DST CoE alumnus", dot: "sand", icon: "" },
-    { label: "KAUST · CLIMATics Group alumnus", dot: "none", icon: "" },
+    { label: "MPI-M | Climate Surface Interaction Group", dot: "blue", icon: "" },
+    { label: "IIT Delhi | DST CoE alumnus", dot: "sand", icon: "" },
+    { label: "KAUST | CLIMATics Group alumnus", dot: "none", icon: "" },
     { label: "Rhodes Scholarship India Finalist", dot: "none", icon: "" },
   ],
 
@@ -55,24 +55,23 @@ window.CONTENT = {
   stats: [
     { number: "5+",   label: "Publications & Preprints" },
     { number: "3",    label: "Research Institutions"    },
-    { number: "9.15", label: "GPA (out of 10)"         },
-    { number: "8+",   label: "Honours & Awards"         },
+    { number: "9.22", label: "Overall CPI (out of 10)" },
+    { number: "7",    label: "Honours & Awards"         },
   ],
 
   /* ── Bio ───────────────────────────────────────────────── */
   bio: {
-    transition: "BS-MS Environmental Science at IISER Bhopal · Research Assistant at the <strong>Max Planck Institute for Meteorology</strong> · Former researcher at the <strong>DST CoE for Climate Information, IIT Delhi</strong>.",
+    transition: "BS-MS Environmental Science at IISER Bhopal | Research Assistant at the <strong>Max Planck Institute for Meteorology</strong> | Former researcher at the <strong>DST CoE for Climate Information, IIT Delhi</strong>.",
     paragraphs: [
-      "My work sits at the intersection of <strong>tropical precipitation</strong>, <strong>Indian summer monsoon dynamics</strong>, <strong>climate model evaluation</strong>, and <strong>climate model uncertainty</strong>. I use CMIP-class archives, kilometer-scale simulations, large ensembles, reanalysis products, and satellite retrievals to ask where models are credible, where they fail, and what that means for decisions.",
-      "The scientific center of gravity is South Asia and the Global South: regions where monsoon risk, atmospheric composition, aerosol forcing, data gaps, and model uncertainty are not abstract technical issues but practical constraints on climate adaptation.",
-      "Alongside the modeling, I work on the <strong>ethics and governance of climate action</strong>: how evidence becomes policy, how uncertainty should be communicated, and how public reason can support more equitable climate decisions.",
+      "I study <strong>tropical precipitation</strong> and <strong>Indian summer monsoon dynamics</strong>, asking what kilometer-scale simulations and large ensembles can tell us about model performance. My work combines climate-model output with reanalysis and satellite data.",
+      "I am particularly interested in what model uncertainty means for climate information and decision-making in South Asia. Alongside modelling, I work on the <strong>ethics and governance of climate action</strong> and on how evidence travels into public debate.",
     ],
     fullParagraphs: [
-      "I am a climate researcher interested in <strong>how tropical precipitation, monsoon dynamics, and atmospheric systems respond to variability, forcing, and model resolution</strong>.",
+      "I am a climate researcher studying <strong>tropical precipitation, monsoon dynamics, and the limits of climate-model performance</strong>.",
       "I completed my BS-MS in Environmental Science at IISER Bhopal, with my master's thesis research carried out at KAUST's CLIMATics Group under Prof. Ibrahim Hoteit and co-supervision from Prof. Saroj K. Mishra at IIT Delhi.",
       "I am currently a Research Assistant in the Climate Surface Interaction Group within the Climate Physics Department at the Max Planck Institute for Meteorology, where I work with Dr. Clara Bayley on cloud microphysics and convergence in the superdroplet model CLEO.",
-      "My work uses CMIP-class archives, large ensembles, kilometer-scale simulations, reanalysis, and observational products to ask a recurring question: when can climate models be trusted over the Global South?",
-      "Beyond modelling, I am invested in science communication and climate governance. I have co-authored public commentary, presented at GeoMIP 2024, and was shortlisted as a Rhodes Scholarship India finalist.",
+      "Across CMIP-class archives, large ensembles, kilometer-scale simulations, reanalysis, and observational products, I evaluate what model output can reliably say about Indian summer monsoon precipitation and related climate risks.",
+      "I also work on science communication and climate governance. I have co-authored public commentary, presented at GeoMIP 2024, and was shortlisted as a Rhodes Scholarship India finalist.",
     ],
   },
 
@@ -89,8 +88,8 @@ window.CONTENT = {
       degree:      "BS-MS Environmental Science",
       institution: "IISER Bhopal",
       location:    "Bhopal, India",
-      period:      "2021 – 2026",
-      detail:      "Bachelor and Master of Science in Environmental Science · Overall CPI: 9.22/10 · Master's CPI: 10.00/10 · Master's thesis research carried out at KAUST's CLIMATics Group.",
+      period:      "2021-2026",
+      detail:      "Bachelor and Master of Science in Environmental Science. Overall CPI: 9.22/10. Master's CPI: 10.00/10. Master's thesis research carried out at KAUST's CLIMATics Group.",
       badge:       "",
     },
   ],
@@ -99,9 +98,9 @@ window.CONTENT = {
   experience: [
     {
       role:       "Research Assistant",
-      org:        "Max Planck Institute for Meteorology · Climate Surface Interaction Group",
+      org:        "Max Planck Institute for Meteorology | Climate Surface Interaction Group",
       location:   "Hamburg, Germany",
-      period:     "July 2026 – November 2026",
+      period:     "July-November 2026",
       supervisor: "Dr. Clara Bayley",
       bullets: [
         "Developing a convergence framework for the superdroplet model CLEO, quantifying how superdroplet resolution, stochastic sampling, and initialization affect droplet-size distributions and bulk cloud microphysics.",
@@ -112,7 +111,7 @@ window.CONTENT = {
       role:       "Researcher",
       org:        "DST Centre of Excellence for Climate Information, IIT Delhi",
       location:   "New Delhi, India",
-      period:     "May 2023 – June 2026",
+      period:     "May 2023-June 2026",
       supervisor: "Prof. Saroj K. Mishra",
       bullets: [
         "Evaluated CMIP5/CMIP6 multi-model ensembles and IFS-FESOM kilometer-scale simulations of historical precipitation and the Indian summer monsoon over South Asia.",
@@ -125,7 +124,7 @@ window.CONTENT = {
       role:       "Visiting Researcher",
       org:        "CLIMATics Group, KAUST",
       location:   "Saudi Arabia",
-      period:     "July 2025 – June 2026",
+      period:     "July 2025-June 2026",
       supervisor: "Prof. Ibrahim Hoteit",
       bullets: [
         "Completed master's thesis work: Toward Reliable Tropical Precipitation Simulations by Assessing the Added Value of Large Ensembles and Kilometer-Scale Simulations.",
@@ -135,10 +134,10 @@ window.CONTENT = {
       ],
     },
     {
-      role:       "Research Intern — Ethnography Studies",
+      role:       "Research Intern, Ethnography Studies",
       org:        "IISER Bhopal",
       location:   "Bhopal, India",
-      period:     "Aug 2023 – Apr 2024",
+      period:     "Aug 2023-Apr 2024",
       supervisor: "Dr. Renny Thomas",
       bullets: [
         "Field ethnography on the socio-cultural importance of Garuda Purana.",
@@ -209,7 +208,7 @@ window.CONTENT = {
       year:      2026,
       authors:   "<strong>Arora, A.</strong>",
       title:     "Public enlightenment and climate action: rethinking Kantian principles for a sustainable future",
-      venue:     "npj Climate Action (submitted)",
+      venue:     "npj Climate Action (under review)",
       doi:       "",
       url:       "",
       tags:      ["Climate Ethics", "Philosophy", "Policy"],
@@ -234,7 +233,7 @@ window.CONTENT = {
       status:    "in-prep",
       year:      2026,
       authors:   "<strong>Arora, A.</strong>, Upadhyaya, P., Mishra, S. K., Bhuyan, D., Behera, S., Fasullo, J., Tribbia, J., Jain, S., Salunke, P., Sahany, S., Dash, S. K.",
-      title:     "Climate models doubled in a decade but credibility remains poor over the Global South",
+      title:     "Assessing climate-model credibility over the Global South",
       venue:     "In preparation",
       doi:       "",
       url:       "",
@@ -257,7 +256,7 @@ window.CONTENT = {
     {
       id:        "geomip-poster-2024",
       type:      "conference",
-      status:    "published",
+      status:    "conference",
       year:      2024,
       authors:   "<strong>Arora, A.</strong>, Upadhyaya, P., Mishra, S. K.",
       title:     "Circulation Changes under Geoengineering and their Implications in Regional Precipitation and Temperature",
@@ -282,13 +281,13 @@ window.CONTENT = {
       url:      "",
     },
     {
-      type:     "Talk",
+      type:     "Poster",
       title:    "Evaluating Indian Summer Monsoon Precipitation in the IFS-FESOM nextGEMS Production Historical Simulation at Kilometre Scale",
       event:    "km-Scale Global Modelling Summit 2026",
       location: "Hamburg, Germany",
       date:     "2026",
       authors:  "Arora, A., Dasari, H. P., Jha, S. K., Mishra, S. K., Hoteit, I.",
-      note:     "Accepted contribution",
+      note:     "Poster presentation",
       url:      "",
     },
   ],
@@ -297,8 +296,8 @@ window.CONTENT = {
   awards: [
     {
       year:  "2025",
-      title: "Rhodes Scholarship — India Finalist",
-      org:   "University of Oxford · Rhodes Trust",
+      title: "Rhodes Scholarship India Finalist",
+      org:   "University of Oxford | Rhodes Trust",
       desc:  "Among the top 13 students out of 1,000 applicants for the Rhodes Scholarship India.",
     },
     {
@@ -308,20 +307,14 @@ window.CONTENT = {
       desc:  "Full scholarship to conduct master's thesis research at KAUST, Saudi Arabia.",
     },
     {
-      year:  "2025",
-      title: "MPI-M 1-Year Research Funding (Declined)",
-      org:   "Max Planck Institute for Meteorology, Hamburg",
-      desc:  "Full funding offered under IISER-MPI collaboration. Declined in favour of KAUST.",
-    },
-    {
       year:  "2024",
-      title: "Full Travel Support — GeoMIP Meeting",
+      title: "Full Travel Support, GeoMIP Meeting",
       org:   "Cornell University, Ithaca, USA",
       desc:  "Full travel and accommodation support for the 14th Annual GeoMIP Meeting.",
     },
     {
       year:  "2023",
-      title: "Bronze Medal — University Physics Competition",
+      title: "Bronze Medal, University Physics Competition",
       org:   "Carroll College, Helena, Montana (International)",
       desc:  "Team award in the international University Physics Competition 2022.",
     },
@@ -384,7 +377,7 @@ window.CONTENT = {
       tags:       ["CMIP6", "Model Evaluation", "Global South"],
       methods:    ["CMIP5/CMIP6", "Global South", "Model evaluation", "Regional credibility"],
       summary:    "A model-evaluation project asking where CMIP credibility remains weak over the Global South.",
-      desc:       "Systematic evaluation of CMIP5/CMIP6 multi-model ensemble performance over the Global South. Finds that despite doubling the number of models over a decade, credibility metrics over South Asia and Africa remain poor — raising questions about where and how models are validated.",
+      desc:       "Systematic evaluation of CMIP5/CMIP6 multi-model ensemble performance over the Global South, examining how model expansion has translated into regional credibility over South Asia and Africa.",
       pdf:        "",
       url:        "project-detail.html?id=gcm-credibility",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
@@ -404,7 +397,7 @@ window.CONTENT = {
       summary:    "Master's thesis research on whether km-scale simulations and large ensembles improve tropical precipitation credibility.",
       desc:       "Master's thesis research completed at KAUST's CLIMATics Group, evaluating tropical and Indian summer monsoon precipitation across IFS-FESOM nextGEMS, CMIP6 benchmarks, and large ensembles to ask what resolution and ensemble size add to model credibility.",
       detail:     "This project is my master's thesis work at KAUST's CLIMATics Group. It evaluates tropical precipitation and Indian summer monsoon precipitation across CMIP6 benchmarks, the IFS-FESOM nextGEMS production historical simulation, and large ensembles including CESM2-LE, MPI-GE, and CESM2-PPE. The central question is whether higher model resolution and larger ensemble size meaningfully improve the reliability of tropical precipitation simulations, or whether structural model limitations remain dominant.",
-      thesisTitle:"TOWARD RELIABLE TROPICAL PRECIPITATION SIMULATIONS BY ASSESSING THE ADDED VALUE OF LARGE ENSEMBLES AND KILOMETER-SCALE MODEL SIMULATIONS",
+      thesisTitle:"Toward Reliable Tropical Precipitation Simulations by Assessing the Added Value of Large Ensembles and Kilometer-Scale Model Simulations",
       thesisAccess:"The thesis is not publicly downloadable from this website. Please email me to request a copy.",
       pdf:        "",
       url:        "project-detail.html?id=large-ensemble",
@@ -437,7 +430,7 @@ window.CONTENT = {
       thumbClass: "thumb-decision",
       tags:       ["MDPs", "Climate Policy", "Optimization"],
       summary:    "A decision-theory framework for climate action under uncertainty.",
-      desc:       "Developed a novel framework for sequential decision-making using Markov Decision Processes (MDPs) to promote efficient climate adaptation strategies.",
+      desc:       "Contributed to a framework for sequential decision-making using Markov Decision Processes (MDPs) to examine efficient climate-action strategies.",
       pdf:        "",
       url:        "project-detail.html?id=policy",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
@@ -553,7 +546,7 @@ window.CONTENT = {
     {
       icon: "🌐",
       title: "Climate Model Evaluation",
-      desc: "Assessing the performance and credibility of GCMs — especially CMIP5/CMIP6 multi-model ensembles — over South Asia and the Global South, where model uncertainty and observational gaps are greatest."
+      desc: "Assessing the performance of CMIP5 and CMIP6 multi-model ensembles over South Asia and the Global South, with attention to regional uncertainty and observational gaps."
     },
     {
       icon: "☁️",
@@ -563,7 +556,7 @@ window.CONTENT = {
     {
       icon: "🌧️",
       title: "Indian Summer Monsoon",
-      desc: "Understanding the dynamics, multi-decadal variability, and future projections of the Indian monsoon — and how anthropogenic forcing and geoengineering interventions alter its character and predictability."
+      desc: "Understanding the dynamics, multi-decadal variability, and future projections of the Indian monsoon, including the influence of anthropogenic forcing and geoengineering interventions."
     },
     {
       icon: "🏭",
@@ -578,7 +571,7 @@ window.CONTENT = {
     {
       icon: "🧭",
       title: "Science, Society & Philosophy",
-      desc: "Exploring the socio-political dimensions of climate action — from transboundary carbon migration to Kantian frameworks for public enlightenment, epistemic justice, and the moral philosophy of collective climate responsibility."
+      desc: "Exploring the socio-political dimensions of climate action, from transboundary carbon migration to public enlightenment, epistemic justice, and collective responsibility."
     },
   ],
 
