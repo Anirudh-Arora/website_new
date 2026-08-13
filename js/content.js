@@ -382,7 +382,7 @@ window.CONTENT = {
   projects: [
     {
       id:         "geomip",
-      title:      "Stratospheric Aerosol Injection & the South Asian Monsoon",
+      title:      "Circulation Response to Solar Geoengineering and Regional Rainfall",
       year:       2024,
       category:   "Climate Modeling",
       tier:       "Current / Core Climate Research",
@@ -391,9 +391,9 @@ window.CONTENT = {
       thumbIcon:  "🌐",
       thumbClass: "thumb-climate",
       tags:       ["GeoMIP", "Geoengineering", "Monsoon"],
-      methods:    ["GeoMIP", "G1/G6sulfur", "CESM-WACCM", "Monsoon circulation"],
-      summary:    "Regional monsoon and circulation response under stratospheric aerosol injection scenarios.",
-      desc:       "Analyzed GeoMIP G6 outputs (CESM-WACCM) to assess impacts of SAI on precipitation patterns, temperature gradients, and atmospheric circulation. Presented at GeoMIP 2024, Cornell University.",
+      methods:    ["GeoMIP5", "G1 / 4×CO₂ / piControl", "8-model multi-model mean", "200/850 hPa winds"],
+      summary:    "How circulation change under solar geoengineering translates into regional rainfall.",
+      desc:       "Diagnosed the circulation pathway linking solar geoengineering to regional rainfall using an eight-model GeoMIP5 multi-model mean (G1, 4×CO₂, piControl), comparing seasonal precipitation and 200/850 hPa wind responses. Found a strengthened low-latitude meridional circulation, incomplete restoration of the Tibetan anticyclone under G1, and consistent weakening of the mid-latitude westerlies between 30–60° N. Presented at the 14th Annual GeoMIP Meeting, Cornell University.",
       pdf:        "",          // no PDF for this one — linked to poster
       url:        "project-detail.html?id=geomip",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
@@ -447,8 +447,8 @@ window.CONTENT = {
       thumbIcon:  "🏭",
       thumbClass: "thumb-atmos",
       tags:       ["Air Quality", "Satellite Data", "IGP"],
-      summary:    "Source-attribution and policy-facing work on air pollution over North India.",
-      desc:       "Multi-scale analysis of natural and anthropogenic sources of air pollution using reanalysis and satellite datasets. Co-authored policy commentary in The India Forum.",
+      summary:    "Large-scale circulation controls on chronic air pollution over the Indo-Gangetic Plain.",
+      desc:       "Examined the large-scale circulation controls on chronic air pollution over the Indo-Gangetic Plain, arguing that persistent subsidence beneath the descending branches of the Hadley and Walker circulations, together with weakening ventilation, sustains a background burden that episodic sources only modulate. Co-authored a perspective in The India Forum.",
       pdf:        "",          // linked to India Forum article instead
       url:        "project-detail.html?id=pollution",
       advisor:    "Prof. Saroj Mishra, IIT Delhi",
@@ -585,7 +585,7 @@ window.CONTENT = {
     {
       icon: "☁️",
       title: "Solar Geoengineering",
-      desc: "Investigating the atmospheric and regional climate consequences of stratospheric aerosol injection (SAI) using GeoMIP G1 and G6sulfur simulations, with a focus on monsoon implications and circulation changes."
+      desc: "Investigating how circulation change under solar geoengineering affects regional rainfall using GeoMIP5 G1, 4×CO₂, and piControl simulations."
     },
     {
       icon: "🌧️",
