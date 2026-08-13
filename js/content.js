@@ -63,15 +63,15 @@ window.CONTENT = {
   bio: {
     transition: "BS-MS Environmental Science at IISER Bhopal | Research Assistant at the <strong>Max Planck Institute for Meteorology</strong> | Former researcher at the <strong>DST CoE for Climate Information, IIT Delhi</strong>.",
     paragraphs: [
-      "I study <strong>tropical precipitation</strong> and <strong>Indian summer monsoon dynamics</strong>, asking what kilometer-scale simulations and large ensembles can tell us about model performance. My work combines climate-model output with reanalysis and satellite data.",
-      "I am particularly interested in what model uncertainty means for climate information and decision-making in South Asia. Alongside modelling, I work on the <strong>ethics and governance of climate action</strong> and on how evidence travels into public debate.",
+      "I study <strong>tropical precipitation</strong> and <strong>Indian summer monsoon dynamics</strong>, working down through scales: from CMIP-class ensembles, to kilometre-scale simulations, to the cloud microphysics that storm-resolving models must now represent explicitly. Each step was prompted by a limitation of the one before it.",
+      "Having grown up in a country where the monsoon governs agriculture, water availability, and public health, I have never found it easy to treat a persistent dry bias over South Asia as a purely technical matter. That is much of why my work has been on model fidelity rather than model application. It is also why I write on the ethics of climate decisions taken under uncertainty.",
     ],
     fullParagraphs: [
       "I am a climate researcher studying <strong>tropical precipitation, monsoon dynamics, and the limits of climate-model performance</strong>.",
       "I completed my BS-MS in Environmental Science at IISER Bhopal, with my master's thesis research carried out at KAUST's CLIMATics Group under Prof. Ibrahim Hoteit and co-supervision from Prof. Saroj K. Mishra at IIT Delhi.",
       "I am currently a Research Assistant in the Climate Surface Interaction Group within the Climate Physics Department at the Max Planck Institute for Meteorology, where I work with Dr. Clara Bayley on cloud microphysics and convergence in the superdroplet model CLEO.",
       "Across CMIP-class archives, large ensembles, kilometer-scale simulations, reanalysis, and observational products, I evaluate what model output can reliably say about Indian summer monsoon precipitation and related climate risks.",
-      "I also work on science communication and climate governance. I have co-authored public commentary, presented at GeoMIP 2024, and was shortlisted as a Rhodes Scholarship India finalist.",
+      "My master's thesis found that kilometre-scale resolution improves monsoon precipitation characteristics substantially while leaving large-scale circulation biases essentially untouched. Working on cloud microphysics since has changed how I read that result: from outside a model, a bias is a number; from inside a microphysics scheme, the same bias resolves into a chain of representational choices, each individually defensible. That shift is what I want to build the next few years on.",
     ],
   },
 
@@ -579,33 +579,33 @@ window.CONTENT = {
   interests: [
     {
       icon: "🌐",
-      title: "Climate Model Evaluation",
-      desc: "Assessing the performance of CMIP5 and CMIP6 multi-model ensembles over South Asia and the Global South, with attention to regional uncertainty and observational gaps."
+      title: "Km-Scale and Storm-Resolving Models",
+      desc: "Evaluating what convection-permitting global simulations such as IFS-FESOM nextGEMS improve in tropical precipitation, and which large-scale circulation biases survive the jump in resolution."
     },
     {
       icon: "☁️",
-      title: "Solar Geoengineering",
-      desc: "Investigating how circulation change under solar geoengineering affects regional rainfall using GeoMIP5 G1, 4×CO₂, and piControl simulations."
+      title: "Cloud Microphysics and the Superdroplet Method",
+      desc: "Quantifying how superdroplet number, stochastic ensemble size, and initialization trade off against accuracy and computational cost in the Lagrangian microphysics model CLEO."
     },
     {
       icon: "🌧️",
       title: "Indian Summer Monsoon",
-      desc: "Understanding the dynamics, multi-decadal variability, and future projections of the Indian monsoon, including the influence of anthropogenic forcing and geoengineering interventions."
+      desc: "Studying monsoon dynamics, intraseasonal variability, and simulated biases, and what they imply for regional projections where a dry bias is not an abstraction."
     },
     {
-      icon: "🏭",
-      title: "Cloud Microphysics",
-      desc: "Studying how superdroplet resolution, stochastic sampling, and initialization shape droplet-size distributions and bulk cloud microphysics."
+      icon: "🌀",
+      title: "Ensemble Convergence and Internal Variability",
+      desc: "Determining how many members a climate ensemble needs before precipitation statistics can be trusted, using Monte Carlo resampling and probabilistic convergence criteria across CESM2-LE, MPI-GE, and CESM2-PPE."
     },
     {
-      icon: "📜",
-      title: "Climate Policy & Decision Theory",
-      desc: "Developing principled frameworks for sequential climate decision-making using Markov Decision Processes (MDPs), and examining the ethical dimensions of geoengineering governance under uncertainty."
+      icon: "🛰️",
+      title: "Atmospheric Composition from Space",
+      desc: "Working with long-term, bias-corrected satellite records of methane over the Arabian Peninsula and the atmospheric dynamics that shape what those records appear to show."
     },
     {
       icon: "🧭",
-      title: "Science, Society & Philosophy",
-      desc: "Exploring the socio-political dimensions of climate action, from transboundary carbon migration to public enlightenment, epistemic justice, and collective responsibility."
+      title: "Science, Society and Philosophy",
+      desc: "Considering climate model credibility over the Global South as both a scientific and an epistemic question, alongside work on public reason, collective responsibility, and decision-making under uncertainty."
     },
   ],
 
