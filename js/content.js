@@ -46,7 +46,7 @@ window.CONTENT = {
   /* ── Hero Affiliations ─────────────────────────────────── */
   affiliations: [
     { label: "MPI-M | Climate Surface Interaction Group", dot: "blue", icon: "" },
-    { label: "IIT Delhi | DST CoE alumnus", dot: "sand", icon: "" },
+    { label: "IIT Delhi | DST CoE for Climate Information alumnus", dot: "sand", icon: "" },
     { label: "KAUST | CLIMATics Group alumnus", dot: "none", icon: "" },
     { label: "Rhodes Scholarship India Finalist", dot: "none", icon: "" },
   ],
@@ -79,7 +79,7 @@ window.CONTENT = {
   skills: [
     "Python", "MATLAB", "NCAR NCL", "Mathematica", "CDO", "NCO", "NetCDF",
     "CMIP5/CMIP6", "nextGEMS", "Large Ensembles", "ERA5", "TROPOMI", "GOSAT",
-    "Slurm", "Levante", "Shaheen III", "Bash", "Git", "LaTeX", "HTML5/CSS",
+    "Slurm", "Levante", "Shaheen III", "Bash", "Git",
   ],
 
   /* ── Education ─────────────────────────────────────────── */
@@ -89,7 +89,7 @@ window.CONTENT = {
       institution: "IISER Bhopal",
       location:    "Bhopal, India",
       period:      "December 2021-May 2026",
-      detail:      "Bachelor and Master of Science in Environmental Science. Overall CPI: 9.22/10. Master's CPI: 10.00/10. Master's thesis research carried out at KAUST's CLIMATics Group.",
+      detail:      "Bachelor and Master of Science in Environmental Science. Overall CPI: 9.22/10. Master's Thesis: 10.00/10.00. Master's thesis research carried out at KAUST's CLIMATics Group.",
       badge:       "",
     },
   ],
@@ -117,7 +117,6 @@ window.CONTENT = {
       bullets: [
         "Assessed whether climate-model credibility over the Tropics, particularly South Asia, has improved across CMIP generations by comparing CMIP5 models and their direct CMIP6 successors against observations.",
         "Diagnosed the circulation pathway linking solar geoengineering to regional rainfall change using an eight-model GeoMIP5 multi-model mean and seasonal precipitation with 200 and 850 hPa wind responses.",
-        "Contributed to the SARCI regional climate framework through skill-weighted CMIP6 sea-surface temperature and sea-ice lower boundary conditions, bias-corrected against HadISST while preserving low-frequency variability.",
         "Examined the large-scale circulation controls on chronic Indo-Gangetic Plain air pollution and co-authored a perspective in The India Forum.",
       ],
     },
@@ -238,7 +237,7 @@ window.CONTENT = {
       venue:     "In preparation",
       doi:       "",
       url:       "",
-      tags:      ["Climate Modeling", "CMIP", "Global South"],
+      tags:      ["Climate Science", "CMIP", "Global South"],
       highlight: true,
     },
     {
@@ -384,7 +383,7 @@ window.CONTENT = {
       id:         "geomip",
       title:      "Circulation Response to Solar Geoengineering and Regional Rainfall",
       year:       2024,
-      category:   "Climate Modeling",
+      category:   "Climate Science",
       tier:       "Current / Core Climate Research",
       tierDesc:   "The work that best represents my current climate-science direction.",
       pinned:     true,
@@ -402,7 +401,7 @@ window.CONTENT = {
       id:         "gcm-credibility",
       title:      "GCM Credibility over the Global South",
       year:       2025,
-      category:   "Climate Modeling",
+      category:   "Climate Science",
       tier:       "Current / Core Climate Research",
       tierDesc:   "The work that best represents my current climate-science direction.",
       pinned:     true,
@@ -420,7 +419,7 @@ window.CONTENT = {
       id:         "large-ensemble",
       title:      "Tropical Precipitation in Large Ensembles and km-Scale Simulations",
       year:       2025,
-      category:   "Climate Modeling",
+      category:   "Climate Science",
       tier:       "Current / Core Climate Research",
       tierDesc:   "The work that best represents my current climate-science direction.",
       pinned:     true,
@@ -473,7 +472,7 @@ window.CONTENT = {
       id:         "aerosols",
       title:      "Modeling Atmospheric Aerosols in Climate Systems",
       year:       2024,
-      category:   "Climate Modeling",
+      category:   "Climate Science",
       tier:       "Atmospheric Science & Policy",
       tierDesc:   "Applied atmospheric work with direct policy and communication consequences.",
       thumbIcon:  "🔬",
@@ -580,7 +579,7 @@ window.CONTENT = {
     {
       icon: "🌐",
       title: "Km-Scale and Storm-Resolving Models",
-      desc: "Evaluating what convection-permitting global simulations such as IFS-FESOM nextGEMS improve in tropical precipitation, and which large-scale circulation biases survive the jump in resolution."
+      desc: "Evaluating what convection-permitting global simulations improve in tropical precipitation, and which large-scale circulation biases survive the jump in resolution."
     },
     {
       icon: "☁️",
@@ -598,9 +597,9 @@ window.CONTENT = {
       desc: "Determining how many members a climate ensemble needs before precipitation statistics can be trusted, using Monte Carlo resampling and probabilistic convergence criteria across CESM2-LE, MPI-GE, and CESM2-PPE."
     },
     {
-      icon: "🛰️",
-      title: "Atmospheric Composition from Space",
-      desc: "Working with long-term, bias-corrected satellite records of methane over the Arabian Peninsula and the atmospheric dynamics that shape what those records appear to show."
+      icon: "📖",
+      title: "Ethnography",
+      desc: "Studying the social and cultural life of scientific and ritual practices, including the role of Garuda Purana in death rituals and ethnographic work in laboratory environments."
     },
     {
       icon: "🧭",

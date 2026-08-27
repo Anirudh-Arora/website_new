@@ -72,8 +72,6 @@
     .agenda-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:22px 24px; }
     .agenda-card strong { display:block; font-family:var(--font-display); font-size:1.05rem; color:var(--text); line-height:1.45; margin-bottom:10px; }
     .agenda-card span { display:block; color:var(--text-muted); font-size:0.88rem; line-height:1.65; }
-    .method-strip { display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; }
-    .method-strip span { padding:5px 11px; border:1px solid var(--border); border-radius:99px; background:var(--bg-alt); color:var(--text-muted); font-family:var(--font-mono); font-size:0.72rem; }
     @media(max-width:840px){ .agenda-grid { grid-template-columns:1fr; } }
   </style>
 </head>
@@ -86,7 +84,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
       <li class="active"><a href="projects.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li><li><a href="talks.html">Speaking</a></li>
+      <li><a href="publications.html">Publications</a></li>
       <li><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -99,7 +97,7 @@
 <div class="nav-mobile" id="nav-mobile">
   <a href="index.html">Home</a><a href="about.html">About</a>
   <a href="projects.html" class="active">Research</a>
-  <a href="publications.html">Publications</a><a href="talks.html">Speaking</a>
+  <a href="publications.html">Publications</a>
   <a href="readings.html">Writing</a><a href="life.html">Life</a>
   <a href="contact.html">Contact</a>
 </div>
@@ -125,11 +123,8 @@
       <div>
         <div class="agenda-grid">
           <div class="agenda-card"><strong>Can climate models be trusted over the Global South?</strong><span>Evaluating regional model credibility where observational gaps, monsoon dynamics, and development stakes overlap.</span></div>
-          <div class="agenda-card"><strong>What does km-scale modelling add for tropical precipitation?</strong><span>Testing whether IFS-FESOM / nextGEMS improves precipitation structure beyond conventional benchmarks.</span></div>
+          <div class="agenda-card"><strong>What does km-scale modelling add for tropical precipitation?</strong><span>Testing whether km-scale simulations improve precipitation structure beyond conventional benchmarks.</span></div>
           <div class="agenda-card"><strong>How much ensemble size is enough for reliable monsoon signals?</strong><span>Using large ensembles and convergence diagnostics to separate forced change from internal variability.</span></div>
-        </div>
-        <div class="method-strip" aria-label="Research methods and datasets">
-          <span>CMIP5/CMIP6</span><span>IFS-FESOM / nextGEMS</span><span>CESM2-LE</span><span>MPI-GE</span><span>CESM2-PPE</span><span>IMD</span><span>GPCP</span><span>ERA5</span>
         </div>
       </div>
     </div>
@@ -157,7 +152,7 @@
       <div class="footer-col"><h4>Navigate</h4><ul>
         <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
         <li><a href="projects.html">Research</a></li><li><a href="publications.html">Publications</a></li>
-        <li><a href="talks.html">Speaking</a></li><li><a href="readings.html">Writing</a></li>
+        <li><a href="readings.html">Writing</a></li>
         <li><a href="life.html">Life</a></li>
       <li><a href="contact.html">Contact</a></li>
       </ul></div>
@@ -172,7 +167,7 @@
 </footer>
 
 <script src="js/content.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20260827"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 
