@@ -113,7 +113,7 @@
       margin-top:auto;
     }
 
-    .reading-rating { color:var(--sand); font-size:0.9rem; letter-spacing:2px; }
+    .reading-status { color:var(--sand); font-size:0.78rem; font-family:var(--font-mono); letter-spacing:0.05em; text-transform:uppercase; }
 
     /* Cover fallbacks by genre */
     .cover-fiction    { background:linear-gradient(135deg,#1B3A5C,#4A8BBD); }
@@ -183,7 +183,7 @@
           <div class="reading-title">To Solve North India's Air Crisis, Look Beyond Stubble and Fireworks</div>
           <div class="reading-reflection">A policy commentary on why North India's air pollution problem needs a wider source-attribution frame.</div>
           <div class="reading-footer">
-            <div class="reading-rating">Published</div>
+            <div class="reading-status">Published</div>
             <a href="https://www.theindiaforum.in/environment/solve-north-indias-air-crisis-look-beyond-stubble-and-fireworks-0" target="_blank" rel="noopener" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Article →</a>
           </div>
         </div>
@@ -211,7 +211,6 @@
           <div class="reading-pullquote">"Even after waking up as a bug, Gregor's first thoughts are not about fear or freedom, but about work: missing the train, disappointing his employer."</div>
           <div class="reading-reflection">A meditation on usefulness, isolation, and quiet replacement that feels disturbingly familiar inside high-pressure institutions.</div>
           <div class="reading-footer">
-            <div class="reading-rating">★★★★★</div>
             <a href="Readings/metamorphosis.html" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Reflection →</a>
           </div>
         </div>
@@ -229,7 +228,6 @@
           <div class="reading-pullquote">"The girl knows. She holds it anyway."</div>
           <div class="reading-reflection">A reflection on normalization, withholding, and how people learn to accept the unacceptable when no other life has been made imaginable.</div>
           <div class="reading-footer">
-            <div class="reading-rating">★★★★★</div>
             <a href="Readings/never-let-me-go.html" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Reflection →</a>
           </div>
         </div>
@@ -247,7 +245,6 @@
           <div class="reading-pullquote">A brief, tender study of longing, imagined lives, and the strange intimacy of being understood for one night.</div>
           <div class="reading-reflection">What stayed with me is hope treated not as heroic force, but as something fragile and self-deceiving.</div>
           <div class="reading-footer">
-            <div class="reading-rating">★★★★★</div>
             <a href="Readings/white-nights.html" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Reflection →</a>
           </div>
         </div>
@@ -265,8 +262,24 @@
           <div class="reading-pullquote">"The jury does not convict him for what he did. They convict him for what he is."</div>
           <div class="reading-reflection">A reflection on isolation, recognition, and the unsettling familiarity of a life lived at a remove from itself.</div>
           <div class="reading-footer">
-            <div class="reading-rating">★★★★★</div>
             <a href="Readings/the-stranger.html" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Reflection →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="reading-card">
+        <div class="reading-cover cover-philosophy">
+          <div class="cover-emoji">🪨</div>
+          <div class="reading-cover-gradient"></div>
+          <span class="reading-genre">Philosophy</span>
+        </div>
+        <div class="reading-body">
+          <div class="reading-author">Albert Camus</div>
+          <div class="reading-title">The Myth of Sisyphus</div>
+          <div class="reading-pullquote">"The boulder rolls back down. I walk after it."</div>
+          <div class="reading-reflection">A reflection on routine, revolt, and the ordinary work of living without appeal.</div>
+          <div class="reading-footer">
+            <a href="Readings/myth-of-sisyphus.html" class="btn btn-outline" style="padding:7px 14px;font-size:0.82rem;">Read Reflection →</a>
           </div>
         </div>
       </div>
@@ -292,9 +305,6 @@
           <div class="reading-author">Elizabeth Kolbert</div>
           <div class="reading-title">The Sixth Extinction</div>
           <div class="reading-reflection">A model for urgent, accessible science writing that still respects evidence and field detail.</div>
-          <div class="reading-footer">
-            <div class="reading-rating">★★★★★</div>
-          </div>
         </div>
       </div>
 
@@ -308,9 +318,6 @@
           <div class="reading-author">Rajan Mehta</div>
           <div class="reading-title">Backstage Climate</div>
           <div class="reading-reflection">Useful because it treats climate as science, politics, economics, and public action at once.</div>
-          <div class="reading-footer">
-            <div class="reading-rating">★★★★☆</div>
-          </div>
         </div>
       </div>
 
@@ -326,18 +333,18 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;" data-reveal-stagger>
 
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px 22px;display:flex;gap:14px;align-items:center;">
-        <span style="font-size:2rem;">🪨</span>
-        <div>
-          <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--text);">The Myth of Sisyphus</div>
-          <div style="font-size:0.82rem;color:var(--text-muted);">Albert Camus</div>
-        </div>
-      </div>
-
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px 22px;display:flex;gap:14px;align-items:center;">
         <span style="font-size:2rem;">☕</span>
         <div>
           <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--text);">At the Existentialist Café</div>
           <div style="font-size:0.82rem;color:var(--text-muted);">Sarah Bakewell</div>
+        </div>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px 22px;display:flex;gap:14px;align-items:center;">
+        <span style="font-size:2rem;">🦠</span>
+        <div>
+          <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--text);">The Plague</div>
+          <div style="font-size:0.82rem;color:var(--text-muted);">Albert Camus</div>
         </div>
       </div>
 
