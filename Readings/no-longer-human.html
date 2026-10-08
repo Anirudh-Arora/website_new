@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection: No Longer Human | Anirudh Arora</title>
+  <meta name="description" content="A reflection on Osamu Dazai's No Longer Human: performance, disqualification, and the experience of not being seen." />
+  <meta property="og:title" content="Reflection: No Longer Human | Anirudh Arora" />
+  <meta property="og:description" content="A reflection on Osamu Dazai's No Longer Human: performance, disqualification, and the experience of not being seen." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anirudh-arora.com/Readings/no-longer-human.html" />
+  <link rel="canonical" href="https://anirudh-arora.com/Readings/no-longer-human.html" />
+  <link rel="icon" type="image/png" href="images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .page-hero { padding:140px 0 60px; background:var(--bg-alt); border-bottom:1px solid var(--border); }
+    .article-grid { display:grid; grid-template-columns:1fr 280px; gap:60px; align-items:start; }
+    .article-body { font-size:1.05rem; line-height:1.85; color:var(--text-muted); }
+    .article-body p { margin-bottom:1.5em; }
+    .article-body h2 { font-family:var(--font-display); font-size:1.5rem; color:var(--text); margin:2.5em 0 0.8em; }
+    .article-body blockquote { border-left:3px solid var(--sand); padding:16px 24px; margin:2em 0; background:var(--bg-alt); border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-family:var(--font-display); font-style:italic; font-size:1.05rem; color:var(--text); line-height:1.7; }
+    .article-body blockquote footer { display:block; margin-top:8px; color:var(--text-light); font-family:var(--font-mono); font-size:0.82rem; font-style:normal; }
+    .article-sidebar { position:sticky; top:90px; }
+    .book-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px; margin-bottom:24px; }
+    .book-cover-placeholder { width:100%; aspect-ratio:2/3; border-radius:var(--radius-md); background:linear-gradient(135deg,#1a1a2e,#4A2D7A); display:flex; align-items:center; justify-content:center; font-size:5rem; margin-bottom:20px; }
+    .book-meta-row { display:flex; flex-direction:column; gap:6px; margin-bottom:16px; }
+    .book-title { font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--text); }
+    .book-author { font-size:0.88rem; color:var(--text-muted); }
+    .book-genre { display:inline-block; padding:3px 10px; background:var(--tag-bg); color:var(--tag-text); border-radius:99px; font-family:var(--font-mono); font-size:0.75rem; font-weight:600; }
+    .article-meta { display:flex; align-items:center; gap:12px; margin-bottom:40px; flex-wrap:wrap; }
+    .meta-author-img { width:44px; height:44px; border:2px solid var(--border); border-radius:50%; object-fit:cover; }
+    .meta-name { color:var(--text); font-size:0.9rem; font-weight:600; }
+    .meta-info { color:var(--text-light); font-size:0.82rem; }
+    .toc { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px 24px; }
+    .toc h4 { margin-bottom:14px; color:var(--sand); font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; }
+    .toc ul { margin:0; padding:0; list-style:none; }
+    .toc li { padding:6px 0; border-bottom:1px solid var(--border); }
+    .toc li:last-child { border-bottom:none; }
+    .toc a { color:var(--text-muted); font-size:0.88rem; text-decoration:none; transition:color var(--transition); }
+    .toc a:hover { color:var(--accent); }
+    @media (max-width:768px) { .article-grid { grid-template-columns:1fr; } .article-sidebar { position:static; } }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/anni.jpeg" alt="" class="nav-logo-img" /><span class="nav-logo-text">Anirudh Arora</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li><li class="active"><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><span id="theme-icon">🌙</span></button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Research</a>
+  <a href="publications.html">Publications</a><a href="readings.html" class="active">Writing</a><a href="life.html">Life</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+      <a href="readings.html" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--sand);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">← Readings</a>
+      <span style="color:var(--text-light);font-size:0.8rem;">/ Reflection</span>
+    </div>
+    <span class="section-label">Literary Reflection</span>
+    <h1 class="section-title" style="max-width:800px;">Reflections on Performance, Disqualification, and Not Being Seen</h1>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-muted);margin-top:12px;">A reflection on Osamu Dazai's <em>No Longer Human</em></p>
+  </div>
+</div>
+
+<section style="padding:70px 0;">
+  <div class="container">
+    <div class="article-meta" data-reveal>
+      <img src="images/anni.jpeg" alt="Anirudh Arora" class="meta-author-img" />
+      <div><div class="meta-name">Anirudh Arora</div><div class="meta-info">Research Assistant · MPI-M</div></div>
+      <div style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;"><span class="badge-tag">Novel</span><span class="badge-tag">Osamu Dazai</span><span class="badge-tag">Identity</span></div>
+    </div>
+
+    <div class="article-grid">
+      <div class="article-body" data-reveal>
+        <p><em>No Longer Human</em> is often read as a confession, the last testament of a writer whose own life it closely follows. What stayed with me was less the confession than how the book is arranged around it: a man who spent his life unseen, handed to us by people who still do not see him.</p>
+
+        <h2 id="section-mask">The Mask That Worked</h2>
+        <p>At first, the clowning looked to me like a defense, and a reasonable one. A child who cannot understand what other people want from him learns early that laughter keeps them from asking. I did not read it as deception so much as survival, a way of passing as one of them. But the longer the book went on, the less it felt like a strategy and the more it felt like a condition. He does not put the mask on and take it off. There is no one underneath who gets to rest.</p>
+
+        <p>What frightened me was not that Yozo was false to others, but that he gradually became false to himself, until there was no part of him left that could refuse the role. Having read <em>The Stranger</em>, I kept placing the two men side by side. Meursault refuses to perform and is condemned for it. Yozo performs without pause and is consumed by it. I found Yozo the more frightening. Meursault's refusal at least protects something. Yozo's performance protects nothing, because it is a self that exists only while someone is watching.</p>
+
+        <blockquote>Meursault refuses to perform and is condemned for it. Yozo performs without pause and is consumed by it.<footer>Personal reflection</footer></blockquote>
+
+        <h2 id="section-sympathy">The Complication of Sympathy</h2>
+        <p>My sympathy was complete at the start. People take him in, feed him, forgive him, send money, and love him, and none of it reaches him. I wanted to say that the world failed to see him, and I still think that is true. But it became hard to ignore that he had built the thing that made him invisible, and that he built it because being seen was what he feared most. The failure runs in both directions, and the book does not tell you how to divide it.</p>
+
+        <p>It also became uncomfortable to notice what this cost the people around him. The women who love him are not spared. He needs to be held without ever being known, and that is not something anyone can give for long. I did not stop feeling for him. I stopped being able to feel for him alone.</p>
+
+        <h2 id="section-phrase">The Phrase</h2>
+        <p>The moment I kept returning to is where the title finally arrives. It comes late, after the morphine, when Yozo is committed to an institution and understands that he has been certified as no longer human. What struck me was the timing. By then he has felt this way since childhood, when he could not grasp what hunger meant to other people, or what they wanted from him. The institution did not take his humanity. It gave a name to something he had been carrying alone for most of his life.</p>
+
+        <p>I could not tell whether that was a verdict or an acknowledgment. Perhaps it was both. It is strange to be told formally what you have privately believed, and it is stranger that the telling came from a place that exists to decide who counts.</p>
+
+        <h2 id="section-voice">The Voice Outside</h2>
+        <p>The book is framed by a stranger who studies three photographs of Yozo at the start, and by the owner of a bar who hands over the notebooks at the end and remembers him as a good, almost angelic man. That frame changed how I read everything in between. It reads as the world's last word on him, and it is the same failure again, only gentler. They saw a good boy where there was a person being consumed.</p>
+
+        <p>I am not sure it is only a failure. It may be the only kindness available to people who never had access to what he lived through. But kindness of that kind does not help him, and it does not help anyone like him. It felt like a society with no language for what Yozo was, offering the nearest word it has, which was a compliment. I suspect that is not a feature of one decade.</p>
+
+        <h2 id="section-left-me">What It Left Me With</h2>
+        <p>I did not recognize myself in Yozo, and I do not think the book asks me to. What it asked instead was harder: to stay with someone whose suffering I could not make familiar, and to notice that my wish to understand him was itself a way of looking at him from outside.</p>
+
+        <p>If one person had declined to laugh, would he have had somewhere to stop?</p>
+
+        <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);"><a href="readings.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Back to Readings</a></div>
+      </div>
+
+      <div class="article-sidebar" data-reveal="right">
+        <div class="book-card">
+          <div class="book-cover-placeholder">🎭</div>
+          <div class="book-meta-row"><div class="book-title">No Longer Human</div><div class="book-author">Osamu Dazai · 1948</div><span class="book-genre">Novel</span></div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:12px;line-height:1.6;">A novel about a man whose performance of belonging becomes the thing that keeps him unseen.</p>
+        </div>
+        <div class="toc">
+          <h4>In this reflection</h4>
+          <ul>
+            <li><a href="#section-mask">The Mask That Worked</a></li>
+            <li><a href="#section-sympathy">The Complication of Sympathy</a></li>
+            <li><a href="#section-phrase">The Phrase</a></li>
+            <li><a href="#section-voice">The Voice Outside</a></li>
+            <li><a href="#section-left-me">What It Left Me With</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Anirudh Arora</div>
+        <p>Research Assistant at MPI-M. Curious about most things.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/anirudharora" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://scholar.google.com/citations?user=kYFyXtcAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link"><i class="fa-brands fa-google-scholar"></i></a>
+          <a href="https://github.com/Arora-Anirudh" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:anirudh.arora.research@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="readings.html">Writing</a></li><li><a href="life.html">Life</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:anirudh.arora.research@gmail.com">anirudh.arora.research@gmail.com</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Anirudh Arora</span><span>Hosted on GitHub Pages</span></div>
+  </div>
+</footer>
+<script src="js/main.js?v=20260827"></script>
+</body>
+</html>
