@@ -1449,6 +1449,7 @@ section { padding: 90px 0; }
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+[data-reveal-stagger].revealed > * { opacity:1; transform:none; }
 [data-reveal-stagger].revealed > *:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
 [data-reveal-stagger].revealed > *:nth-child(2) { opacity:1; transform:none; transition-delay:0.15s; }
 [data-reveal-stagger].revealed > *:nth-child(3) { opacity:1; transform:none; transition-delay:0.25s; }
